@@ -25,7 +25,10 @@ http://webdesign.tutsplus.com/tutorials/applications/getting-started-with-octopr
 
     웹브라우저의 localhost:4000 에서 미리보기 가능
 
-어느 곳에 올려야 하는거야?!!!
+    rake new_page[about/index.html]
+
+다시 설치?
+http://www.one-tab.com/page/BFzJTkxBS1uxDFPkxmDgpw
 
 ### 참조 링크
 
@@ -33,3 +36,4 @@ http://opentutorials.org/course/263/1902
 http://doomed-lover.com/archives/migrating-to-octopress/ 
 http://www.tomordonez.com/blog/2012/06/04/creating-a-github-blog-using-octopress/ 
 http://paulsturgess.co.uk/blog/2013/04/24/hello-octopress-and-github-pages/ 
+
