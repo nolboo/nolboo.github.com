@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-07-21T23:23:49+09:00</updated>
+  <updated>2013-07-22T00:32:04+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -151,33 +151,6 @@ rake preview    # http://localhost:4000 에 웹서버를 마운트하고 볼 수
 </code></pre>
 
 <p>이제 웹 브라우저에서 <code>http://localhost:4000</code> 주소를 입력하여 미리볼 수 있다.</p>
-
-<h3><a href="http://octopress.org/docs/blogging/code/">백틱 코드 불럭 문법과 예</a></h3>
-
-<ul>
-<li>문법</li>
-</ul>
-
-
-<p><code>[language] [title] [url] [link text]
-code snippet
-</code></p>
-
-<ul>
-<li>예</li>
-</ul>
-
-
-<p>``` ruby Discover if a number is prime <a href="http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/">http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/</a> Source Article
-class Fixnum
-  def prime?</p>
-
-<pre><code>('1' * self) !~ /^1?$|^(11+?)\1+$/
-</code></pre>
-
-<p>  end
-end
-```</p>
 
 <h2>출판하기</h2>
 
