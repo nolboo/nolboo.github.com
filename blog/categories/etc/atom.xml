@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Nolboo's Blog]]></title>
-  <link href="http://nolboo.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: etc | Nolboo's Blog]]></title>
+  <link href="http://nolboo.github.io/blog/categories/etc/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
   <updated>2013-07-21T22:52:29+09:00</updated>
   <id>http://nolboo.github.io/</id>
