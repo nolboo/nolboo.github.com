@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>CSS 프리프로세서 LESS 튜토리얼과 프리젠테이션 - Nolboo's Blog</title>
+  <meta name="author" content="Nolboo Kim">
+
+  
+  <meta name="description" content="원본 : LESS tutorial and presentation LESS란? css-tricks에서 2012년 6월 실시한 조사에 의하면 46%의 사람들이 CSS preprocessor를 경험하지 않았다. LESS가 51%이다. LESS는 프로그래밍이다.
+LESS는 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://nolboo.github.io/blog/2013/07/22/less-tutorial-and-presentation">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Nolboo's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42615434-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Nolboo's Blog</a></h1>
+  
+    <h2>호모스터디쿠스를 추구하는 놀부.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:nolboo.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">CSS 프리프로세서 LESS 튜토리얼과 프리젠테이션</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-22T21:38:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>원본 : <a href="http://brianflove.com/2012/10/03/less-tutorial-and-presentation/">LESS tutorial and presentation</a></p>
+
+<h3>LESS란?</h3>
+
+<p><a href="http://css-tricks.com/poll-results-popularity-of-css-preprocessors/">css-tricks에서 2012년 6월 실시한 조사</a>에 의하면 46%의 사람들이 CSS preprocessor를 경험하지 않았다. LESS가 51%이다.</p>
+
+<ul>
+<li>LESS는 프로그래밍이다.</li>
+<li>LESS는 CSS로 컴파일된다.</li>
+<li>LESS는 CSS 프리프로세서다.</li>
+<li>LESS 문법은 전통적인 CSS 모델을 따른다.</li>
+<li>LESS는 다이내믹 CSS로 불리기도 한다.</li>
+</ul>
+
+
+<h3>왜 LESS를 사용하나?</h3>
+
+<ul>
+<li>시간 절약</li>
+<li>실수 줄이기</li>
+<li>반복 줄이기(DRY)</li>
+<li>CSS를 여러 화일로 쪼개 logical sense하게 관리한다.
+  CSS @import는 각 화일마다 새로운 HTTP 요청을 발생시켜 성능에 좋지 않다.</li>
+<li>LESS는 쿨하다!</li>
+</ul>
+
+
+<p>CSS 프리프로세서는 CSS를 기능적으로 확장시키진 않는다. 대신에 개발 플로우를 더 쉽게 해준다. CSS를 압축하고 있다면, CSS 프리프로세서를 사용하는 것이 다음 단계다.</p>
+
+<h3>LESS 설치</h3>
+
+<pre><code>npm install less --global
+</code></pre>
+
+<h3>LESS로 뭘 할 수 있나?</h3>
+
+<p>LESS는 CSS가 제공하지 않는 기능을 제공한다.</p>
+
+<ul>
+<li>변수</li>
+<li>Mixins : 룰셋을 재사용할 수 있게 해주는 함수</li>
+<li>DOM 구조와 유사한 스타일 nesting</li>
+<li>간단한 수학적 연산자 : 숫자와 컬러의 +,&ndash;,*,/</li>
+<li>floor(), ceilling(), round()와 같은 수학적 연산자</li>
+<li>darken(), lighten(), fadein(), fadeour()과 같은 컬러 연산자</li>
+</ul>
+
+
+<h3>변수</h3>
+
+<ul>
+<li>@로 시작</li>
+<li><code>#333</code> 혹은 <code>#fefefe</code>와 같은 헥사컬러값을 저장할 수 있다.</li>
+<li>&ldquo;Webcubator, Inc&#8221;와 같은 문자열을 저장할 수 있다.</li>
+<li>10px와 같은 사이즈를 저장할 수 있다.
+<img src="http://uploads.brianflove.com/wp-content/uploads/2012/10/string-variables-in-less.png" alt="" /></li>
+</ul>
+
+
+<h3>Mixins</h3>
+
+<ul>
+<li>여러 곳에 쓰일 수 있는 룰셋의 속성들을 가지고 있다.</li>
+<li>코드 재사용</li>
+<li>패러미터를 줄 수 있으나, 필수는 아니다.</li>
+<li>패러미터의 기본값을 줄 수 있다.</li>
+<li>@argument는 모든 패러미터에 저장된 순서대로의 값을 포함하는 특별한 변수다.
+<img src="http://uploads.brianflove.com/wp-content/uploads/2012/10/mixins-in-less.png" alt="" /></li>
+</ul>
+
+
+<h3>Cascading + Nesting</h3>
+
+<ul>
+<li>cascading(들여쓰기)으로 룰셋을 nest한다.</li>
+<li>기존의 cascading 접근 방식과 함께 사용할 수 있다.</li>
+<li>DOM 구조와 유사하게 할 수 있다.</li>
+<li>cascading된 룰셋으로 <em>컴파일할 수 있다.</em>
+<img src="http://uploads.brianflove.com/wp-content/uploads/2012/10/nested-styles-in-less.png" alt="" /></li>
+</ul>
+
+
+<h3>&amp;연결자(combinator)</h3>
+
+<ul>
+<li>&amp;연결자가 쓰이면 nesting된 실렉터는 부모 실렉터와 연쇄적으로 해석한다.</li>
+<li>:focus나 :hover와 같은 의사 클래스에 매우 유용하다.
+<img src="http://uploads.brianflove.com/wp-content/uploads/2012/10/combinator-in-less.png" title="&amp;연결자" alt="&amp;연결자" /></li>
+</ul>
+
+
+<p>그림은 @.inline으로 설명은 &amp;.inline으로 <em>일치하지 않음</em></p>
+
+<h3>연산자(Operations)</h3>
+
+<ul>
+<li>모든 사이즈와 컬러 변수에서 작동한다.</li>
+<li>+,&ndash;,*,/</li>
+<li>컬러 함수</li>
+<li>수학 함수</li>
+</ul>
+
+
+<p><img src="http://uploads.brianflove.com/wp-content/uploads/2012/10/math-operators-in-less.png" alt="" /></p>
+
+<ul>
+<li>padding: @padding * 10% // outputs “padding: 20px;”</li>
+<li>padding: ((@padding * 10%) / 2) + 5px; //outputs “padding: 15px;”</li>
+<li>adding: @padding + (2 * @padding); //outputs “padding:6px;”</li>
+</ul>
+
+
+<p>LESS에는 여러 수학 함수가 있다.</p>
+
+<ul>
+<li>round()</li>
+<li>ceiling()</li>
+<li>floot()</li>
+<li>percentage()</li>
+</ul>
+
+
+<h3>컬러 함수</h3>
+
+<p>여러 함수를 적용하여 새로운 컬러를 만들거나 기존 컬러에 대한 정보를 얻을 수 있다.</p>
+
+<ul>
+<li>darken(@color, 20%); //20% 어둡게 한다.</li>
+<li>lighten(@color, 20%); //20% 밝게 한다.</li>
+<li>fadein(@color, 20%); //20% 더 투명하게 한다.</li>
+<li>fadeout(@color, 20%); //20% 덜 투명하게 한다.</li>
+<li>fade(@color, 80%); //80%투명도를 가진다.</li>
+<li>hue(@color); //색상 채널</li>
+<li>saturation(@color); //채도(chroma) 채널</li>
+<li>lightness(@color); //명도(value) 채널</li>
+<li>alpha(@color); //알파(투과도) 채널</li>
+</ul>
+
+
+<p>참조 : <a href="http://ko.wikipedia.org/wiki/%EC%83%89_%EA%B3%B5%EA%B0%84" title="위키피디어 - 색 공간">색 공간</a>, <a href="http://ko.wikipedia.org/wiki/%EC%83%89_%EB%AA%A9%EB%A1%9D" title="위키피디어 - 색 목록">색 목록</a></p>
+
+<p><img src="http://uploads.brianflove.com/wp-content/uploads/2012/10/color-functions-in-less.png" alt="" /></p>
+
+<h3>주석(Comments)</h3>
+
+<p>여러 줄의 주석은 컴파일된 CSS에 유지되지만 한줄 주석은 유지되지 않는다. 그러므로 컴파일된 CSS에 포함되기를 원하지 않는 경우에는 한줄 주석을 일반적으로 이용해야 한다.</p>
+
+<ul>
+<li><code>/*</code> 이 주석은 컴파일된 CSS에 유지된다. */</li>
+<li>//이 주석은 컴파일된 CSS에서 빠진다.</li>
+</ul>
+
+
+<h3>@Import</h3>
+
+<p>CSS에서 @import()으 사용은 의심할 필요도 없이 아주 나쁜 생각이다. import된 각 화일 마다 서버에 추가적인 HTTP 요청을 하기 때문이다. CSS를 5개의 화일로 나누면 5번 요청한다. 사이트의 성능때문에 클라이언트에서 요청하는 CSS 화일은 하나로 해야한다.</p>
+
+<p>또한, 인라인 스타일의 사용은 널리 알려진대로 최고로 피해야할 규칙이다. 클라이언트에서 요청된 CSS 화일은 브라우저에 의해 캐싱되므로 서브 페이지 방문에서는 다운로드되지 않는다. HTML은 일반적으로 캐쉬되지 않으므로 인라인 CSS 코드는 매번 포함되어 다운로드된다.</p>
+
+<p>LESS에서는?</p>
+
+<ul>
+<li>@import하면 하나의 화일로 모두 복사되어 컴파일된다.</li>
+<li>모든 변수와 mixin 선언된 이후 <em>are available to main file or files imported after declarations</em></li>
+<li><em>Order matters</em></li>
+<li>.less 확장자는 포함하거나 생략할 수 있다.</li>
+<li>.css 확장자를 사용하여 CSS화일을 import할 수 있다.</li>
+</ul>
+
+
+<p>다음과 같이 필요한 모든 CSS화일을 하나의 .less 화일에 포함하는 것을 추천한다.</p>
+
+<pre><code>// import normalize for CSS resets
+@import "normalize";  // same as @import “normalize.less”;
+
+// import mixins for all of my "global" variables and mixins
+@import "mixins";
+
+// base for mobile devices
+@import "base";
+
+//tablets
+@media only screen and (min-width: 768px) {
+@import "768";
+}
+
+//desktops
+@media only screen and (min-width: 1030px) {
+@import "1030";
+}
+</code></pre>
+
+<h3>문자열 삽입</h3>
+
+<ul>
+<li>@{name} 구성을 사용</li>
+<li>선언시 변수값을 임베딩</li>
+</ul>
+
+
+<p><img src="http://uploads.brianflove.com/wp-content/uploads/2012/10/string-interpolation-in-less.png" alt="" /></p>
+
+<h3>Escaping</h3>
+
+<ul>
+<li>유효한 CSS 문법이 아닌 CSS 출력이 필요하면</li>
+<li>Proprietary syntax not recognized by LESS</li>
+<li>If not used, LESS compiler will throw an error</li>
+<li><p>Simple prefix with ~ symbol and put in quotes (string)</p>
+
+<p>  filter: ~”progid:DXImageTransform.Microsoft.gradient(startColorstr=&lsquo;#dfdfdf&rsquo;, endColorstr=&lsquo;#f8f8f8&rsquo;)”;</p></li>
+</ul>
+
+
+<p>&ldquo;&#8221;앞에 ~를 붙이면 LESS 컴파일러가 코드 문자열을 무시한다.</p>
+
+<h3>Pre-compile</h3>
+
+<ul>
+<li>LESS를 CSS3로 컴파일하면 웹앱에서는 하나의 CSS화일만 로드된다.</li>
+<li>포로덕션에만 사용되어져야 한다.</li>
+<li>개발할 때는 덜 편리하다.</li>
+<li><p>LESS 컴파일러가 디렉토리를 &ldquo;watch&#8221;하게 하면 디렉토리에 저장될 때마다 재컴파일하게 할 수 있다.</p>
+
+<p>  $ lessc style.less > ../css/style.css</p></li>
+</ul>
+
+
+<h3>Post-compile</h3>
+
+<ul>
+<li>less.js 사용할 수 있으며, HTML에 less 화일을 포함해라.</li>
+<li>프로덕션에는 사용하지 말아야 한다.</li>
+<li><p>개발할 때 가장 편리하다.</p>
+
+<p>  <!--LESS stylesheets first--></p>
+
+<p>  <!---Post-compile LESS to CSS3--->
+  <script type="text/javascript" src="less.js"></script><script type="text/javascript">// &lt;![CDATA[
+  less.watch();
+  // ]]></script></p></li>
+</ul>
+
+
+<h3>LESS Elements</h3>
+
+<p>LESS 화일은 크로스 브라우저되는 몇몇 유용한 mixin을 포함한다.</p>
+
+<ul>
+<li>.gradient</li>
+<li>.rounded</li>
+<li>.opacity</li>
+<li>.box-shadow</li>
+<li>.inner-shadow</li>
+</ul>
+
+
+<h3>Minification and compression</h3>
+
+<p>프로덕션 사용으로는 CSS 코드를 minimize하고 compress하는 것이 가장 좋다. 코드를 가볍게 만들어 웹 사이트를 더 빠르게 할 것이다. LESS 컴파일러 -x 옵션을 사용하여 minify할 수 있다. -yui-compress 플래그를 사용하여 YUI CSS 컴프레서를 사용하여 컴파일할 수 있다.</p>
+
+<pre><code>$ lessc -x styles.less &gt; ../css/styles.css
+$ lessc -x --yui-compress styles.less &gt; ../css/styles.css
+</code></pre>
+
+<h3>LESS 대안</h3>
+
+<ul>
+<li><a href="http://sass-lang.com/">SASS: Syntactically Awesome StyleSheets</a></li>
+<li>SCSS: v2 of SASS</li>
+<li><a href="http://learnboost.github.com/stylus/">Stylus</a></li>
+</ul>
+
+
+<h3>Presentation(영문)</h3>
+
+<ul>
+<li><a href="https://s3.amazonaws.com/uploads.brianflove.com/wp-content/uploads/2013/01/less.pdf">영문 Less.pdf</a></li>
+</ul>
+
+
+<h3>추가 자료</h3>
+
+<ul>
+<li><a href="http://lesscss.org/">LESS 공식 홈페이지</a></li>
+<li><a href="http://opentutorials.org/course/253/1748">개발자 영어 한글 번역 및 강좌</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Nolboo Kim</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-22T21:38:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/css/'>CSS</a>, <a class='category' href='/blog/categories/less/'>LESS</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nolboo.github.io/blog/2013/07/22/less-tutorial-and-presentation/" data-via="" data-counturl="http://nolboo.github.io/blog/2013/07/22/less-tutorial-and-presentation/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/07/22/advanced-guide-to-html-and-css-6-slash-10/" title="Previous Post: HTML & CSS 중급자 가이드 - 6강 : jQuery">&laquo; HTML & CSS 중급자 가이드 - 6강 : jQuery</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/07/22/50-useful-css-snippets/" title="Next Post: 모든 디자이너와 프런트 개발자가 숙달하고 있어야할 CSS 스니핏 50">모든 디자이너와 프런트 개발자가 숙달하고 있어야할 CSS 스니핏 50 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/install-markdoc/">Markdoc 설치</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/anonymous-hosting/">100% 익명으로 웹 호스팅하는 방법</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/adapting-to-a-responsive-design/">반응형 디자인 적용하기(케이스 스터디)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/50-useful-css-snippets/">모든 디자이너와 프런트 개발자가 숙달하고 있어야할 CSS 스니핏 50</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/less-tutorial-and-presentation/">CSS 프리프로세서 LESS 튜토리얼과 프리젠테이션</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/advanced-guide-to-html-and-css-6-slash-10/">HTML & CSS 중급자 가이드 - 6강 : jQuery</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/advanced-guide-to-html-and-css-4-slash-10/">HTML & CSS 중급자 가이드 - 4강 : 반응형 웹 디자인</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/beginners-guide-to-html-and-css-5-slash-10/">HTML & CSS 초보자 가이드 - 5강 : 백그라운드와 그라디언트</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/beginners-guide-to-html-and-css-4-slash-10/">HTML & CSS 초보자 가이드 - 4강 : Typography</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/beginners-guide-to-html-and-css-3-slash-10/">HTML & CSS 초보자 가이드 - 3강 : Box Model & Positioning</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/beginners-guide-to-html-and-css-2-slash-10/">HTML & CSS 초보자 가이드 - 2강 : Elements & Semantics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/beginners-guide-to-html-and-css-1-slash-10/">HTML & CSS 초보자 가이드 - 1강 : 용어, 문법, 소개</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/21/start-octopress/">옥토프레스로 블로깅하기</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/21/hello-world/">Hello World</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Nolboo Kim -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'nolboo';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nolboo.github.io/blog/2013/07/22/less-tutorial-and-presentation/';
+        var disqus_url = 'http://nolboo.github.io/blog/2013/07/22/less-tutorial-and-presentation/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

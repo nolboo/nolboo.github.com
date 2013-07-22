@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Markdoc 설치 - Nolboo's Blog</title>
+  <meta name="author" content="Nolboo Kim">
+
+  
+  <meta name="description" content="[TOC] 설치 터미널에서 $ easy_install Markdoc Finished processing dependencies for Markdoc 위의 메시지가 나오면 성공. 위키 만들기 위키 초기화 $ markdoc init my-wiki --vcs-ignore &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://nolboo.github.io/blog/2013/07/22/install-markdoc">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Nolboo's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42615434-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Nolboo's Blog</a></h1>
+  
+    <h2>호모스터디쿠스를 추구하는 놀부.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:nolboo.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Markdoc 설치</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-22T21:41:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>[TOC]</p>
+
+<h2>설치</h2>
+
+<p>터미널에서</p>
+
+<pre><code>$ easy_install Markdoc
+
+Finished processing dependencies for Markdoc
+</code></pre>
+
+<p>위의 메시지가 나오면 성공.</p>
+
+<h2>위키 만들기</h2>
+
+<h3>위키 초기화</h3>
+
+<pre><code>$ markdoc init my-wiki --vcs-ignore hg
+
+markdoc.vcs-ignore: INFO: Writing ignore file to .hgignore
+markdoc.init: INFO: Wiki initialization complete
+markdoc.init: INFO: Your new wiki is at: .../my-wiki
+
+$ cd .../my-wiki
+</code></pre>
+
+<h3>페이지 편집</h3>
+
+<p>wiki/ 서브 디렉토리에 문서가 위치하며, 마크다운 파일이다. .md 확장자를 가지며, wiki configuration에서 추가할 수 있다. wiki/ 디렉토리에서 마크다운 화일 작성.</p>
+
+<h3>빌드</h3>
+
+<p>아래 명령을 내리면 .html/ 서브디렉토리에 모든 HTML이 제너레이트된다.</p>
+
+<pre><code>$ markdoc build
+</code></pre>
+
+<h3>보기</h3>
+
+<pre><code>$ markdoc serve
+markdoc.serve: INFO: Serving on http://127.0.0.1:8008
+</code></pre>
+
+<p>웹브라우저에서 <a href="http://localhost:8008/">http://localhost:8008/</a>를 열면 보인다.</p>
+
+<h2>기타 기능</h2>
+
+<ul>
+<li>구글 애널리틱스를 한줄 코드로 삽입</li>
+<li>rsync를 이용해 원격 서버와 동기화</li>
+<li>Pygments 지원 문법</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Nolboo Kim</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-22T21:41:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/markdown/'>markdown</a>, <a class='category' href='/blog/categories/wiki/'>wiki</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nolboo.github.io/blog/2013/07/22/install-markdoc/" data-via="" data-counturl="http://nolboo.github.io/blog/2013/07/22/install-markdoc/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/07/22/anonymous-hosting/" title="Previous Post: 100% 익명으로 웹 호스팅하는 방법">&laquo; 100% 익명으로 웹 호스팅하는 방법</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/install-markdoc/">Markdoc 설치</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/anonymous-hosting/">100% 익명으로 웹 호스팅하는 방법</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/adapting-to-a-responsive-design/">반응형 디자인 적용하기(케이스 스터디)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/50-useful-css-snippets/">모든 디자이너와 프런트 개발자가 숙달하고 있어야할 CSS 스니핏 50</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/less-tutorial-and-presentation/">CSS 프리프로세서 LESS 튜토리얼과 프리젠테이션</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/advanced-guide-to-html-and-css-6-slash-10/">HTML & CSS 중급자 가이드 - 6강 : jQuery</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/advanced-guide-to-html-and-css-4-slash-10/">HTML & CSS 중급자 가이드 - 4강 : 반응형 웹 디자인</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/beginners-guide-to-html-and-css-5-slash-10/">HTML & CSS 초보자 가이드 - 5강 : 백그라운드와 그라디언트</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/beginners-guide-to-html-and-css-4-slash-10/">HTML & CSS 초보자 가이드 - 4강 : Typography</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/beginners-guide-to-html-and-css-3-slash-10/">HTML & CSS 초보자 가이드 - 3강 : Box Model & Positioning</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/beginners-guide-to-html-and-css-2-slash-10/">HTML & CSS 초보자 가이드 - 2강 : Elements & Semantics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/beginners-guide-to-html-and-css-1-slash-10/">HTML & CSS 초보자 가이드 - 1강 : 용어, 문법, 소개</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/21/start-octopress/">옥토프레스로 블로깅하기</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/21/hello-world/">Hello World</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Nolboo Kim -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'nolboo';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nolboo.github.io/blog/2013/07/22/install-markdoc/';
+        var disqus_url = 'http://nolboo.github.io/blog/2013/07/22/install-markdoc/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
