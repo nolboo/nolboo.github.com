@@ -4,7 +4,7 @@
   <title><![CDATA[Category: responsive | Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/blog/categories/responsive/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-07-22T21:53:01+09:00</updated>
+  <updated>2013-07-22T22:05:18+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -41,7 +41,7 @@
 
 <p>먼저 신뢰할만한 고객에게 의견을 구했고, <a href="http://www.google.co.uk/analytics/">구글 애널리틱스</a>, <a href="http://www.leadforensics.com/">리드포렌식</a>, <a href="http://www.crazyegg.com/">크레이지에그</a> 등을 이용해 기존 웹사이트를 분석했다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/3-card-sorting.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>디자인 팀이 기존 컨텐츠를 재구성하기 위해 카드 소팅을 사용하고 있다.</p>
 
@@ -53,7 +53,7 @@
 
 <p><a href="http://zurb.com/article/883/small-painful-buttons-why-social-media-bu">Zurb에 의하면</a>, 총 19개의 요청으로 페이스북, 트위터, 구글 소셜 미디어 버튼을 로드하는 것이 대역폭에서 246.7 KB를 잡아먹는다고 한다. 그래서 무거운 소셜미디어 플러그인을 가벼운 소셜미디어 링크로 대치하였다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/4-social-buttons.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>몇개의 필수적인 트래킹 스크립트는 남겨야 했는데, HTML의 <code>body</code> 엘리먼트의 바닥과 외부 스크립트 화일에 집어넣어서 컨텐츠 이후에 로딩되도록 하였다.</p>
 
@@ -63,13 +63,13 @@
 
 <p><a href="http://newrelic.com/">New Relic</a>과 같은 서버사이드 성능 모니터링 툴을 사용해서, 이전에 사용하던 CMS가 페이지 로딩 타임을 느리게하는 주요 요인이라는 것을 알 수 있었다. 그래서 웹사이트에서 CMS를 완전히 제거해버렸다. 블로그는 제외했는데, 올리는 컨텐츠의 양과 주기때문에 효과적으로 관리하기 위해서는 아직 CMS가 필요했다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/5-wordpress-db-queries.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>이전 홈페이지 2.34초의 총 실행시간 동안 1,459번의 데이타베이스 서버를 쿼리했다.</p>
 
 <p>이전 웹사이트는 워드프레스 CMS와 연결된 MVC 아키텍트로 구축되었었다. 예로 들었듯이 하나의 일반적인 페이지가 로드하되기위해 600 ~ 1,500 쿼리를 사용했다. 단순히 CMS를 제거함으로써 수백번의 데이타베이스 쿼리가 한방에 0으로 줄었다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/6-designing-performance.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>초기 프로토타입을 개발하고 있다.</p>
 
@@ -77,7 +77,7 @@
 
 <p>이것만으로, 웹사이트 처리 속도를 3,900% 넘게 개선할 수 있었다. 평균 2.2초에서 56 밀리초로 서버 처리속도가 개선되었다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/7-laravel-profiler.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>서버 처리 속도가 이제 단지 56밀리초이며, 데이타베이스 쿼리는 0이다. &ndash; 전보다 대략 40배 더 빨라졌다.</p>
 
@@ -93,7 +93,7 @@
 
 <p>컨텐츠를 정의하는 레이아웃에 반해 컨텐츠가 레이아웃과 그리드를 모양짓는 것을 디자인하였다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/8-responsive-grid.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>위에서 부터 시계방향(놀부주: 시계반대방향인 듯)으로: 데스크탑에서 레이아웃은 3개의 행이고 모바일에선 하나의 행으로된 스택(쌓아놓은 더미)로 된다. 태블릿에선 컨텐츠 왼쪽에 이미지를 띄워 추가 공간의 이점을 살렸다.</p>
 
@@ -213,7 +213,7 @@ $gutter:     20px;
 
 <p>속도 향상을 필요로 하고 지원될 때만 자바스크립트가 로드되길 원했고, <a href="http://requirejs.org/">RequireJS</a>를 이용했다. 자바스크립트 화일을 줄여주는 <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a>도 포함되어있다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/9-scripts-optimisation.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>최적화로 자바스크립트 크기가 411 KB에서 106 KB로 줄었다.</p>
 
@@ -223,7 +223,7 @@ $gutter:     20px;
 
 <p>Adobe Firework의 <a href="http://help.adobe.com/en_US/fireworks/cs/using/WS3f28b00cc50711d9-73dfa65f133a490f3b9-8000.html">selective quality options</a>을 사용해 웹사이트의 전체 이미지를 수작업으로 최적화했다. 압축, blur, desaturation 등의 더 세세한 조정을 통해 이미지 화일 크기를 줄이기도 했다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/10-image-compression.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>이미지의 부분들을 desaturation하고 blur하는 것은 꼭 필요한 것은 아니지만 이미지 크기를 상당히 줄였다.</p>
 
@@ -231,7 +231,7 @@ $gutter:     20px;
 
 <p>홈페이지의 슬라이드쇼 배너에서는 미디어 쿼리를 이용해 적합한 크기의 이미지만 로드하여 다양한 스크린 크기에 최적화했다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/13-responsive-carousel.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>위의 이미지는 모바일에서 볼 수 있고, 슬라이드쇼는 훨씬 더 가벼워졌다.</p>
 
@@ -248,7 +248,7 @@ $gutter:     20px;
 } 
 </code></pre>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/13-responsive-carousel-desktop.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>데스크탑에선 더 많은 자산을 로드한다.</p>
 
@@ -311,7 +311,7 @@ $gutter:     20px;
 
 <p>이 접근법으로 웹사이트 전체에서 엘리먼트를 다이내믹하게 활성화하거나 비활성화하여 자바스크립트가 가능하지 않을 때에 페이지에 이 엘리먼트가 존재하도록 하였다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/11-responsive-navigation-pattern.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>상단 GUI의 오른쪽에서 지도와 전화 버튼을 볼 수 있으며, 페이지의 나머지 부분을 접근할 수 있는 표준 컨트롤을 둘 수 있다.</p>
 
@@ -376,13 +376,13 @@ $('.btn-menu').click(function(e){
 
 <p>이 기기 종속적이지 않은 접근법으로 다른 기기가 시장에 나올 때마다 코드를 최적화할 필요가 없게 되었다. 우리는 120, 240, 600, 760, 980, 1360에 구분점을 잡았다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/15-flexible-grid.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>웹사이트는 각 구분점 사이에서 유동적으로 반응한다.</p>
 
 <p>미래 친화성을 더 확실히 하기위해 특정 기기에 기반한 구분점을 디자인하지 않고, 우리가 손에 넣을 수 있는 데스크탑 브라우저와 다양한 폰과 태블릿에서, Lynx, 플레이스테이션 3, 킨들 페이퍼 화이트, PSP Vita 등등의 많은 기기와 브라우저에서 테스트하였다. 오래된 노키아 기기에서도 테스트하였고 웹사이트는 잘 동작하였다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/12-device-testing.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>우리 디자이너와 프론트엔드 팀이 노키아 X2와 같은 오래된 모델을 포함한 매우 다양한 기기에서 테스트하였다.</p>
 
@@ -460,13 +460,13 @@ $('.btn-menu').click(function(e){
 
 <p>몇 주전 새 웹사이트를 띄운 결과가 인상적이었다. 모바일 트래픽이 200% 넘게 증가하였고(모든 트래픽 평균에선 82%가 증가), 평균 방문 시간이 18% 증가혔다. 모바일 사용자의 exit 비율이 4,000% 감소하였다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/16-ga-speed-statistics.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>구글 애널리틱스에 의하면 서버 반응 속도가 평균 1.21 초에서 170 밀리초로 감소하였다. 비슷하게 페이지 로딩 시간도 평균 9.19 초에서 1.82 초로 감소하였다.</p>
 
 <p>여기서 중요한 것은 단지 시작이라는 것이다. 성능 최적화, 화일 크기 줄이기, 터치 제스처, <a href="http://adaptive-images.com/">adaptive images</a>과 같은 서버 사이드 솔루션 등을 더 사용할 수 있다.</p>
 
-<p><img src="http://media.smashingmagazine.com/wp-content/uploads/2013/04/17-rwd-result-large.jpg" alt="" /></p>
+<p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>반응형으로 가는 것은 우리 웹사이트의 첫번째 단계일 뿐이다.</p>
 
