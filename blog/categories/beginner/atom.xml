@@ -1,0 +1,1501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Beginner | Nolboo's Blog]]></title>
+  <link href="http://nolboo.github.io/blog/categories/beginner/atom.xml" rel="self"/>
+  <link href="http://nolboo.github.io/"/>
+  <updated>2013-07-22T21:28:28+09:00</updated>
+  <id>http://nolboo.github.io/</id>
+  <author>
+    <name><![CDATA[Nolboo Kim]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[HTML & CSS 초보자 가이드 - 5강 : 백그라운드와 그라디언트]]></title>
+    <link href="http://nolboo.github.io/blog/2013/07/22/beginners-guide-to-html-and-css-5-slash-10/"/>
+    <updated>2013-07-22T21:08:00+09:00</updated>
+    <id>http://nolboo.github.io/blog/2013/07/22/beginners-guide-to-html-and-css-5-slash-10</id>
+    <content type="html"><![CDATA[<p>원본 : <a href="http://learn.shayhowe.com/html-css/backgrounds-gradients">A Beginner&rsquo;s Guide to HTML &amp; CSS &ndash; LESSON 5 : Backgrounds &amp; Gradients</a></p>
+
+<p>백그라운드(배경)은 작게 쓰이거나 크게 쓰이거나 웹사이트 전체 디자인에 중요한 시각적 효과를 준다.</p>
+
+<p>CSS3에서는 그라디언트 백그라운드, 하나의 엘리먼트에 여러 백그라운드 이미지 적용 등의 새로운 <a href="http://learn.shayhowe.com/html-css/backgrounds-gradients">백그라운드 특성</a>이 도입되었다.</p>
+
+<h2>Adding a Background Color</h2>
+
+<p>엘리먼트에 백그라운드 적용하는 가장 빠른 방법은 <code>background</code>나 <code>background-color</code> 속성으로 한 가지 색의 백그라운드를 적용하는 것이다. <code>background</code> 속성은 색상과 이미지를, <code>background-color</code>는 백그라운드 색상만을 위해 사용된다.</p>
+
+<pre><code>div {
+  background: #f60;
+  background-color: #f60;
+}
+</code></pre>
+
+<p>백그라운드 속성을 선언할 때 16진값, RGB, RGBa, HSL, HSLa의 키워드를 사용한다. 보통 16진수를 사용하며, 알파 채널을 통한 불투명도를 주는 경우는 RGBa와 HSLa를 사용한다. 만약 30% 불투명한 검정을 기대한다면 <code>rgba(0, 0, 0, 0.3)</code>를 사용하면 된다. RGBa와 HSLa는 모든 브라우저에서 지원되는 것은 아니기 때문에 다음과 같이 불투명값을 사용하는 선언 바로 위에 대체 CSS를 선언해야 한다.</p>
+
+<pre><code>div { 
+    background: #b2b2b2;
+    background: rgba(0,0,0,0.3);
+}
+</code></pre>
+
+<h2>Adding a Background Image</h2>
+
+<p>백그라운드 색상처럼 <code>background</code> 속성이나 <code>background-image</code> 속성을 사용하여 백그라운드 이미지를 추가할 수 있다. 어떤 속성을 사용하던지 간에 백그라운 이미지의 경로 즉, 이미지 소스를 정의하는 <code>url</code> 값을 사용해야 한다.</p>
+
+<pre><code>div {
+  background: url('alert.png');
+  background-image: url('alert.png');
+}
+</code></pre>
+
+<p><code>url</code> 값만 사용하면 컨테이너 엘리먼트의 좌상에서부터 수평과 수직 방향으로 반복될 것이다. 다행히 <code>background-repeat</code> 와 <code>background-position</code> 속성을 사용해서 이를 해결할 수 있다.</p>
+
+<h3>Background Repeat</h3>
+
+<p>기본적으로 백그라운 이미지는 수평과 수직 방향으로 무한 반복된다. <code>background</code> 속성의 <code>url</code> 값 뒤에 반복 값을 추가하거나 <code>background-repeat</code> 속성으로 반복 값을 지정할 수 있다.</p>
+
+<pre><code>div {
+  background: url('alert.png') no-repeat;
+  background-image: url('alert.png');
+  background-repeat: no-repeat;
+}
+</code></pre>
+
+<p>백그라운드 반복(repeat)은 <code>repeat</code>, <code>repeat-x</code>, <code>repeat-y</code>, <code>no-repeat</code>의 네 가지 값을 갖는다. <code>repeat</code> 값이 디폴트이며, 수직과 수평 방향으로 이미지를 반복한다. <code>repeat-x</code>는 수평방향으로 이미지를 반복하며, <code>repeat-y</code>는 수직방향으로 반복한다. <code>no-repeat</code>는 백그라운드 이미지를 한번만 표시하며, 반복하지 않는다.</p>
+
+<h3>Background Position</h3>
+
+<p><code>background-position</code> 속성을 사용하면 백그라운드 이미지가 어디에 위치할지와 어디서부터 반복할지를 조정할 수 있다. 다른 백그라운드 속성과 마찬가지로 <code>background</code> 속성의 <code>url</code> 값 뒤에서 지정하거나 <code>background-position</code> 속성으로 별도로 지정할 수 있다.</p>
+
+<pre><code>div {
+  background: url('alert.png') 10px 10px no-repeat;
+  background-image: url('alert.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+}
+</code></pre>
+
+<p>백그라운드 포지션은 수평 오프셋(첫번째)과 수직 오프셋(마지막)의 두 가지 값이 필요하다. <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> 키워드 값을 사용할 수 있다. 이 키워드 값은 퍼센트와 매유 유사하게 작동한다. <code>top left</code> 키워드는 <code>0 0</code> 퍼센트와 동일하고, <code>right bottom</code>은 <code>100% 100%</code> 퍼센트와 동일하다.</p>
+
+<p><code>50%</code> 값을 이용하면 백그라운드 이미지를 중앙에 정렬할 수 있다.엘리먼트의 상단에 백그라운드 이미지를 중양 정렬하려면 <code>50% 0</code> 값을 사용하면 된다. 정확한 조정을 위해 픽셀을 사용하는 것도 인기있는 방법이다.</p>
+
+<p><img src="http://learn.shayhowe.com/assets/courses/html-css-guide/backgrounds-gradients/background-percentages.png" alt="Background Percentages" />
+<strong>Fig. 5.01</strong> 백그라운드 이미지의 위치를 조정하기 위해 퍼센트와 키워드를 사용</p>
+
+<h3>Alert Message Background Example</h3>
+
+<h6>HTML</h6>
+
+<pre><code>&lt;p&gt;&lt;strong&gt;Warning!&lt;/strong&gt; You are walking on thin ice.&lt;/p&gt;
+</code></pre>
+
+<h6>CSS</h6>
+
+<pre><code>p {
+  background: #fff6cc url('warning.png') 15px 50% no-repeat;
+  border-radius: 6px;
+  border: 1px solid #ffd100;
+  color: #000;
+  padding: 10px 10px 10px 38px;
+}
+</code></pre>
+
+<h4>Demo</h4>
+
+<ul>
+<li><a href="http://jsfiddle.net/nolboo/gWUuR/">jsfiddle 링크</a></li>
+</ul>
+
+
+<h2>Gradient Backgrounds with CSS3</h2>
+
+<p>그라디언트 백그라운드는 CSS3와 함께 도입되었으며, 모든 브라우저에서 지원되지는 않지만 최신 브라우저에서는 전부 지원된다.</p>
+
+<p>그라디언트 백그라운드는 백그라운드 이미지처럼 다뤄지며, <code>background</code>나 <code>background-image</code> 속성을 이용하여 linear, radial 두 가지 형태로 만들 수 있다.</p>
+
+<blockquote><h4>Browser Specific Property Values</h4>
+
+<p><br>
+브라우저들이 CSS3를 다른 특성들을 서서히 지원하였기 때문에 각 브라우저 제작사는 약간씩 다른 방법으로 새로운 속성을 적용하였다. 새로운 속성이 정확하게 작동하게 하기 위해 vendor prefix를 사용했다. 대부분의 브라우저가 그라디언트 백그라운드를 표준으로 정했지만 아직은 대체 지원을 할 필요가 있다.
+<br><br>
+vendor prefixe가 점점 상관없어지고 있지만 오래된 브라우저 때문에 그것들을 사용하는 것이 더 안전한다.<br><br></p>
+
+<ul>
+<li>Mozilla Firefox: <code>-moz-</code></li>
+<li>Microsoft Internet Explorer: <code>-ms-</code></li>
+<li>Opera: <code>-o-</code></li>
+<li>Webkit (Chrome &amp; Safari): <code>-webkit-</code></li>
+</ul>
+</blockquote>
+
+<h3>Linear Gradient Background</h3>
+
+<p>수년간 디자이너와 개발자들은 이미지 화일을 잘라내 선형(linear) 그라디언트 백그라운드로 사용해왔다. 잘 작동하기는 했지만 적용하는 시간이 걸렸고, 변경하기가 어려웠다. 다행히 그런 시절은 가버렸고 이젠 CSS안에서 <a href="http://dev.opera.com/articles/view/css3-linear-gradients/">linear gradient</a>를 지정할 수 있다. 색상을 변경하려고 이미지를 다시 자르고 서버에 업로드할 필요가 없으며, CSS 안에서 빠르게 변경할 수 있다.</p>
+
+<pre><code>div {
+  background: #70bf32;
+  background: url('linear-gradient.png') 0 0 repeat-x;
+  background: -webkit-linear-gradient(#a1e048, #6a942f);
+  background:    -moz-linear-gradient(#a1e048, #6a942f);
+  background:     -ms-linear-gradient(#a1e048, #6a942f);
+  background:      -o-linear-gradient(#a1e048, #6a942f);
+  background:         linear-gradient(#a1e048, #6a942f);
+}
+</code></pre>
+
+<p>기본적으로 리니어 백그라운드는 엘리먼트의 위에서부터 아래로 전이된다. 그 방향은 색상 값 앞에 키워드나 각도(degree) 값을 사용하여 변경할 수 있다. 예를 들어 왼쪽에서 오른쪽으로 전이시키려면 <code>to right</code> 키워드 값을 사용하며, 좌상에서 우하로 전이시키려면 <code>to bottom right</code> 키워드 값을 사용한다.</p>
+
+<pre><code>div {
+  background: linear-gradient(to bottom right, #a1e048, #6a942f);
+}
+</code></pre>
+
+<p>대각선 그라디언트를 사용할 때 엘리먼트가 정확하게 사각형이 아니라면 그라디언트는 한 구석에서 다른 쪽으로 직접 진행되지 않을 것이다. 대신에 그라디언트는 엘리먼트의 정중앙을 확인할 것이고 진행되야 할 곳으로부터 수식 코너에 닻을 내릴 것이다. 그리고 그 값 안에서 윤곽된 구성으로 움직일 것이다. 그라이디언트가 향하는 구석을 “magic corners”라 부르지만 절대적인 것은 아니다. 에릭 마이어가 <a href="http://meyerweb.com/eric/thoughts/2012/04/26/lineargradient-keywords/">outlining this syntax</a>란 훌륭한 작업을 했다.</p>
+
+<p>키워드에 더해 degree 값을 사용할 수도 있으며, <code>left top</code>에서 부터 그라디언트가 시작하길 원하면 <code>315deg</code> 값을 사용할 수 있다.</p>
+
+<blockquote><h4>Old Linear Gradient Keyword Syntax</h4>
+
+<p>예전엔 리니어 그라디언트의 키워드 문법은 <code>to</code> 키워드를 사용하지 않았다. 키워드(들)를 선언하는 대신 그라디언트의 시작점을 선언하였고 그 반대방향으로 진행되었다. 위의 대각선 리니어 그라디언트 예제에서 예전 문법은 <code>to bottom right</code>가 아닌 <code>top left</code>가 될 것이다.
+<br><br>
+새로운 키워드 문법으로 다른 브라우저들 사이에서 지원될 수 있게 되었다. 새로운 문법이 작동되지 않으면 예전 문법이 작동되는지 확인해볼 필요가 있다. 그러나, 곧 업데이트되야 할 것이라는 것을 염두에 두어라.</p></blockquote>
+
+<h3>Radial Gradient Background</h3>
+
+<p>리니어 그라디언트는 한 방향으로 퍼지는 그라디언트를 만들기엔 완벽하지만 종종 radial 그라디언트에 대한 요구도 있다. 리니어 백그라운드와 유사하지만 위치, 크기, 반경 값 등으로 좀 더 복잡할 수 있다. 여기선 기본적인 것만 다루고 <a href="http://dev.opera.com/articles/view/css3-radial-gradients/">여기서</a> 좀 더 깊게 살펴 볼 수 있다.</p>
+
+<pre><code>div {
+  background: #70bf32;
+  background: url('radial-gradient.png') 50% 50% no-repeat;
+  background: radial-gradient(circle, #a1e048, #6a942f);
+}
+</code></pre>
+
+<blockquote><h4>CSS3 Gradient Background Generator</h4>
+
+<p>CSS3 그라디언트를 직접 프로그래밍하는 것은 숙달하지 않으면 꽤 힘든 작업이다. 다행히 <a href="http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/default.html">CSS3 그라디언트 제너레이터</a>와 같은 것들이 나타났다. 제너레이터들마다 약간 다르게 동작하지만 어떤 것은 프리셋과 예제가 있고, 어떤 것은 확장할 수 있는 옵션 목록을 가지고 있다. 관심이 있다면 필요에 맞는 적절한 제너레이터를 조사해볼 것을 추천한다.</p></blockquote>
+
+<h3>Gradient Background Stops</h3>
+
+<p>지금까지 하나의 색상에서 다른 색으로 전이되는 그라디언트에 관해 논의했으나, 두 가지 이상의 색상에서 전이되길 원하면 &ldquo;color stop"을 사용할 수 있다. 두 개의 색상값을 선언하는 대신에 여러 개의 값을 선언할 수 있으며, 차례대로 하나에서 다음 색으로 전이할 것이다. 컬러 스톱에 길이 값을 추가하면 전이의 위치와 길이가 결정된다. 길이값이 선언되지 않으면 그라디언트는 선언된 모든 색상 사이에 평등하게 전이될 것이다.</p>
+
+<pre><code>div {
+  background: #6c9730;
+  background: url('linear-gradient-stops.png') 0 0 repeat-y;
+  background: linear-gradient(left, #8dc63f, #d8ad45, #3b4b94);
+}
+</code></pre>
+
+<h3>Navigation Background Example</h3>
+
+<h6>HTML</h6>
+
+<pre><code>&lt;ul&gt;
+  &lt;li class="play"&gt;&lt;a href="#"&gt;Play&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="back"&gt;&lt;a href="#"&gt;Skip Backward&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="stop"&gt;&lt;a href="#"&gt;Pause/Stop&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="forward"&gt;&lt;a href="#"&gt;Skip Forward&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h6>CSS</h6>
+
+<pre><code>ul {
+  background: #f4f4f4;
+  background: linear-gradient(#fff, #eee);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: inline-block;
+  height: 22px;
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0 4px 0 0;
+}
+li {
+  height: 16px;
+  float: left;
+  padding: 3px;
+  text-indent: -9999px;
+  width: 16px;
+}
+.play {
+  background: #f4f4f4;
+  background: linear-gradient(#fff, #eee);
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  left: -4px;
+  padding: 7px;
+  position: relative;
+  top: -5px;
+}
+li a {
+  background: url('controls.png') 0 0 no-repeat;
+  display: block;
+  height: 16px;
+  width: 16px;
+}
+.play a:hover {
+  background-position: 0 -16px;
+}
+.back a {
+  background-position: -16px 0;
+}
+.back a:hover {
+  background-position: -16px -16px;
+}
+.stop a {
+  background-position: -32px 0;
+}
+.stop a:hover {
+  background-position: -32px -16px;
+}
+.forward a {
+  background-position: -48px 0;
+}
+.forward a:hover {
+  background-position: -48px -16px;
+}
+</code></pre>
+
+<h4>Demo</h4>
+
+<ul>
+<li><a href="http://jsfiddle.net/nolboo/yTM63/">jsfiddle 링크</a></li>
+</ul>
+
+
+<h2>Multiple Background Images with CSS3</h2>
+
+<p>예전엔 하나의 엘리먼트에 한 개 이상의 백그라운드를 원한다면 또다른 엘리먼트로 감싸고 그 엘리먼트에 백그라운드를 할당해야 했다. 이것 때문에 백그라운드를 추가하는 단순한 사용으로도 코드가 비대해지곤 했다. CSS3에선 백그라운드 값들을 연달아(chain) 선언하여 하나의 엘리먼트에 여러 개의 백그라운드 이미지를 사용할 수 있다.</p>
+
+<pre><code>div {
+  background:
+    url('foreground.png') no-repeat 0 0,
+    url('middle-ground.png') no-repeat 0 0,
+    url('background.png') no-repeat 0 0;
+}
+</code></pre>
+
+<p><code>background</code> 속성 값을 연달어 선언할 수 있을 뿐아니라, <code>background-repeat</code>, <code>background-position</code>와 같은 다른 백그라운드 관련 속성들도 연달아 선언할 수 있다.</p>
+
+<h3>Multiple Background Images Example</h3>
+
+<h6>HTML</h6>
+
+<pre><code>&lt;div&gt;Dinosaur with Grass and Clouds&lt;/div&gt;
+</code></pre>
+
+<h6>CSS</h6>
+
+<pre><code>div {
+  background: 
+    url('dyno.png') no-repeat 380px 18px, 
+    url('grass.png') no-repeat 0 100%, 
+    url('sky.jpg') no-repeat 0 0;
+  border-radius: 6px;
+  height: 200px;
+}
+</code></pre>
+
+<h4>Demo</h4>
+
+<p><a href="http://jsfiddle.net/nolboo/vtgqy/">Dinosaur with Grass and Clouds</a></p>
+
+<h2>New CSS3 Background Properties</h2>
+
+<p>그라디언트 백그라운드와 여러 개의 백그라운드 이미지와 함께 <code>background-size</code>, <code>background-clip</code>, <code>background-origin</code>의 세 가지 새로운 CSS 속성이 추가되었다.</p>
+
+<h3>CSS3 Background Size</h3>
+
+<p><code>background-size</code> 속성은 백그라운드 이미지에 특정한 크기를 줄 수 있다. 선언되는 첫번째 값은 이미지의 너비이며, 두번째 값은 높이이며, 어떠한 길이 값이나 키워드도 사용할 수 있다. 만약 하나의 값만 선언된다면 적절한 이미지 비율을 유지해주는 <code>auto</code> 키워드가 사용된다.</p>
+
+<pre><code>div {
+  background: url('shay.jpg') 0 0 no-repeat;
+  background-size: 85% auto;
+  border: 1px dashed #8c9198;
+  height: 240px;
+  width: 200px;
+}
+</code></pre>
+
+<blockquote><h4>Cover &amp; Contain Values</h4>
+
+<p><code>cover</code> 키워드 값은 (백그라운드가) 엘리먼트 전체를 완전히 덮는 비율적 크기로 재조정되어야 한다. 백그라운드를 얼마나 재조정하느냐는 백그라운드와 엘리먼트의 차원(dimension)에 달려있다. 백그라운드는 비율적으로 차원을 가지지만 이미지 퀄리티(질)는 다소간 왜곡되게 재조정될 수 있다. 항상 작업을 체크하라.<br><br></p>
+
+<p><code>contain</code> 키워드 값은 엘리먼트의 경계 범위 안에 백그라운드 이미지를 비율적 크기로 재조정할 것이다. 이것은 엘리먼트의 일부분이 백그라운드가 없는 것을 의미하지만, 전체 백그라운드 이미지는 보여진다. <code>cover</code> 키워드 값처럼 백그라운드 이미지의 크기 재조정은 이미지의 차원에 비율적일 것이나 이미지는 왜곡될 수 있다.</p></blockquote>
+
+<p>역자참조링크 :</p>
+
+<ul>
+<li><a href="http://dolly77.tistory.com/entry/CSS3-backgroundsize-%EC%86%8D%EC%84%B1%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0">background-size 속성 알아보기</a></li>
+<li><a href="http://blog.naver.com/PostView.nhn?blogId=poppymanye&amp;logNo=60161713731">background-size 속성 사용법</a></li>
+</ul>
+
+
+<h3>CSS3 Background Clip &amp; Background Origin</h3>
+
+<p><code>background-clip</code> 속성은 백그라운 이미지가 적용되는 영역을 지정하며, <code>background-origin</code> 속성은 <code>background-position</code>이 어디서부터 시작되는지 지정한다. 이 두 속성이 도입되면서 <code>border-box</code>, <code>padding-box</code>, <code>content-box</code>의 세 값이 포함되었으며, 각각 <code>background-clip</code>과 <code>background-origin</code> 속성값으로 사용될 수 있다.</p>
+
+<pre><code>div {
+  background: url('shay.jpg') 0 0 no-repeat;
+  background-clip: padding-box;
+  background-origin: border-box;
+}
+</code></pre>
+
+<p><strong>Fig. 5.03</strong> The <code>border-box</code> 값은 엘리먼트의 경계선안까지 확장된다.
+<img src="http://learn.shayhowe.com/assets/courses/html-css-guide/backgrounds-gradients/border-box.png" alt="Border Box Value" /></p>
+
+<p><strong>Fig. 5.04</strong> <code>padding-box</code> 값은 엘리먼트의 패딩 안까지 확장되지만, 경계선 안까지만 포함된다.
+<img src="http://learn.shayhowe.com/assets/courses/html-css-guide/backgrounds-gradients/padding-box.png" alt="Padding Box Value" /></p>
+
+<p><strong>Fig. 5.05</strong> <code>content-box</code> 값은 엘리먼트의 경계선과 패딩 안까지 포함된다.
+<img src="http://learn.shayhowe.com/assets/courses/html-css-guide/backgrounds-gradients/content-box.png" alt="Content Box Value" /></p>
+
+<h2>Resources &amp; Links</h2>
+
+<ul>
+<li><a href="http://www.slideshare.net/maxdesign/css3-backgrounds">CSS3 Background</a> via Russ Weakley</li>
+<li><a href="http://dev.opera.com/articles/view/css3-linear-gradients/">CSS3 Linear Gradients</a> via Dev.Opera</li>
+<li><a href="http://dev.opera.com/articles/view/css3-radial-gradients/">CSS3 Radial Gradients</a> via Dev.Opera</li>
+<li><a href="http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/default.html">CSS Gradient Background Maker</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[HTML & CSS 초보자 가이드 - 4강 : Typography]]></title>
+    <link href="http://nolboo.github.io/blog/2013/07/22/beginners-guide-to-html-and-css-4-slash-10/"/>
+    <updated>2013-07-22T21:08:00+09:00</updated>
+    <id>http://nolboo.github.io/blog/2013/07/22/beginners-guide-to-html-and-css-4-slash-10</id>
+    <content type="html"><![CDATA[<p>원본 : <a href="http://learn.shayhowe.com/html-css/typography">A Beginner&rsquo;s Guide to HTML &amp; CSS &ndash; LESSON 4 : Typography"</a></p>
+
+<p>웹 타이포그래피는 최근 몇년 동안 지속적으로 성장해왔다. 이러한 대중적 성장은 몇 가지 이유가 있지만, 웹 사이트에 자신의 웹 폰트를 (얼마나 쉽게) 적용(emded)할 수 있는가가 가장 큰 이유이다.</p>
+
+<p>역자참조링크 :</p>
+
+<ul>
+<li><a href="http://ko.wikipedia.org/wiki/%ED%83%80%EC%9D%B4%ED%8F%AC%EA%B7%B8%EB%9E%98%ED%94%BC">타이포그래피</a></li>
+<li><a href="http://ko.wikipedia.org/wiki/%EC%BA%98%EB%A6%AC%EA%B7%B8%EB%9E%98%ED%94%BC">캘리그래피</a></li>
+<li><a href="http://ko.wikipedia.org/wiki/%EB%82%99%EC%84%9C">그라피티</a></li>
+</ul>
+
+
+<p>과거엔 웹사이트에 사용할 수 있는 타입페이스(글꼴)의 수가 작고 한정되어 있었다. 이러한 글꼴들은 컴퓨터에 공통적으로 설치되어 화면에 적절하게 표현된다. 최근에는 임베딩 폰트를 사용할 수 있어 디자이너들이 휠씬 많은 글꼴을 선택할 수 있다.</p>
+
+<p>폰트 임베딩의 문이 새로운 글꼴들에 활짝 열리면서 디자이너들에게 타이포그래피의 기본적인 원칙을 아는 것이 필요하게 되었다. 이러한 기본 원칙을 HTML과 CSS로 변환하는 것은 온라인 타이포그래피와 <a href="http://dev.opera.com/articles/view/29-text-styling-with-css/">텍스트 스타일링</a>의 핵심에 기여한다.</p>
+
+<blockquote><h4>Typeface vs. Font</h4>
+
+<p><br></p>
+
+<p>타입페이스와 폰트는 자주 혼용해서 사용되기 때문에 혼선을 준다. 아래에 각 용어가 무엇을 뜻하는지와 두 용어가 어떻게 사용되어 컨텍스트를 더하는지 적었다.<br><br></p>
+
+<p><strong>typeface</strong> 는 보이는 것이다. 문자가 어떻게 보이고, 느끼고, 읽히는지에 대한 예술적 인상이다.<br><br></p>
+
+<p><strong>font</strong> 는 타입페이스를 포함하는 화일이다. 컴퓨터에서 하나의 폰트를 사용하는 것은 컴퓨터가 그 타입페이스에 접근할 수 있는 것이다.<br><br></p>
+
+<p>타입페이스와 폰트의 차이는 <a href="http://fontfeed.com/archives/font-or-typeface/" title="Font or Typeface?">노래와 MP3</a>의 차이와 같다. 타입페이스는 예술 작품이라는 측면에서 노래와 매우 유사하다. 한 명의 아티스트나 아티스트들에 의해 만들어지고 해석은 열려있다. 반면에 폰트는 예술적 감상이 아닌 예술적 가치를 전달하는 방법이라는 측면에서 MP3와 매우 유사하다.</p></blockquote>
+
+<h2>Formatting Content</h2>
+
+<h3>Headings</h3>
+
+<p><code>h1</code>은 가장 중요한 헤딩이며 나머지 <code>h2</code>~<code>h6</code>는 <code>h1</code>을 지원하고 필요에 따라 여러 번 사용할 수 있다.</p>
+
+<h3>Paragraphs</h3>
+
+<p>단락마다 <code>p</code> 태그로 둘러싸인 컨텐츠</p>
+
+<h3>Bolding Text</h3>
+
+<p><code>strong</code> 엘리먼트는 텍스트를 굵은체로 만들 뿐아니라 문맥적으로도 중요한 텍스트임을 알린다.</p>
+
+<h3>Italicizing Text</h3>
+
+<p><code>em</code> 엘리먼트는 텍스트를 기울임체로 만들어 주고 문맥적으로 강조된 중요성을 의미한다.</p>
+
+<h2>Text Color</h2>
+
+<p>디자이너나 개발자가 웹사이트를 만들 때 일반적으로 제일 먼저 하는 것이 텍스트 색상과 글꼴을 고르는 것이다. 페이지의 외관이란 측면에서 이 두 가지는 가장 적은 시간에 가장 큰 효과를 줄 수 있다. 브라우저의 디폴트 값을 제거하고 자신만의 텍스트 색상과 글꼴을 사용하여 즉시 페이지의 기조를 정하게 된다.</p>
+
+<p>텍스트 색상을 지정할 때 필요한 유일한 것은 <code>color</code> 속성이다. <code>color</code> 속성은 하나의 값만 허용된다. 그러나, 형식은 여러가지가 사용되며, 키워드, 16진값, RGB, RGBa, HSL, HSLa 등이 있다. 가장 많이 볼 수 있는 것은 최소의 노력으로 가장 큰 조작을 할 수 있는 16진값(<a href="http://www.quackit.com/css/css_color_codes.cfm">hexadecimal</a>)이다.</p>
+
+<p>RGBa값은 투명 색상을 제공하기 때문에 CSS3와 함께 부상하고 있으나, 모든 브라우저에서 지원되지 않기 때문에 16진값 대체(fallback)과 적절하게 사용되어야 한다.</p>
+
+<pre><code>body {
+  color: #555;
+}
+</code></pre>
+
+<blockquote><h4>Shorthand Hexadecimal Color Values</h4>
+
+<p>16진 색상 값은 숏핸드 값을 사용할 수 있다. 16진 색상은 파운드 기호(#)와 뒤따르는 6개의 문자로 선언된다. 이 문자들은 첫 두 글자, 중간 두 글자, 마지막 두 글자로 두개의 문자씩 짝을 이루는 패턴을 가지고 사용되면서 각각 하나의 특정한 색상을 지정한다. 이러한 패턴은 6개에서 3개로 축약될 수 있다. 예를 들면 <code>#555555</code>는 <code>#555</code>로 축약될 수 있으며, <code>#ff6600</code>은 <code>#f60</code>으로, <code>#ffff00</code>은 <code>#ff0</code> 등으로 축약될 수 있다.</p></blockquote>
+
+<h2>Font Properties</h2>
+
+<p>CSS는 텍스트의 룩앤픽을 편집할 수 있는 수많은 속성을 제공하며, 크게 <code>font</code> 기반 속성과 <code>text</code> 기반 속성의 두 가지 범주로 나뉜다. 이 범주의 대부분의 속성은 <code>font-*</code> 나 <code>text-*</code>로 접두될 것이다.</p>
+
+<h3>Font Family</h3>
+
+<p><code>font-family</code> 속성은 텍스트가 디스플레이될 때 사용되는 폰트와 대체 폰트를 선언한다. <code>font-family</code> 값은 <code>,</code>로 구분되는 여러 개의 폰트 이름을 포함한다. 가장 왼쪽에 선언된 첫번째 폰트는 가장 우선적인 폰트이다. 첫번째 폰트를 사용할 수 없다면 왼쪽에서 오른쪽 순으로 선언된 대체 폰트가 사용된다. 두 개이상의 단어로 된 폰트 이름은 인용부호로 감싸져야 한다. 가장 마지막 폰트는 특정 형식의 시스템 디폴트 폰트를 지칭하는 키워드 값이어야 한다.</p>
+
+<pre><code>p {
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+</code></pre>
+
+<h3>Font Size</h3>
+
+<p><code>font-size</code> 속성은 픽셀, em, 퍼센트, 포인트, <code>font-size</code>  키워드 등의 <a href="http://css-tricks.com/css-font-size/">길이값</a>을 사용하여 텍스트의 크기를 지정할 수 있다. 픽셀 값이 점점 더 자주 사용되고 있다. 전에는 사용자가 브라우저 안의 페이지를 확대할 때 상대적으로 확장되는 em과 퍼센트 값이 꽤 인기가 있었다. 최근엔 대부분의 브라우저가 픽셀을 확장할 수 있기 때문에 em과 퍼센트 값을 사용할 필요가 없어졌다.</p>
+
+<pre><code>p {
+  font-size: 13px;
+}
+</code></pre>
+
+<h3>Font Style</h3>
+
+<p>텍스트를 기울이거나 그 반대로 하기위해 <code>font-style</code> 속성이 사용된다. <code>font-style</code> 속성은 <code>normal</code>, <code>italic</code>, <code>oblique</code>, <code>inherit</code> 4가지 키워드 값을 받아들이며, <code>normal</code>, <code>italic</code>이 가장 대중적으로 사용된다. <code>italic</code>은 텍스트를 이탤릭으로 지정할 때 <code>normal</code>은 보통으로 되돌릴 때 사용된다.</p>
+
+<pre><code>p {
+  font-style: italic;
+}
+</code></pre>
+
+<h3>Font Variant</h3>
+
+<p>자주는 아니지만 때때로 텍스트를 작은 대문자로 지정할 필요가 있을 때 <code>font-variant</code> 속성을 사용한다. <code>font-variant</code> 속성은 <code>normal</code>, <code>small-caps</code>, <code>inherit</code>의 3가지 값을 허용한다. 타입페이스가 작은 대문자를 지원하지 않으면 아무런 변화가 없을 것이다. 이 속성을 이용하기 전에 타입페이스 지원여부를 체크해야한다.</p>
+
+<pre><code>p {
+  font-variant: small-caps;
+}
+</code></pre>
+
+<h3>Font Weight</h3>
+
+<p>텍스트를 굵게하거나 굵은 정도를 지정할 때 <code>font-weight</code> 속성을 사용한다. 일반적으로 말하면 <code>font-weight</code> 속성은 <code>normal</code>, <code>bold</code>, <code>bolder</code>, <code>lighter</code>, <code>inherit</code>의 키워드 속성 값과 사용된다. 이 중 <code>bold</code>와 <code>normal</code>이 굵게 바꾸거나 보통으로 되돌릴 때 우선적으로 추천된다.</p>
+
+<p>위의 키워드에 추가하여 <code>100</code>, <code>200</code>, <code>300</code>, <code>400</code>, <code>500</code>, <code>600</code>, <code>700</code>, <code>800</code>, <code>900</code>의 숫자 값이 있다. 굵은 정도를 나타내는 weight의 순서는 가장 가는 <code>100</code>에서 가장 두꺼운 <code>900</code>으로 확장된다. 이 값들은 normal (<code>400</code>)과 bold(<code>700</code>) 이상의 여러 weight를 값는 타입페이스와 특별히 관련되므로, 숫자 값을 사용하기 전에 타입페이스가 지원하는 것을 정확히 체크하라. 그렇지 않으면 작동하지 않을 수 있다.</p>
+
+<pre><code>p {
+  font-weight: bold;
+}
+</code></pre>
+
+<h3>Line Height</h3>
+
+<p>줄간격(leading)으로 알려진 두 텍스트 줄 사이의 거리는 <code>line-height</code> 속성으로 선언한다. 갸장 읽기 쉬운 <code>line-height</code>는 <code>font-size</code>의 1.5배이며 <code>line-height</code>를 150%로 설정하면 된다. 그러나, 그리드와 작업할 때는 <code>line-height</code>를 픽셀로 사용하는 것을 선호할 수 있다.</p>
+
+<p><code>line-height</code>를 엘리먼트의 <code>height</code>와 같게 설정하면 텍스트가 수직적 중앙에 위치한다. 버튼, 알림 메시지, 한 줄 텍스트 블럭 등에서 흔히 볼 수 있다.</p>
+
+<pre><code>p {
+  line-height: 20px;
+}
+</code></pre>
+
+<h3>Shorthand Font Properties</h3>
+
+<p>위의 모든 폰트 기반 속성은 하나의 <code>font</code> 속성과 <a href="http://www.impressivewebs.com/css-font-shorthand-property-cheat-sheet/">숏핸드 값</a>으로 합칠 수 있다. 속성의 순서는 왼쪽부터 <code>font-style</code>, <code>font-variant</code>, <code>font-weight</code>, <code>font-size</code>, <code>line-height</code>, <code>font-family</code> 순이며, 컴마없이 나열한다.(폰트 이름들은 예외이며 컴마로 나열된다.) <code>font-size</code>와 <code>line-height</code> 속성값은 값 사이는 /로 나눈다.</p>
+
+<p><code>font-size</code>와 <code>font-family</code> 속성값을 제외한 나머지 속성값은 선택적이기 때문에 <code>font-size</code>와 <code>font-family</code> 값만을 가진 <code>font</code> 속성을 종종 볼 수 있다.</p>
+
+<pre><code>p {
+  font: italic small-caps bold 13px/20px 'Helvetica Neue',
+  Arial, Helvetica, sans-serif;
+}
+</code></pre>
+
+<h3>Font Properties Example</h3>
+
+<h6>HTML</h6>
+
+<pre><code>&lt;h2&gt;&lt;a href="#" title="Sample Blog Post Title"&gt;Sample Blog Post Title&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p class="byline"&gt;Posted by Shay Howe on February 5th, 2012&lt;/p&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla vehicula nisi vitae rutrum. Donec laoreet, arcu in elementum, dui mi auctor tortor, et lorem massa orci… &lt;a href="#" title="Sample Blog Post Title"&gt;Continue reading →&lt;/a&gt;&lt;/p&gt;
+</code></pre>
+
+<h6>CSS</h6>
+
+<pre><code>h2, p {
+  color: #555;
+  font: 13px/20px Arial, 'Helvetica Neue', 'Lucida Grande', sans-serif;
+}
+a {
+  color: #8ec63f;
+}
+a:hover {
+  color: #f7941d;
+}
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.byline {
+  color: #8c8c8c;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+}
+</code></pre>
+
+<h2>Text Properties</h2>
+
+<p>이제 반 왔다.</p>
+
+<h3>Text Align</h3>
+
+<p>텍스트 정렬은 페이지의 리듬과 흐름을 만드는 중요한 부분이며, <code>text-align</code> 속성으로 지정한다. <code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code>, <code>inherit</code>의 5가지 값을 갖는다. <code>text-align</code> 속성은 <code>float</code> 속성과 혼동하지 말아야 한다. <code>text-align</code>의 <code>left</code>와 <code>right</code> 값은 엘리먼트 안의 텍스트를 정렬하는 반면 <code>float</code>의 <code>left</code>와 <code>right</code> 값은 엘리먼트 전체를 이동시킨다.</p>
+
+<pre><code>p {
+  text-align: center;
+}
+</code></pre>
+
+<h3>Text Decoration</h3>
+
+<p><code>text-decoration</code> 속성은 텍스트를 치장해주며, <code>none</code>, <code>underline</code>, <code>overline</code>, <code>line-through</code>, <code>blink</code>, <code>inherit</code> 키워드 값을 갖는다. 가장 인기있는 사용법은 링크에 밑줄을 치는 것이다. <code>blink</code> 값은 극도로 어지럽히므로 추천하지 않는다. 시맨틱적으로 <code>line-though</code> 값은 문서에서 제거된 텍스트를 나타내는 <code>del</code> 엘리먼트와 정확하지않거나 상관없는 텍스트를 나타내는 <code>s</code> 엘리먼트 대신 사용될 수 있다.</p>
+
+<pre><code>p {
+  text-decoration: underline;
+}
+</code></pre>
+
+<h3>Text Indent</h3>
+
+<p><code>text-indent</code> 속성은 텍스트를 안과 밖으로 들여쓸 수 있게 한다.</p>
+
+<pre><code>p {
+  text-indent: 20px;
+}
+</code></pre>
+
+<h3>Text Shadow</h3>
+
+<p><code>text-shadow</code> 속성은 텍스트에 하나 또는 여러 개의 그림자를 추가할 수 있게 한다. 4개의 값들이 왼쪽에서 오른쪽 순으로 나열되어야 한다. 처음 3개 값은 길이이며 마지막 값은 색상이다. 3개의 길이 값 중 첫번째는 그림자의 horizontal offset, 두번째는 vertical offset, 세번째는 blur radius를 결정한다. 네번째 즉, 마지막 값은 그림자의 색상이며, <code>color</code> 속성에서 사용되는 모든 컬러 값을 사용할 수 있다.</p>
+
+<p>여러 개의 텍스트 그림자들은 컴마로 구분된다.</p>
+
+<pre><code>p {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+</code></pre>
+
+<h3>Text Transform</h3>
+
+<p><code>text-transform</code>은 <code>font-variant</code> 속성과 유사하다. <code>font-variant</code>는 타입페이스의 작은 대문자를 가져오지만 <code>text-transform</code> 속성은 인라인으로 텍스트를 변경한다. <code>none</code>, <code>capitalize</code>, <code>uppercase</code>, <code>lowercase</code>, <code>inherit</code> 값을 갖는다.</p>
+
+<p><code>capitalize</code> 값은 각 단어의 첫번째 글자를 대문자로 만들고, <code>uppercase</code> 값은 모든 글자를 대문자로 만들며, <code>lowercase</code>는 모든 문자를 소문자로 만든다. <code>none</code>은 상속되는 값을 없애고 디폴트 값으로 되돌린다.</p>
+
+<pre><code>p {
+  text-transform: uppercase;
+}
+</code></pre>
+
+<h3>Letter Spacing</h3>
+
+<p><code>letter-spacing</code> 속성으로 페이지의 글자 간격을 조정할 수 있다. <code>none</code> 속성은 자간을 보통 거리로 되돌린다.</p>
+
+<pre><code>p {
+  letter-spacing: -.5em;
+}
+</code></pre>
+
+<p>역자참조링크 :</p>
+
+<ul>
+<li><a href="http://j.mp/17oGhiK">1em은 현재 사용되는 글꼴의 16포인트 크기의 대문자 &ldquo;M"의 넓이</a></li>
+</ul>
+
+
+<h3>Word Spacing</h3>
+
+<p>단어들의 간격을 조정할 수 있다.</p>
+
+<pre><code>p {
+  word-spacing: .25em;
+}
+</code></pre>
+
+<h3>Text Properties Example</h3>
+
+<h6>HTML</h6>
+
+<pre><code>&lt;h2&gt;&lt;a href="#" title="Sample Blog Post Title"&gt;Sample Blog Post Title&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p class="byline"&gt;Posted by Shay Howe on February 5th, 2012&lt;/p&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla vehicula nisi vitae rutrum. Donec laoreet, arcu in elementum, dui mi auctor tortor, et lorem massa orci… &lt;a href="#" title="Sample Blog Post Title"&gt;Continue reading →&lt;/a&gt;&lt;/p&gt;
+</code></pre>
+
+<h6>CSS</h6>
+
+<pre><code>h2, p {
+  color: #555;
+  font: 13px/20px Arial, 'Helvetica Neue', 'Lucida Grande', sans-serif;
+}
+a {
+  color: #8ec63f;
+}
+a:hover {
+  color: #f7941d;
+}
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: -.9px;
+  margin-bottom: 6px;
+}
+h2 a {
+  text-shadow: 1px 1px 0 #75a334;
+}
+h2 a:hover {
+  text-shadow: 1px 1px 0 #d48019;
+}
+p {
+  text-indent: 15px;
+}
+.byline {
+  color: #8c8c8c;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  text-indent: 0;
+}
+p a {
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+</code></pre>
+
+<h2>Web Safe Fonts</h2>
+
+<p>모든 컴퓨터, 태블릿, 폰 혹은 브라우징이 가능한 기기에는 디폴트로 미리 설치된 몇 개의 특정 폰트들이 있다. 모든 기기에 설치되면 폰트들은 온라인에서 무료로 사용될 수 있으며 브라우저 기기와 상관없이 적절하게 보여질 것이다. 이러한 폰트들이 “web safe fonts.”이다. 그 목록은 아래와 같다.</p>
+
+<ul>
+<li>Arial</li>
+<li>Courier New, Courier</li>
+<li>Garamond</li>
+<li>Georgia</li>
+<li>Lucida Sans, Lucida Grande, Lucida</li>
+<li>Palatino Linotype</li>
+<li>Tahoma</li>
+<li>Times New Roman ,Times</li>
+<li>Trebuchet</li>
+<li>Verdana</li>
+</ul>
+
+
+<h2>Embedding Web Fonts</h2>
+
+<p>최근에 web safe fonts에 대한 대안이 뜨고있다. 이제는 폰트를 서버에 업로드하여 CSS <code>@font-face</code> 속성을 통해 웹사이트에 포함시킬 수 있다. 이것은 온라인 타이포그래피에 경이로운 일이며, 이제 활자가 온라인으로 올라왔다.</p>
+
+<pre><code>@font-face {
+  font-family: 'Bryant Normal';
+  src: url('bryant-normal.eot');
+  src: url('bryant-normal.eot') format('embedded-opentype'),
+       url('bryant-normal.woff') format('woff'),
+       url('bryant-normal.ttf') format('truetype'),
+       url('bryant-normal.svg') format('svg');
+}
+body {
+  font-family: 'Bryant Normal', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+</code></pre>
+
+<p>그러나 몇 가지 작은 함정이 있다. 웹사이트에 모든 타입페이스를 사용할 수 있다는 것이 합법적인 권리를 승인받았다는 것을 의미하지는 않는다. 타입페이스는 예술 작품이므로 그것을 라이센스 없이 서버에 올릴 수 없다.</p>
+
+<p>다행히 새로운 타입페이스의 가치가 인식되고 회사들이 웹사이트에 새로운 폰트들을 라이센스하여 포함할 수 있도록 하고 있다. <a href="https://typekit.com/">Typekit</a>과 <a href="http://fontdeck.com/">Fontdeck</a>과 같은 회사들은 폰트 라이센싱을 서브스크립션 모델로 팔고있고, <a href="http://www.google.com/webfonts">Google Fonts</a>는 무료로 폰트를 라이센싱하고 있다.</p>
+
+<p>또 다른 함정은 브라우저 지원이다. <code>@font-face</code> 속성은 오래된 브라우저에서 지원되지 않을 수 있다. 다행히 폰트를 사용할 때 <code>font-family</code> 속성에서 대체 폰트를 지정할 수 있다.</p>
+
+<h2>Citations &amp; Quotes</h2>
+
+<p><code>cite</code>, <code>q</code>, <code>blockquote</code> 엘리먼트를 사용한다.</p>
+
+<p><code>cite</code> 엘리먼트는 a title of work를 참조할 때 사용되고, <code>q</code> 엘리먼트는 짧은 인라인 인용에, <code>blockquote</code>는 더 길고 외부 인용에 사용된다.</p>
+
+<h3>Citing a Title of Work</h3>
+
+<p><code>cite</code> 엘리먼트는 <code>cite</code> 속성과 혼동하지 말아야 한다. <strong>element</strong>는 시맨틱 문맥을 제공하고 <strong>attribute</strong>는 참조 소스로서 URI 값을 가진다. <code>cite</code> 엘리먼트는 특별히 a title of work을 위해 예약되어 있으며 소스와 관련된 다른 컨텍스트를 포함하지 말아야 한다. A title of work는 하나의 책, 영화, 노래 등이다. 관련된 원본 소스의 하이퍼링크를 포함할 수 있다.</p>
+
+<pre><code>&lt;p&gt;&lt;cite&gt;&lt;a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537" title="Steve Jobs"&gt;Steve Jobs&lt;/a&gt;&lt;/cite&gt; by Walter Isaacson is truly inspirational.&lt;/p&gt;
+</code></pre>
+
+<blockquote><h4>Citing a Title of Work Demo</h4>
+
+<p><a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537">Steve Jobs</a> by Walter Isaacson is truly inspirational.</p></blockquote>
+
+<h3>Dialog &amp; Prose Quotation</h3>
+
+<p><code>q</code> 엘리먼트는 대화나 문장을 시맨틱하게 지정할 때 사용되며 다른 인용 목적으로 사용되지 말아야 한다.</p>
+
+<pre><code>&lt;p&gt;Steve Jobs once said, &lt;q&gt;“One home run is much better than two doubles.”&lt;/q&gt;&lt;/p&gt;
+</code></pre>
+
+<h3>Dialog &amp; Prose Citation</h3>
+
+<p><code>q</code> 엘리먼트에서 선택적으로 사용하는 속성은 <code>cite</code> 속성이다. <code>cite</code> 속성은 URI를 인용부호로 감싸는 형태이다. 이 속성은 엘리먼트의 외양을 변화시키지 않으며, 단순히 스크린 리더와 같은 기기에 가치를 제공한다. 속성은 브라우저 내에서 볼 수 없기 때문에 가능하다면 소스를 포함한 하이퍼링크를 제공하는 것이 추천된다.</p>
+
+<pre><code>&lt;p&gt;&lt;a href="http://www.businessweek.com/magazine/content/06_06/b3970001.htm" title="Steve Jobs' Magic Kingdom"&gt;Steve Jobs&lt;/a&gt; once said, &lt;q cite="http://www.businessweek.com/magazine/content/06_06/b3970001.htm"&gt;“One home run is much better than two doubles.”&lt;/q&gt;&lt;/p&gt;
+</code></pre>
+
+<h3>External Quotation</h3>
+
+<p>커다란 텍스트 블럭을 인용하기 위해, 외부 소스와 여러 줄을 차지하는 <code>blockquote</code> 엘리먼트가 사용된다. <code>blockquote</code>는 헤딩과 단락 등의 다른 블럭 레벨 엘리먼트를 포함할 수 있는 블럭 레벨 엘리먼트이다.</p>
+
+<pre><code>&lt;blockquote&gt;
+  &lt;p&gt;“In most people’s vocabularies, design is a veneer. It’s interior decorating. It’s the fabric of the curtains, of the sofa. But to me, nothing could be further from the meaning of design. Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product.”&lt;/p&gt;
+  &lt;p&gt;— Steve Jobs in Fortune Magazine&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+
+<h3>External Citation</h3>
+
+<p><code>blockquote</code> 엘리먼트 안에서 사용된 긴 인용들은 항상 인용처를 포함해야 한다. 이 인용처는 저자와 소스처럼 지극히 단순할 수 있으나 여러 개의 인용처와 추가 적인 레퍼런스를 위한 링크를 포함하는 훨씬 많은 정보일 수 있다.</p>
+
+<p><code>cite</code> 속성은 <code>blockquote</code> 엘리먼트 안에 포함될 수 있으며, <code>cite</code> 엘리먼트는 인용문 다음에 위치하여 관련된 title of work을 지정하는 것을 도울 수 있다.</p>
+
+<p><code>cite</code> 속성과 <code>cite</code> 엘리먼트는 순수하게 시맨틱하고 유저에게 어떠한 시각적인 참조를 추가하지 않기에 하이퍼링크가 선호된다. These hyperlinks should highlight both the origin of the quote (author, artist, etcetera) and the title of work in which it first appeared.</p>
+
+<pre><code>&lt;blockquote cite="http://money.cnn.com/magazines/fortune/
+fortune_archive/2000/01/24/272277/index.htm"&gt;
+  &lt;p&gt;“In most people’s vocabularies, design is a veneer. It’s interior decorating. It’s the fabric of the curtains, of the sofa. But to me, nothing could be further from the meaning of design. Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product.”&lt;/p&gt;
+  &lt;p&gt;— &lt;a href="http://en.wikipedia.org/wiki/Steve_Jobs" title="Steve Jobs"&gt;Steve Jobs&lt;/a&gt; in &lt;cite&gt;&lt;a href="http://money.cnn.com/magazines/fortune/fortune_archive/2000/01/24/272277/index.htm" title="Apple's One-Dollar-a-Year Man"&gt;Fortune Magazine&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+
+<h4>Automating Quotation Marks with CSS</h4>
+
+<p>HTML에 인용부호를 추가하기 보다는 CSS에서 자동으로 추가하는 방법이 있다. 예전에는 브라우저의 언어 지원 때문에 CSS에서 적절하게 표현되지 못했지만 최근 브라우저의 언어 지원이 더 좋아졌다.</p>
+
+<p>아래는 <code>q</code> 엘리먼트에 <code>before</code>, <code>after</code> 가상엘리먼트와 속성을 이용하여 인용부호를 추가하는 방법이다. 좀 더 자세한 것은 <a href="http://css-tricks.com/pseudo-element-roundup/">가상 엘리먼트</a> 와 <a href="http://html5doctor.com/blockquote-q-cite/">인용부호 사용하는 방법</a>.</p>
+
+<pre><code>q {
+  quotes: '“' '”' '‘' '’';
+}
+q:before {
+  content: '“';
+  content: open-quote;
+}
+q:after {
+  content: '”';
+  content: close-quote;
+}
+</code></pre>
+
+<h2>Resources &amp; Links</h2>
+
+<ul>
+<li><a href="http://dev.opera.com/articles/view/29-text-styling-with-css/">Text styling with CSS</a> via Dev.Opera</li>
+<li><a href="http://html5doctor.com/blockquote-q-cite/">Quoting and citing with blockquote, q, cite, and the cite attribute</a> via HTML5 Doctor</li>
+<li><a href="http://www.impressivewebs.com/css-font-shorthand-property-cheat-sheet/">CSS Font Shorthand Property Cheat Sheet</a> via Impressive Webs</li>
+<li><a href="http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326">The Elements of Typographic Style</a> by Robert Bringhurst</li>
+</ul>
+
+
+<h3>역자참조링크</h3>
+
+<ul>
+<li><a href="http://www.creativebloq.com/typography/what-is-typography-123652">What is typography? Learn the basic rules and terms of type!</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[HTML & CSS 초보자 가이드 - 3강 : Box Model & Positioning]]></title>
+    <link href="http://nolboo.github.io/blog/2013/07/22/beginners-guide-to-html-and-css-3-slash-10/"/>
+    <updated>2013-07-22T21:08:00+09:00</updated>
+    <id>http://nolboo.github.io/blog/2013/07/22/beginners-guide-to-html-and-css-3-slash-10</id>
+    <content type="html"><![CDATA[<p>원본 : <a href="http://learn.shayhowe.com/html-css/box-model">A Beginner’s Guide to HTML &amp; CSS &ndash; LESSON 3 : Box Model &amp; Positioning</a></p>
+
+<p>HTML과 CSS를 완전히 이해하는데 필요한 하나의 원칙은 박스모델이다.</p>
+
+<p><strong>&ldquo;페이지의 모든 엘리먼트는 사각형 박스이다.&rdquo;</strong></p>
+
+<p>박스 모델을 이해하는 것은 어렵고 까다로울 수 있으나 일반적인 웹사이트를 만들기 위해서는 필요하다. 더불어 레이아웃을 만들기 위해, 페이지에 엘리먼트를 배치하는 방법을 아는 것도 똑같이 중요하다.</p>
+
+<h2>Box Sizing</h2>
+
+<p>이전의 강의를 통해 페이지에 모든 엘리먼트는, 블럭이나 인라인 레벨이건, 모두 사각형 박스라는 것을 알았을 것이다. 박스는 다른 크기를 가질 수 있으며, 마진, 패딩, 경계선 등이 크기를 변경할 수도 있다. 이것들을 통틀어 <em>the box model</em> 이라 한다. 박스 모델의 한 예를 보자.</p>
+
+<p>Fig. 3.01
+<img src="http://learn.shayhowe.com/assets/courses/html-css-guide/box-model/square-elements.jpg" alt="" /></p>
+
+<h2>The Box Model</h2>
+
+<p>알다시피 모든 엘리먼트는 높이(height)와 너비(width)를 가지는 사각형 박스이며, 다른 마진(margin), 패딩(padding), 보더(boarder)로 구성되어 있다. 이 모든 값들이 합쳐져 <a href="http://css-tricks.com/the-css-box-model/">박스모델</a>을 만든다.</p>
+
+<p>박스는 엘리먼트의 <code>height</code>와 <code>width</code>의 속성값을 주는 것으로 시작된다. <code>padding</code>과 <code>border</code>가 차례로 <code>height</code> 와 <code>width</code>를 둘러싼다. 그런 다음 <code>margin</code>이 <code>border</code>를 둘러싼다. 그러나, 마진은 박스의 실제 크기에는 포함되지 않으며, 박스모델을 정의하는 것에는 도움을 준다.</p>
+
+<pre><code>div {
+  background: #fff;
+  border: 6px solid #ccc;
+  height: 100px;
+  margin: 20px;
+  padding: 20px;
+  width: 400px;
+}
+</code></pre>
+
+<p>박스모델에서 엘리먼트의 전체 너비는 다음 공식을 사용한다:</p>
+
+<p><code>margin-right</code> + <code>border-right</code> + <code>padding-right</code> + <code>width</code> + <code>padding-left</code> + <code>border-left</code> + <code>margin-left</code></p>
+
+<p>엘리먼트의 전체 높이 공식은</p>
+
+<p><code>margin-top</code> + <code>border-top</code> + <code>padding-top</code> + <code>height</code> + <code>padding-bottom</code> + <code>border-bottom</code> + <code>margin-bottom</code></p>
+
+<p>Fig. 3.02 박스모델
+<img src="http://learn.shayhowe.com/assets/courses/html-css-guide/box-model/box-model.png" alt="" /></p>
+
+<p>공식을 사용하여 위 그림의 전체 높이와 너비를 계산하면</p>
+
+<p><strong>Width</strong>: <code>492px</code> = <code>20px</code> + <code>6px</code> + <code>20px</code> + <code>400px</code> + <code>20px</code> + <code>6px</code> + <code>20px</code><br/>
+<strong>Height</strong>: <code>192px</code> = <code>20px</code> + <code>6px</code> + <code>20px</code> + <code>100px</code> + <code>20px</code> + <code>6px</code> + <code>20px</code></p>
+
+<h2>Height &amp; Width</h2>
+
+<p>모든 엘리먼트는 상속된 <code>height</code>와 <code>width</code>를 갖는다. 어떤 엘리먼트가 페이지의 레이아웃과 디자인에 핵심요소(key)가 된다면 특정한 <code>height</code>와 <code>width</code>가 필요할 것이고 이때 블럭 레벨 엘리먼트의 디폴트 값은 (새로 지정된 값으로) 덮어씌워질 것이다.(overrided)</p>
+
+<p>역자참조링크 : <a href="http://www.clearboth.org/28_inheritance_and_cascade/">상속과 캐스케이딩</a></p>
+
+<h3>CSS Height Property</h3>
+
+<p>엘리먼트의 <code>height</code>의 디폴트 값은 컨텐츠에 의해 결정된다. 컨텐츠를 수용하기 위해 필요한 만큼 수직으로 늘어나거나 줄어들 것이다. 블럭 엘리먼트의 높이를 지정하기 위해는 <code>height</code> 속성이 사용된다.</p>
+
+<pre><code>div {
+  height: 100px;
+}
+</code></pre>
+
+<h3>CSS Width Property</h3>
+
+<p>엘리먼트의 <code>width</code>의 디폴트값은 보여지는 방식에 달려있다.
+블럭 레벨 엘리먼트는 width = 100% 가 디폴트이며, 가능한 모든 너비를 차지한다. inline 엘리먼트는 컨텐츠가 차지하는 만큼 수평적으로 늘어나고 줄어든다. 인라인 레벨 엘리먼트는 정해진 값을 가질 수 없으므로,  <code>height</code> 속성처럼 <code>width</code> 속성은 블럭 레벨 엘리먼트와만 관계가 있다.</p>
+
+<pre><code>div {
+  width: 400px;
+}
+</code></pre>
+
+<h2>Margin &amp; Padding</h2>
+
+<p><code>margin</code> 과 <code>padding</code>은 브라우저마다 엘리먼트마다 가독성을 이유로 다른 디폴트 값을 가진다. 이러한 디폴트값을 모두 0로 맞추기 위해 제1강에서 <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro#reset">CSS reset</a>을 사용하는 것을 논의했다.</p>
+
+<h3>CSS Margin Property</h3>
+
+<p><code>margin</code> 속성으로 엘리먼트를 둘러싼 여백의 크기를 정할 수 있다. 마진은 경계선(border)의 바깥에 위치하며 완전히 투명하다. 마진으로 페이지의 특정 위치에 엘리먼트가 배치되는 것을 돕거나 다른 엘리먼트가 충분한 거리를 두도록 여백만을 줄 수도 있다.</p>
+
+<pre><code>div {
+  margin: 20px;
+}
+</code></pre>
+
+<h3>CSS Padding Property</h3>
+
+<p><code>padding</code> 속성은 <code>margin</code> 속성과 매우 유사하나 엘리먼트의 경계선(<code>border</code>)안에 위치한다. 패딩은 엘리먼트의 백그라운드를 상속한다. <code>margin</code> 속성은 엘리먼트를 배치하기 위한 것이지만 패딩은 엘리먼트 안의 여백을 제공한다.</p>
+
+<pre><code>div {
+  padding: 20px;
+}
+</code></pre>
+
+<p>Fig. 3.03
+<img src="http://learn.shayhowe.com/assets/courses/html-css-guide/box-model/margin-padding.png" alt="" /></p>
+
+<h3>Margin &amp; Padding Declarations(선언)</h3>
+
+<p><code>margin</code> 과 <code>padding</code> 값은 롱핸드와 숏핸드 형식으로 줄 수 있다.</p>
+
+<p>엘리먼트의 네 변을 하나의 값으로 설정하거나 상하, 좌우, 상우하좌로 한번에 설정할 수 있다.(숏핸드)</p>
+
+<pre><code>margin: 20px; 상하좌우 모두 20px
+margin: 10px 20px; 상하 10px, 좌우 20px
+margin: 10px 20px 0 15px; 상부터 시계 방향으로 상우하좌 순
+</code></pre>
+
+<p>한 개의 속성을 사용해서 한 번에 한 변의 값을 설정할 수 있다. 각 속성은 <code>margin</code> 혹은 <code>padding</code>으로 시작하며 -와 적용할 <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code> 으로 적용할 변을 뒤따라 지정한다. 예를 들어 <code>padding-left</code>는 엘리먼트의 왼쪽 패딩에 값을 적용한다.(롱핸드)</p>
+
+<pre><code>div {
+  margin-top: 10px;
+  padding-left: 6px;
+}
+</code></pre>
+
+<h2>Borders(경계선)</h2>
+
+<p>경계선은 <code>padding</code>과 <code>margin</code>사이에 위치하며, 엘리먼트 주위의 아웃라인을 제공한다. 모든 경계선은 너비, 스타일, 색상의 세가지 값이 필요하다. 숏핸드 값은 너비, 스타일, 색상 순으로 주어진다. 롱핸드의 경우 <code>border-width</code>, <code>border-style</code>, <code>border-color</code> 값으로 나뉘어진다.</p>
+
+<p>대부분 단순한 사이즈, 실선, 한가지 색의 경계를 볼 수 있을 것이다. 그러나 <a href="http://www.quackit.com/html/codes/html_borders.cfm">수많은</a> 사이즈와 모양과 색상이 가능하다.</p>
+
+<pre><code>div {
+  border: 6px solid #ccc;
+}
+</code></pre>
+
+<blockquote><h4>Length Value</h4>
+
+<p>마진, 패딩, 경계선과 쓸 수 있는 <a href="https://developer.mozilla.org/en/CSS/length">길이 값</a>은 상대적인, 절대적인 값으로 여러 가지가 있다.
+<br>
+<br>
+<strong>상대 값</strong>은 값이 적용되는 엘리먼트와 상관관계가 있다. <code>em</code>과 퍼센티지 등이 있다.
+<br>
+<br>
+<strong>절대 값</strong>은 엘리먼트와 상관없이 측정 단위로 고정된다. 픽셀, 포인트, 인치, 센티미터 등이 있다.</p></blockquote>
+
+<h2>Floating Elements</h2>
+
+<p>박스모델로 엘리먼트의 모양새를 다듬는 것은 페이지 레이아웃을 코딩하는 전체에서 반을 차지한다. 나머지 반은 페이지의 다른 엘리먼트들을 적절하게 정렬하는 방법을 아는 것이다. 다른 엘리먼트 옆에 엘리먼트를 배치하는 방법 중 하나는 <code>float</code> 속성을 이용하는 것이다. <code>float</code> 속성은 엘리먼트들을 왼쪽과 오른쪽으로 연속으로 배치하게 한다.</p>
+
+<p><strong>역자 링크</strong> : 역자는 <code>float</code> 개념이 처음에 많이 헷갈렸다. 그래서 도움을 얻을만한 글들을 몇 개 링크한다.^^</p>
+
+<ul>
+<li><a href="http://celestarry.egloos.com/3595449">float 속성의 이해와 웹 페이지 레이아웃 잡기</a></li>
+<li><a href="http://tranbot.net/ALA/css-floats-101/">CSS 플로트 기초</a></li>
+<li><a href="http://techbug.tistory.com/181">CSS Float 속성의 모든것 (All About Floats)</a></li>
+<li><a href="http://naradesign.net/wp/2008/05/27/144/">float을 clear하는 4가지 방법</a></li>
+<li><a href="http://blog.wystan.net/2009/01/12/relationships-between-position-float-display">position, float, display 속성간의 관계</a></li>
+</ul>
+
+
+<p>블럭 엘리먼트인 <code>section</code>과 <code>aside</code>로 일반적인 페이지 레이아웃을 잡을 때 기본적으로는 수직적으로 쌓여버릴 것이다. 나란히 옆으로 배치하고 싶다면 각각 특정 <code>width</code>를 준 후에 하나는 왼쪽으로 다른 하나는 오른쪽으로 플로트하면 된다.</p>
+
+<p>Fig. 3.04
+<img src="http://learn.shayhowe.com/assets/courses/html-css-guide/box-model/floats.png" alt="" /></p>
+
+<p><a href="http://coding.smashingmagazine.com/2007/05/01/css-float-theory-things-you-should-know/">엘리먼트를 플로팅</a>할 때 주목해야 할 몇가지 것들이 있다. 첫번째는 플로팅 엘리먼트가 부모 컨테이너의 가장자리에 붙어버린다는 것이다. 만약 부모 엘리먼트가 없다면 페이지의 가장자리에 붙어버릴 것이다. 추가적으로 하나의 엘리먼트를 폴로트하면 다른 엘리먼트는 페이지 흐름 안에서 자연스럽게 이어붙을 것이다.</p>
+
+<pre><code>section {
+  float: left;
+  margin: 10px;
+  width: 600px;
+}
+aside {
+  float: right;
+  margin: 10px;
+  width: 320px;
+}
+</code></pre>
+
+<h3>Clearing Floated Elements</h3>
+
+<p>엘리먼트가 플로트될 때마다 페이지의 보통 흐름이 깨지고 다른 엘리먼트는 필요한대로 플로팅된 것 주위로 랩핑된다. 켄텐츠 옆에 이미지를 플로팅한 것과 같이 좋을 때도 있지만 때론 좋지 않다.</p>
+
+<p>하나나 여러 개의 엘리먼트를 플로팅한 후 <code>clear</code> 속성을 이용하여 도큐먼트를 보통 흐름으로 되돌린다.</p>
+
+<p>위의 예젱에서는 <code>section</code>과 <code>aside</code>를 플로트한 후 두 플로트된 엘리먼트 밑에 위치하는 <code>footer</code>에 클리어를 적용했다.</p>
+
+<pre><code>footer {
+  clear: both;
+}
+</code></pre>
+
+<h2>Positioning Elements</h2>
+
+<p>플로팅하는 것 외에 엘리먼트를 정렬할 때 <code>position</code> 속성을 사용할 수도 있다. <code>position</code> 속성은 <a href="http://www.alistapart.com/articles/css-positioning-101/">다른 기능</a>을 하는 여러 값을 가진다.</p>
+
+<p>디폴트 <code>position</code> 값은 <code>static</code>이다. <code>realtive</code> 값은 <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>과 같은 오프셋 값을 사용할 수 있다. <code>absolute</code>와 <code>fixed</code>는 <code>relative</code> 값을 가진 부모 엘리먼트와 함께 사용된다.</p>
+
+<p>Fig. 3.05</p>
+
+<p><img src="http://learn.shayhowe.com/assets/courses/html-css-guide/box-model/position.png" alt="" /></p>
+
+<p>위의 예에서, <code>header</code> 엘리먼트는 고정된 엘리먼트로 동작하기 위해 <code>relative</code>로 배치되고, 그 안에 <code>absolute</code>로 배치되는 엘리먼트의 주된 컨테이너 역할을 한다. <code>ul</code> 엘리먼트는 <code>header</code> 엘리먼트의 위쪽과 오른쪽에서 <code>10px</code> 떨어진 절대 위치에 배치된다.</p>
+
+<p>코드는 다음과 같을 것이다.</p>
+
+<h6>HTML</h6>
+
+<pre><code>&lt;header&gt;
+  &lt;ul&gt;...&lt;/ul&gt;
+&lt;/header&gt;
+</code></pre>
+
+<h6>CSS</h6>
+
+<pre><code>header {
+  position: relative;
+}
+ul {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+</code></pre>
+
+<h3>Box Offset Properties</h3>
+
+<p>엘리먼트의 <code>position</code>이 <code>static</code>으로 설정되지 않는 한, 박스 오프셋 속성이 사용될 수 있다. 오프셋 값은 <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> 등이 있다.</p>
+
+<p>예를 들면, <code>bottom: 32px;</code>은 <code>realtive</code> 배치 속성값을 가진 부모 엘리먼트의 바닥에서 32 픽셀에 위치될 것이다. 반대로 <code>bottom: -32px;</code>은 <code>realtive</code> 배치 속성값을 가진 부모 엘리먼트의 아래 32 픽셀에 위치될 것이다</p>
+
+<blockquote><h4>Grids &amp; Frameworks</h4>
+
+<p><br>
+사이트의 레이아웃을 만들 때 고려하는 툴과 실제예는 셀 수없이 많다. 그 중 그리드와 프레임워크가 가장 선두에 있다.
+<br>
+<br>
+<strong>Grid</strong>는 &ndash; vertical과 baseline 모두 &ndash; 웹사이트에 일련의 흐름을 더해주고 모든 것을 정렬하는 훌륭한 방법을 제공한다. 수년동안 인기있는 수십 개의 서로 다른 <a href="http://vandelaydesign.com/blog/design/resources-grid-based-design/">추천 그리드</a>가 있으며, 자신의 프로젝트에 가장 알맞는 것을 선택할 수 있다.
+<br>
+<br>
+<strong>Framework</strong>는 미리 선정된 표준 세트를 바탕으로 웹사이트를 빠르게 만들 수 있는 방법을 제공한다. 프로젝트에 따라 프레임워크는 훌륭한 시작점을 제공하거나 완벽한 솔루션을 제공하기도 한다.</p></blockquote>
+
+<h2>Resources &amp; Links</h2>
+
+<ul>
+<li><a href="https://developer.mozilla.org/en/CSS/length">CSS Length Values</a> via Mozilla Developer Network</li>
+<li><a href="http://www.quackit.com/html/codes/html_borders.cfm">HTML Borders</a> via Quackit.com</li>
+<li><a href="http://css-tricks.com/the-css-box-model/">The CSS Box Model</a> via CSS-Tricks</li>
+<li><a href="http://coding.smashingmagazine.com/2007/05/01/css-float-theory-things-you-should-know/">CSS Float Theory</a> via Smashing Magazine</li>
+<li><a href="http://www.alistapart.com/articles/css-positioning-101/">CSS Positioning 101</a> via A List Apart</li>
+<li><a href="http://vandelaydesign.com/blog/design/resources-grid-based-design/">Resources for Grid-Based Design</a> via Vandelay Design</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[HTML & CSS 초보자 가이드 - 2강 : Elements & Semantics]]></title>
+    <link href="http://nolboo.github.io/blog/2013/07/22/beginners-guide-to-html-and-css-2-slash-10/"/>
+    <updated>2013-07-22T21:07:00+09:00</updated>
+    <id>http://nolboo.github.io/blog/2013/07/22/beginners-guide-to-html-and-css-2-slash-10</id>
+    <content type="html"><![CDATA[<p>원본 : <a href="http://learn.shayhowe.com/html-css/elements-semantics">A Beginner’s Guide to HTML &amp; CSS &ndash; LESSON 2 : Elements &amp; Semantics</a></p>
+
+<br><br>일단 코딩을 시작하게 되면 semantic 코딩을 반드시 원하게 될 것이다. semantic 코딩을 한다는 것은 코드를 잘 정리하고 풍부한 정보를 갖춘 결정도 할 수 있다는 것이다.
+
+
+<h2>Semantics Overview(시맨틱 개요)</h2>
+
+<br>
+
+
+<p>HTML에서 <a href="http://boagworld.com/dev/semantic-code-what-why-how/">Semantics</a>는 페이지의 의미와 구조 위에 컨텐츠를 올려놓는 것이다. 페이지에서 컨텐츠의 <strong>가치</strong>를 표현하며, 스타일링 목적으로<strong>만 사용되진 않는다</strong>. semantic 코딩은 웹 페이지를 적절히 읽고 이해하는 능력을 컴퓨터, 스크린 리더, 검색엔진이나 다른 기기들에게 제공하는 등의 이점을 제공한다. 게다가 semnatic 코드는 각 컨텐츠의 특성을 명확하게 알  수 있어 관리하거나 일하는 것이 더 쉽다.</p>
+
+<p>역자참고</p>
+
+<ul>
+<li><a href="http://m.mkexdev.net/77">HTML5 : 의미있는 문서, 시맨틱(SEMANTIC) 요소</a></li>
+<li><a href="http://ko.wikipedia.org/wiki/%EC%8B%9C%EB%A7%A8%ED%8B%B1_%EC%9B%B9">시맨틱 웹</a></li>
+</ul>
+
+
+<h2>Divisions &amp; Spans</h2>
+
+<br>
+
+
+<p>div(division)와 span은 켄텐츠의 컨테이너로 작동되는 HTML 엘리먼트다. p(paragraph)는 단락을 나타내는 시멘틱 엘리먼트이지만 div와 span은 그런 의미를 가지지않는 단순한 컨테이너다. 그러나, CSS 스타일링을 세부적으로 지정할 수 있기 때문에 는 웹사이트 제작 시 매우 쓸모있는 것이다.</p>
+
+<p>div는 웹 사이트의 큰 섹션을 정의하는 데에 주로 사용되는 블럭 엘리먼트이며, 레이아웃과 디자인을 만드는 것을 도와준다. 한편, span은 문단(p)과 같은 블럭 엘리먼트 안의 일부 텍스트 부분을 정의하는 데에 주로 사용되는 inline 엘리먼트다.</p>
+
+<blockquote><p><h4>Block vs. Inline Elements</h4></p>
+
+<p>모든 엘리먼트는 블럭 또는 inline 엘리먼트다. 그 차이점은?<br><br></p>
+
+<p><strong>블럭 엘리먼트</strong>는 페이지의 새로운 줄에 시작되며, 가능한 최대의 너비를 갖는다. inline 레벨 엘리먼트 뿐만 아니라 다른 블럭 엘리먼트도 포함할 수 있다.<br><br></p>
+
+<p><strong>inline 엘리먼트</strong>는 새로운 줄에서 시작되지 않으며, 문서의 흐름을 따르고 필요한 너비만을 가진다. 블럭 엘리먼트를 포함할 수 없으나 다른 inline 엘리먼트를 포함할 수는 있다.</p></blockquote>
+
+<p>div와 span은 class나 id를 주어 값을 더해줄 수 있다. class와 id는 대체로 스타일링 목적으로 사용되거나 다른 div, span과의 차이를 나타낼 수 있다. 그러므로 클래스나 id 이름은 semantic하게 선택하는 것이 중요하다.</p>
+
+<p>예를 들면, 오렌지 배경색를 가진 소셜미디어 링크를 &ldquo;orange&rdquo; 클래스로 이름을 주게되면, 나중에 배경색이 파란색으로 바뀌면 &ldquo;orange&rdquo; 클래스는 더 이상 의미가 없어진다. 좀 더 낫게 시멘틱한 클래스 이름은 <code>div</code> 스타일이 아닌 컨텐츠에 적합한 &ldquo;social"이 될 것이다.</p>
+
+<pre><code>&lt;!-- div --&gt;
+&lt;div class="social"&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- span --&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, &lt;span class="tooltip"&gt;consectetur&lt;/span&gt; elit.&lt;/p&gt;
+</code></pre>
+
+<h2>Typography</h2>
+
+<br>
+
+
+<p>온라인 컨텐츠의 아주 많은 부분은 문자 위주다.</p>
+
+<h3>Headings</h3>
+
+<p>블럭 엘리먼트이며 <code>h1</code>~<code>h6</code>까지 6개이다. <code>h1</code>은 페이지나 섹션의 주 헤딩으로 쓰여야 하며, 보조적 헤딩으로 <code>h2</code>가 필요할 때 쓰여져야 한다. 텍스트를 굵게하거나 크게하기 위해 쓰여져서는 안된다.</p>
+
+<pre><code>&lt;h1&gt;This is a Level 1 Heading&lt;/h1&gt;
+&lt;h2&gt;This is a Level 2 Heading&lt;/h2&gt;
+&lt;h3&gt;This is a Level 3 Heading&lt;/h3&gt;
+</code></pre>
+
+<blockquote><h4>Headings Demo</h4>
+
+<h1>This is a Level 1 Heading</h1>
+
+<h2>This is a Level 2 Heading</h2>
+
+<h3>This is a Level 3 Heading</h3></blockquote>
+
+<h3>Paragraphs</h3>
+
+<p><code>p</code> 블럭 엘리먼트로 정의한다</p>
+
+<h3>Bold Text with Strong</h3>
+
+<p><code>strong</code>과 <code>b</code>는 모두 텍스트를 굵은체로 표시한다. 둘의 <a href="http://html5doctor.com/i-b-em-strong-element/">semantic 차이</a>를 이해하는 것이 중요하다. <code>strong</code>은 중요하여 강조하는 굵은 체이며, <code>b</code>는 스타일 상 굵은 체이나 항상 주목받는 텍스트는 아니다.</p>
+
+<h3>Italicize Text with Emphasis</h3>
+
+<p><code>em</code>과 <code>i</code>의 차이도 거의 ditto다.</p>
+
+<h2>Hyperlinks(하이퍼링크)</h2>
+
+<br>
+
+
+<p><code>a</code>(nchor) inline 엘리먼트로 정의되며 <code>href</code>(hyperlink reference)로 링크의 목적지를 정한다.</p>
+
+<p>HTML5에서는 <code>a</code> inline 엘리먼트가 블럭 또는 inline 레벨 엘리먼트를 포함할 수 있게 되어, 페이지의 컨텐츠 블럭 전체를 링크할 수 있다.</p>
+
+<h3>Relative &amp; Absolute Paths(상대주소와 절대주소)</h3>
+
+<p>링크의 일반적인 두가지 형태는 한 웹사이트 안에서 <em>다른 페이지</em>로의 링크와 <em>다른 웹사이트</em>로의 링크다.</p>
+
+<p>같은 웹사이트 안의 다른 페이지로 링크를 <strong>상대주소</strong>라고 하며, <code>href</code> 속성값에 <code>/about.html</code>과 같이 도메인이 없다. 서브디렉토리를 지정하려면 <code>/page/about.html</code>과 같이 한다.</p>
+
+<p>다른 웹사이트로 링크하려면 <strong>절대주소</strong>가 필요하며, <code>href</code> 속성값에 <code>http</code>와 <code>.com</code> 등의 전체 도메인이 포함되어야 한다.</p>
+
+<pre><code>&lt;!-- Relative Path --&gt;
+&lt;a href="http://nolboo.github.io/about.html"&gt;About&lt;/a&gt;
+
+&lt;!-- Absolute Path --&gt;
+&lt;a href="http://www.google.com/"&gt;Google&lt;/a&gt;
+</code></pre>
+
+<h3>Linking to an Email Address(이메일 링크)</h3>
+
+<p>이메일 링크를 만들려면 <code>href</code> 속성값에 <code>mailto:</code>로 시작되는 이메일 주소를 준다.</p>
+
+<p>추가적으로 이메일의 제목과 본문도 줄 수 있다. 제목은 추가하려면 이메일 주소 바로 뒤 패러미터(<code>?</code> 바로 뒤에 위치)로 <code>subject=</code>로 지정하며 여러 단어를 사용할 경우에는 빈칸으로 해석되는 <code>%20</code>을 사용하여 나열할 수 있다. 본문을 추가하려면 <code>body=</code> 패터미터를 사용한다. 마찬가지로 빈칸은 <code>%20</code>을 사용하고 줄바꿈은 <code>%0A</code>를 사용한다.</p>
+
+<p>여러 개의 이메일 주소, cc, bcc 패러미터 등을 추가하는 방법은 <a href="http://yoast.com/guide-mailto-links/">The Full mailto Link Syntax</a>를 참조.</p>
+
+<pre><code>&lt;a href="mailto:shay@awesome.com?subject=Still%20Awesome&amp;body=This%20is%20awesome"&gt;Email Me&lt;/a&gt;
+</code></pre>
+
+<h3>Opening Links in a New Window(새 창으로 링크 열기)</h3>
+
+<p>아래와 같이 <code>target</code> 속성에 <code>_blank</code>값을 준다.</p>
+
+<pre><code>&lt;a href="http://shayhowe.com/" target="_blank"&gt;Shay Howe&lt;/a&gt;
+</code></pre>
+
+<h3>Linking to Elements within the Same Page(같은 페이지 내의 엘리먼트 링크)</h3>
+
+<p>아래와 같이 링크하기를 원하는 엘리먼트에 ID를 지정하고 <code>href</code>의 속성값을로 그 ID를 사용한다.</p>
+
+<pre><code>&lt;a href="#awesome"&gt;Awesome&lt;/a&gt;
+&lt;div id="awesome"&gt;Awesome Section&lt;/div&gt;
+</code></pre>
+
+<h2>HTML5 Structural Elements(HTML5 구조 엘리먼트)</h2>
+
+<p> <br></p>
+
+<p>HTML5에서는 좀 더 시맨틱한 코드를 허용하는 몇 개의 새로운 블럭 엘리먼트가 제공된다.</p>
+
+<p><img src="http://learn.shayhowe.com/assets/courses/html-css-guide/elements-semantics/html5.png" alt="HTML5 Document Structure" /><strong>Fig. 2.01</strong> The new HTML5 structural elements outline.</p>
+
+<h3>Header</h3>
+
+<p><code>header</code>는 페이지, article, section 혹은 페이지의 세그먼트의 머리 부분을 정의한다. 일반적으로 헤딩, 도입 구문, 네비게이션을 포함하기도 한다. 한 페이지에 한 개 이상의 <code>header</code>를 사용할 수 있다. 페이지의 시작에 <code>header</code>를 포함하는 것이 이상적이나 구자거으로 article의 헤더나 섹션에 필요한 만큼 사용할 수 있다.</p>
+
+<blockquote><h4>Clarification on the header Element</h4>
+
+<p><code>header</code> 엘리먼트는 <code>head</code> 또는 <code>h1</code> ~ <code>h6</code>의 heading과 혼동하면 안된다.<br><br></p>
+
+<p><code>header</code> 엘리먼트는 <code>body</code> 엘리먼트에 포함되는 페이지 헤딩을 잡아주는 구조적 엘리먼트다. <code>head</code> 엘리먼트는 페이지에 표시되지 않으며 메타데이터, 도큐먼트 제목, 외부 화일 링크 등의 정보를 지정하기 위해 사용된다.<br><br></p>
+
+<p><code>h1</code> ~ <code>h6</code>의 heading은 페이지에 걸친 텍스트 헤딩의 여러 단계를 표현하기 위해 사용된다.</p></blockquote>
+
+<h3>Navigation</h3>
+
+<p><code>nav</code>는 웹사이트의 주요 항해 링크들을 하나로 모은 블럭 엘리먼트다.</p>
+
+<pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<h3>Article</h3>
+
+<p><code>article</code>은 <code>div</code>나 <code>section</code>과 매우 유사한 블럭 엘리먼트이나 독립적으로 분배되거나 재사용할 수 있는 컨텐츠를 특별히 지정한다. 대부분의 경우 <code>article</code>은 블로그나 퍼블리싱 웹사이트 내의 공개된 컨텐츠를 정의한다. <code>article</code> 안의 컨텐츠는 RSS 피드 컨텐츠와 같이 다른 곳에 배포될 수 있어야 한다.</p>
+
+<h3>Section</h3>
+
+<p><code>section</code>은 <code>article</code>보다는 <code>div</code>와 좀 더 혼동될 수 있다. <code>section</code>은 일반 도큐멘트 혹은 앱의 섹션을 정의한다. <code>section</code>은 스타일링이나 스크립팅의 편의를 위해 사용되지 않는 것이 <code>div</code>와의 차이점이다.</p>
+
+<p><code>section</code>에 스타일을 적용할 수 있으나, 스타일 적용만을 목적으로 사용되지 않는다.</p>
+
+<blockquote><h4>Deciding When to Use a section or div</h4>
+
+<p><code>div</code>와 대비하여 <code>section</code>을 사용하기를 결정하는 가장 좋은 방법은 실제 컨텐츠를 보는 것이다. 만약 컨텐츠 블럭이 데이타베이스 안의 레코드로 존재하고 CSS 스타일링 훅이 명백히 필요하지 않다면 <code>section</code> 엘리먼트가 가장 좋을 것이다. 섹션은 페이지를 나누기 위해 사용되어져야 하며, 자연스런 계층을 제공하고 대부분 적절한 헤딩이 가지고 있다.<br><br></p>
+
+<p>반면 <code>div</code>는 컨텐츠 블럭에 스타일을 적용할 때 사용될 수 있다. 예를 들면 한 쌍의 문단이 페이지의 나머지 컨텐츠보다 두드러질 필요가 있다면 그것들을 <code>div</code>로 감싸고 백그라운드, 보더와 같은 적절한 스타일을 주어야 한다.</p></blockquote>
+
+<h3>Aside</h3>
+
+<p><code>aside</code>는 도큐멘트나 섹션과 관련된 컨텐츠를 정의하는 블럭 엘리먼트이며, 필요하다면 한 페이지에서 여러번 사용될 수 있다.</p>
+
+<p>좌우로 위치시키려면 <code>aside</code> 엘리먼트를 <code>float</code>하는 것이 필요하고 이는 나중에 <a href="http://learn.shayhowe.com/html-css/box-model">floating and positioning</a> 에서 배울 것이다.</p>
+
+<h3>Footer</h3>
+
+<p><code>footer</code>는 <code>header</code>와 동일하나 페이지, article, section이나 다른 페이지 세그먼트의 아래 부분을 위한 것이다.</p>
+
+<h2>D.R.Y. – Don’t Repeat Yourself</h2>
+
+<p> <br></p>
+
+<p>개발의 원칙 중 하나는 코드를 여러번 되풀이하지 말라는 D.R.Y.이다. CSS에서는 계속해서 같은 스타일을 지속적으로 코딩하기 쉽기 때문에 이 원칙은 많은 걸 말해준다. 절대 하지 마라. CSS는 스타일을 적용하고 상속하기 쉽게 하도록 cascade와 class를 허락하게 디자인되어 있다. 최종 목표는 깨끗하고 가벼운 코드를 쓰고 시맨틱하고 쉽게 관리되는 것이다.</p>
+
+<h2>Resources &amp; Links</h2>
+
+<br>
+
+
+<ul>
+<li><a href="http://boagworld.com/dev/semantic-code-what-why-how/">Semantic code: What? Why? How?</a> via Boagworld</li>
+<li><a href="http://html5doctor.com/">HTML5 Doctor</a></li>
+<li><a href="http://html5doctor.com/i-b-em-strong-element/">The i, b, em, &amp; strong Elements</a> via HTML5 Doctor</li>
+<li><a href="http://yoast.com/guide-mailto-links/">The Full mailto Link Syntax</a> via Joost de Valk</li>
+<li><a href="http://dev.opera.com/articles/view/new-structural-elements-in-html5/">New Structural Elements in HTML5</a> via Dev.Opera</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[HTML & CSS 초보자 가이드 - 1강 : 용어, 문법, 소개]]></title>
+    <link href="http://nolboo.github.io/blog/2013/07/22/beginners-guide-to-html-and-css-1-slash-10/"/>
+    <updated>2013-07-22T21:06:00+09:00</updated>
+    <id>http://nolboo.github.io/blog/2013/07/22/beginners-guide-to-html-and-css-1-slash-10</id>
+    <content type="html"><![CDATA[<p>원본 : <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro">A Beginner’s Guide to HTML &amp; CSS &ndash; LESSON 1 : Terminology, Syntax, &amp; Introduction</a></p>
+
+<p>HTML은 콘텐츠에 구조와 의미를 주기 위한 하이퍼 텍스트 마크업 언어이고, CSS(<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets)는 콘텐츠에 스타일과 모양을 주기위한 프리젠테이션 언어이다. 두 언어는 서로에 독립적이며, CSS가 HTML 문서 안에 있을 필요는 없고, 그 반대도 마찬가지다.</p>
+
+<h2>Common HTML Terms</h2>
+
+<p>오늘은 tags, elements, and attributes 세 가지 용어에 대해 익숙해지자.</p>
+
+<h3>Elements</h3>
+
+<p>페이지 안에서 구조와 컨텐츠를 포함하는 객체를 정의하기 위한 지명자.</p>
+
+<h3>Tags</h3>
+
+<p>시작 태그 &lt;> 와 끝 태그 </>
+엘리먼트는 하나 또는 여러 개의 태그로 만들어진다.</p>
+
+<h3>Attributes</h3>
+
+<p>엘리먼트에 추가적으로 주어지는 속성.</p>
+
+<h2>HTML Document Structure &amp; Syntax</h2>
+
+<p>모든 HTML 문서는 <code>doctype, html, head, body</code>의 선언과 태그를 포함하는 구조로 만들어진다.</p>
+
+<p><code>doctype</code> 선언은 사용된 HTML 버전을 웹 브라우저에게 알려주며, HTML 문서의 최상위에 위치한다. <code>doctype</code> 선언에 이어, 문서의 처음과 끝을 뜻하는 <code>html</code> 태그가 위치한다.</p>
+
+<p><code>head</code>는 메타 데이타, 문서 <code>title</code>, 외부 화일 링크로 구성된다. 실제 웹 페이지에서는 보여지지 않는다. 웹 페이지에 보여줄 모든 콘텐츠는 <code>body 태그 안</code>에 넣는다.</p>
+
+<p>일반적인 HTML 문서 구조</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+      &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Hello World&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+            &lt;h1&gt;Hello World&lt;/h1&gt;
+            &lt;p&gt;This is a website.&lt;/p&gt;
+      &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>Common CSS Terms</h2>
+
+<h3>Selectors</h3>
+
+<p>스타일을 적용할 엘리먼트(들).
+ID, class, type, 속성들의 조합이 하나의 실렉터가 될 수도 있다.</p>
+
+<h3>Properties</h3>
+
+<p>엘리먼트에 적용될 스타일을 결정한다.</p>
+
+<pre><code>p {
+      color: #ff0;
+      font-size: 16px;
+}
+</code></pre>
+
+<h3>Values</h3>
+
+<p>property 의 값이며, :와 ;사이에 위치한다.</p>
+
+<h2>CSS Structure &amp; Syntax</h2>
+
+<p>CSS는 실렉터를 사용하여 HTML 엘리먼트에 스타일을 적용하며, 모든 CSS 스타일은 여러 엘리먼트에 상속될 수 있다.</p>
+
+<p>예를 들어 한 페이지 안의 모든 텍스트에 특정 컬러와 크기와 wieght를 하나의 스타일로 지정할 수 있으며, 좀 더 세분화된 실렉터를 사용하여 특정 엘리먼트에 유일한 스타일을 덮어씌울 수 있다.</p>
+
+<p>Fig. 1.01 CSS syntax outline.<br/>
+<img src="http://learn.shayhowe.com/assets/courses/html-css-guide/terminology-syntax-intro/selector.png" alt="" /></p>
+
+<h3>Long vs. Short Hand</h3>
+
+<p>CSS에서 속성값을 선언하는 방법 중 하나의 속성과 하나의 값을 여러번 선언하는 것은 long hand, 하나의 속성에 여러 값을 나열하는 것이 short hand이다. short hand를 사용하는 것이 코드가 적기 때문에 좋다. 모든 속성이 shot hand를 지원하는 것이 아니기 때문에 확인해야 한다.</p>
+
+<pre><code>/* Long Hand */
+p {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+/* Short Hand */
+p {
+  padding: 10px 20px;
+}
+
+/* Short Hand */
+p {
+  padding: 10px;
+}
+</code></pre>
+
+<h4>Comments within HTML &amp; CSS</h4>
+
+<p>주석(comments)은 특히 여러 사람들이 공동작업할 때 매우 유용하다.</p>
+
+<p>HTML comments : <code>&lt;!--</code> 로 시작하고 <code>--&gt;</code> 로 끝난다.
+CSS comments : <code>/*</code> 로 시작하고 <code>*/</code> 로 끝난다.</p>
+
+<h2>Selectors</h2>
+
+<p>elements, IDs, and classes 또는 세 가지의 조합</p>
+
+<h3>Type Selectors</h3>
+
+<p>가장 기본적인 실렉터이다. 관리하기 쉽고 코드량이 적고 관리하기 쉽기 때문에 선호된다.</p>
+
+<h3>Class Selectors</h3>
+
+<p>HTML에선 class=&ldquo;classname&rdquo;, CSS에선 .classname
+페이지 내 여러 엘리먼트에 적용될 수 있다.</p>
+
+<h3>ID Selectors</h3>
+
+<p>클래스 실렉터와 유사하지만 한번에 하나의 엘리먼트 만을 대상으로 한다. 한 페이지 당 하나만 허용되므로, 중요한 엘리먼트에만 사용되야 한다.</p>
+
+<p>HTML에선 id=&ldquo;idname&rdquo;, CSS에서 #idname</p>
+
+<h3>Combining Selectors</h3>
+
+<p>CSS의 아름다움은 seelector 와 inherit 스타일을 조합하는 능력이다. 일반적인 실렉터로부터 시작하고 원하는 만큼 특정 실렉터를 조합해 나간다.</p>
+
+<pre><code>ul#social li {
+  padding: 0 3px;
+}
+ul#social li a {
+  height: 17px;
+  width: 16px;
+}
+ul#social li.tumblr a {
+  background: url('tumblr.png') 0 0 no-repeat;
+}
+</code></pre>
+
+<h3>Additional Selectors</h3>
+
+<p>그 외 많은 진보된 실렉터가 존재한다. 그러나, <a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/">진보된 실렉터</a>가 모든 브라우저에서 작동되는 것은 아니니 제대로 동작하지 않으면 브라우저 지원을 확인해야 한다.</p>
+
+<h2>Referencing CSS</h2>
+
+<p>가장 좋은 방법은 웹페이지의 head 안에 하나의 외부 화일로 링크하도록 한다. 하나의 외부 스타일시트을 사용하면 전체 웹 사이트에 걸쳐 같은 스타일을 사용할 수 있고, 사이트를 빠르게 변경할 수 있다.</p>
+
+<p>인터널과 인라인 스타일은 일반적으로 웹 사이트를 업데이트하고 유지하는 것을 짜증나게 한다.</p>
+
+<pre><code>&lt;!-- External CSS File --&gt;
+&lt;link rel="stylesheet" href="file.css"&gt;
+
+&lt;!-- Internal CSS --&gt;
+&lt;style type="text/css"&gt;
+p {
+  color: #f60;
+  font-size: 16px;
+}
+&lt;/style&gt;
+
+&lt;!-- Inline CSS --&gt;
+&lt;p style="color: #f60; font-size: 16px;"&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+</code></pre>
+
+<h3>Using External CSS Stylesheets</h3>
+
+<p>전체 웹사이트에 걸쳐 하나의 스타일로 편하게 관리할 수 있으며, 스타일 렌더링을 위한 트래픽도 적어진다.</p>
+
+<p>다음 예는 서브 디렉토리인 styles의 file.css를 불러오게 된다.</p>
+
+<pre><code>&lt;head&gt;
+    &lt;link rel="stylesheet" href="styles/file.css"&gt;
+&lt;/head&gt;
+</code></pre>
+
+<h2>Reset</h2>
+
+<p>기본적으로 모든 웹브라우저는 자신 만의 방법으로 엘리먼트의 스타일을 해석한다. 이러한 문제와 전투를 벌이기 위해서 CSS reset이 널리 사용왼다.</p>
+
+<pre><code>#### Cross Browser Compatibility &amp; Testing
+각 브라우저가 다른 방식으로 페이지를 렌더링한다. 웹사이트가 모든 브라우저에서 동일하게 보일 필요는 없지만 유사하게는 보여야 한다. 
+</code></pre>
+
+<p>CSS reset은 모든 일반적인 HTML 엘리먼트를 하나의 통일된 스타일로 만들어버리는 몇 개의 룰셋이다. 페이지의 뼈대에 적용되는 모든 스타일이 확실히 렌더링되기 위해 CSS 스타일의 가장 앞에서 위치한다.</p>
+
+<p>엄청 많은 reset이 있으면 각장의 장점을 가지고 있다. 저자가 가장 좋은 하는 것은 <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyers reset</a></p>
+
+<pre><code>#### Code Validation
+
+코드 검증은 브라우저에 걸처 적절하게 렌더링하는 것도 도와주며, 코드 작성을 위한 베스트 프랙티스도 가르쳐 준다.
+[W3C HTML validator](http://validator.w3.org/)
+[W3C CSS validator](http://jigsaw.w3.org/css-validator/)
+</code></pre>
+
+<h2>Resources &amp; Links</h2>
+
+<ul>
+<li><a href="http://www.scriptingmaster.com/html/HTML-terms-glossary.asp">Common HTML Terms</a> via Scripting Master</li>
+<li><a href="http://www.codestyle.org/css/Glossary.shtml">CSS Glossary</a> via Code Style</li>
+<li><a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/">Taming Advanced CSS Selectors</a> via Smashing Magazine</li>
+<li><a href="http://meyerweb.com/eric/tools/css/reset/">CSS Tools: Reset CSS</a> via Eric Meyer</li>
+<li><a href="http://www.shayhowe.com/web-design/intro-to-html-css/">An Intro to HTML &amp; CSS via Shay Howe</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
