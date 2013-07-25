@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CSS | Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/blog/categories/css/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-07-22T22:05:18+09:00</updated>
+  <updated>2013-07-25T17:25:47+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -25,6 +25,9 @@
 <p><img src="http://media02.hongkiat.com/css-snippets-for-designers/css-snippets.jpg" alt="" /></p>
 
 <p>이 기사가 모든 웹 프로들에게 <strong>50개의 편리한 CSS2/CCS3 코드 스니핏을</strong> 선물하기를 바란다.</p>
+
+<!-- more -->
+
 
 <h4>1. CSS Resets</h4>
 
@@ -1215,6 +1218,9 @@ a:hover, .glow {
 </ul>
 
 
+<!-- more -->
+
+
 <h3>왜 LESS를 사용하나?</h3>
 
 <ul>
@@ -1505,6 +1511,9 @@ $ lessc -x --yui-compress styles.less &gt; ../css/styles.css
 <h2>JavaScript Intro</h2>
 
 <p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript">자바스크립트</a>는 웹사이트에 상호작용성을 추가할 수 있게 해주고 유저 경험을 풍부하게 하는 것을 돕는다. HTML은 페이지에 <strong>구조</strong>를 제공하고 CSS는 <strong>외모</strong>를 제공하고 자바스크립트는 <strong>행동</strong>을 제공한다.</p>
+
+<!-- more -->
+
 
 <p>CSS처럼, 자바스크립트는 <code>.js</code> 화일 확장자로 외부 화일에 저장해야하며, <code>script</code> 엘리먼트를 사용하여 HTML 문서 안에서 참조(reference)된다. HTML 안의 자바스크립트 참조가 어디에 있느냐는 그것이 언제 실행되야하는가에 따라 다르다. 일반적으로 말하면 자바스크립트 화일이 연급되는 가장 좋은 위치는 &ndash; 모든 HTML이 파싱되고난 후에 자바스크립트가 로드되도록 &ndash; <code>&lt;/body&gt;</code>태그가 끝나기 바로 전이다. 그러나, 때론 HTML을 렌더링하거나 그것의 행동을 결정하는 것을 도와야하기 때문에 문서의 <code>head</code> 안에서 참조될 수 있다.</p>
 
@@ -2175,6 +2184,9 @@ $('.tabs-nav a').on('click', function(event){
 
 <p>모바일 인터넷 사용이 계속 성장하면서 어떻게 모든 유저에게 적합한 웹사이트를 만들 것인가 하는 질문이 제기되고있다. 업계는 이 질문에 반응형 웹 디자인(responsive web design : RWD로 응답하고 있다.</p>
 
+<!-- more -->
+
+
 <h2>Responsive Overview</h2>
 
 <p>반응형 웹 디자인은 모바일 혹은 데스트탑의 모든 기기와 크고 작은 모든 스크린 사이즈에서 적절하게 작동하는 웹사이트를 만드는 것이다.</p>
@@ -2625,6 +2637,9 @@ iframe {
 <p>백그라운드(배경)은 작게 쓰이거나 크게 쓰이거나 웹사이트 전체 디자인에 중요한 시각적 효과를 준다.</p>
 
 <p>CSS3에서는 그라디언트 백그라운드, 하나의 엘리먼트에 여러 백그라운드 이미지 적용 등의 새로운 <a href="http://learn.shayhowe.com/html-css/backgrounds-gradients">백그라운드 특성</a>이 도입되었다.</p>
+
+<!-- more -->
+
 
 <h2>Adding a Background Color</h2>
 

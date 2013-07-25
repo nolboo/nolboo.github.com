@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Beginner | Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/blog/categories/beginner/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-07-22T22:05:18+09:00</updated>
+  <updated>2013-07-25T17:25:47+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -23,6 +23,9 @@
 <p>백그라운드(배경)은 작게 쓰이거나 크게 쓰이거나 웹사이트 전체 디자인에 중요한 시각적 효과를 준다.</p>
 
 <p>CSS3에서는 그라디언트 백그라운드, 하나의 엘리먼트에 여러 백그라운드 이미지 적용 등의 새로운 <a href="http://learn.shayhowe.com/html-css/backgrounds-gradients">백그라운드 특성</a>이 도입되었다.</p>
+
+<!-- more -->
+
 
 <h2>Adding a Background Color</h2>
 
@@ -387,6 +390,9 @@ li a {
 
 
 <p>과거엔 웹사이트에 사용할 수 있는 타입페이스(글꼴)의 수가 작고 한정되어 있었다. 이러한 글꼴들은 컴퓨터에 공통적으로 설치되어 화면에 적절하게 표현된다. 최근에는 임베딩 폰트를 사용할 수 있어 디자이너들이 휠씬 많은 글꼴을 선택할 수 있다.</p>
+
+<!-- more -->
+
 
 <p>폰트 임베딩의 문이 새로운 글꼴들에 활짝 열리면서 디자이너들에게 타이포그래피의 기본적인 원칙을 아는 것이 필요하게 되었다. 이러한 기본 원칙을 HTML과 CSS로 변환하는 것은 온라인 타이포그래피와 <a href="http://dev.opera.com/articles/view/29-text-styling-with-css/">텍스트 스타일링</a>의 핵심에 기여한다.</p>
 
@@ -824,6 +830,9 @@ q:after {
 
 <p>박스 모델을 이해하는 것은 어렵고 까다로울 수 있으나 일반적인 웹사이트를 만들기 위해서는 필요하다. 더불어 레이아웃을 만들기 위해, 페이지에 엘리먼트를 배치하는 방법을 아는 것도 똑같이 중요하다.</p>
 
+<!-- more -->
+
+
 <h2>Box Sizing</h2>
 
 <p>이전의 강의를 통해 페이지에 모든 엘리먼트는, 블럭이나 인라인 레벨이건, 모두 사각형 박스라는 것을 알았을 것이다. 박스는 다른 크기를 가질 수 있으며, 마진, 패딩, 경계선 등이 크기를 변경할 수도 있다. 이것들을 통틀어 <em>the box model</em> 이라 한다. 박스 모델의 한 예를 보자.</p>
@@ -1081,6 +1090,9 @@ ul {
 
 <p>HTML에서 <a href="http://boagworld.com/dev/semantic-code-what-why-how/">Semantics</a>는 페이지의 의미와 구조 위에 컨텐츠를 올려놓는 것이다. 페이지에서 컨텐츠의 <strong>가치</strong>를 표현하며, 스타일링 목적으로<strong>만 사용되진 않는다</strong>. semantic 코딩은 웹 페이지를 적절히 읽고 이해하는 능력을 컴퓨터, 스크린 리더, 검색엔진이나 다른 기기들에게 제공하는 등의 이점을 제공한다. 게다가 semnatic 코드는 각 컨텐츠의 특성을 명확하게 알  수 있어 관리하거나 일하는 것이 더 쉽다.</p>
 
+<!-- more -->
+
+
 <p>역자참고</p>
 
 <ul>
@@ -1302,6 +1314,9 @@ ul {
 <h3>Elements</h3>
 
 <p>페이지 안에서 구조와 컨텐츠를 포함하는 객체를 정의하기 위한 지명자.</p>
+
+<!-- more -->
+
 
 <h3>Tags</h3>
 
