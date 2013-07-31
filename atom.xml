@@ -4,7 +4,7 @@
   <title><![CDATA[Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-07-25T17:25:47+09:00</updated>
+  <updated>2013-07-31T18:48:04+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[아주 유용한 jQuery 라이브러리들 - 코드스쿨 추천]]></title>
+    <link href="http://nolboo.github.io/blog/2013/07/31/cs-useful-jquery-libraries/"/>
+    <updated>2013-07-31T18:44:00+09:00</updated>
+    <id>http://nolboo.github.io/blog/2013/07/31/cs-useful-jquery-libraries</id>
+    <content type="html"><![CDATA[<p>코세라를 필두로 온라인 강의에 맛들여서 Code School도 맛보고 있는데 Most Useful jQuery Libraries란 스크린캐스트 강의에서 나온 라이브러리를 소개한다.</p>
+
+<ul>
+<li><a href="http://jqueryui.com/autocomplete/">jQuery UI Autocomplete</a></li>
+<li><a href="http://flowplayer.org/tools/index.html">jQuery Tools</a> : 탭, 툴팁, 오버레이, 스크롤러블, 폼, 툴박스 등의 요긴한 UI를 제공.</li>
+<li><a href="http://fancybox.net/">FancyBox</a> : 라이트박스 즉, 이미지를 클릭하면 팝업으로 보여주는 기능을 제공.</li>
+<li><a href="http://datatables.net/">DataTables</a> : 정렬과 검색이 되는 스프레드시트 등에 유용.</li>
+<li><a href="http://tablesorter.com/docs/">tablesorter</a> : 표에서 행 정렬에 필요한 많은 기능을 제공.</li>
+<li><a href="http://harvesthq.github.com/chosen/">Chosen</a> : 유저 프랜들리 실렉트 박스.</li>
+<li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">Validation</a> : 클라이언트 사이드 폼 유효성 검사.</li>
+<li><a href="http://digitalbush.com/projects/masked-input-plugin/">Masked Input</a> : 전화번호 등의 고정된 형식의 입력.</li>
+<li><a href="http://aquantum-demo.appspot.com/file-upload">jQuery File Upload</a> : 드래그앤드랍 멀티 업로드.</li>
+<li><a href="http://fitvidsjs.com/">FitVids.js</a> : 반응형 비디오 임베딩.</li>
+<li><a href="http://simianstudios.com/portamento/">Portamento.js</a> : 슬라이딩 고정 패널</li>
+<li><a href="http://tympanus.net/codrops/2011/09/12/elastislide-responsive-carousel/">Elasislade</a> 반응형 캐러셀</li>
+<li><a href="http://ryrych.github.com/rlightbox2">rightbox</a> 반응형 미디어 박스. 이미지, 유튜브, 비메오 등 지원.</li>
+<li><a href="http://fittextjs.com/">FitText</a> 가변 반응형 헤드라인.</li>
+<li><a href="http://cherne.net/brian/resources/jquery.hoverIntent.html">hoverIntent</a> 호버 기능의 확장.</li>
+</ul>
+
+
+<p>일년 전 강의지만 현재도 계속 소개되고 있는 것들이 많으며, 유료라 나중에 재확인하기 위해 기록한다.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Markdoc 설치]]></title>

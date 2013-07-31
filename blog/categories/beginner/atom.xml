@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Beginner | Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/blog/categories/beginner/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-07-25T17:25:47+09:00</updated>
+  <updated>2013-07-31T18:48:04+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[아주 유용한 jQuery 라이브러리들 - 코드스쿨 추천]]></title>
+    <link href="http://nolboo.github.io/blog/2013/07/31/cs-useful-jquery-libraries/"/>
+    <updated>2013-07-31T18:44:00+09:00</updated>
+    <id>http://nolboo.github.io/blog/2013/07/31/cs-useful-jquery-libraries</id>
+    <content type="html"><![CDATA[<p>코세라를 필두로 온라인 강의에 맛들여서 Code School도 맛보고 있는데 Most Useful jQuery Libraries란 스크린캐스트 강의에서 나온 라이브러리를 소개한다.</p>
+
+<ul>
+<li><a href="http://jqueryui.com/autocomplete/">jQuery UI Autocomplete</a></li>
+<li><a href="http://flowplayer.org/tools/index.html">jQuery Tools</a> : 탭, 툴팁, 오버레이, 스크롤러블, 폼, 툴박스 등의 요긴한 UI를 제공.</li>
+<li><a href="http://fancybox.net/">FancyBox</a> : 라이트박스 즉, 이미지를 클릭하면 팝업으로 보여주는 기능을 제공.</li>
+<li><a href="http://datatables.net/">DataTables</a> : 정렬과 검색이 되는 스프레드시트 등에 유용.</li>
+<li><a href="http://tablesorter.com/docs/">tablesorter</a> : 표에서 행 정렬에 필요한 많은 기능을 제공.</li>
+<li><a href="http://harvesthq.github.com/chosen/">Chosen</a> : 유저 프랜들리 실렉트 박스.</li>
+<li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">Validation</a> : 클라이언트 사이드 폼 유효성 검사.</li>
+<li><a href="http://digitalbush.com/projects/masked-input-plugin/">Masked Input</a> : 전화번호 등의 고정된 형식의 입력.</li>
+<li><a href="http://aquantum-demo.appspot.com/file-upload">jQuery File Upload</a> : 드래그앤드랍 멀티 업로드.</li>
+<li><a href="http://fitvidsjs.com/">FitVids.js</a> : 반응형 비디오 임베딩.</li>
+<li><a href="http://simianstudios.com/portamento/">Portamento.js</a> : 슬라이딩 고정 패널</li>
+<li><a href="http://tympanus.net/codrops/2011/09/12/elastislide-responsive-carousel/">Elasislade</a> 반응형 캐러셀</li>
+<li><a href="http://ryrych.github.com/rlightbox2">rightbox</a> 반응형 미디어 박스. 이미지, 유튜브, 비메오 등 지원.</li>
+<li><a href="http://fittextjs.com/">FitText</a> 가변 반응형 헤드라인.</li>
+<li><a href="http://cherne.net/brian/resources/jquery.hoverIntent.html">hoverIntent</a> 호버 기능의 확장.</li>
+</ul>
+
+
+<p>일년 전 강의지만 현재도 계속 소개되고 있는 것들이 많으며, 유료라 나중에 재확인하기 위해 기록한다.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[HTML & CSS 초보자 가이드 - 5강 : 백그라운드와 그라디언트]]></title>
@@ -1293,221 +1323,6 @@ ul {
 <li><a href="http://html5doctor.com/i-b-em-strong-element/">The i, b, em, &amp; strong Elements</a> via HTML5 Doctor</li>
 <li><a href="http://yoast.com/guide-mailto-links/">The Full mailto Link Syntax</a> via Joost de Valk</li>
 <li><a href="http://dev.opera.com/articles/view/new-structural-elements-in-html5/">New Structural Elements in HTML5</a> via Dev.Opera</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[HTML & CSS 초보자 가이드 - 1강 : 용어, 문법, 소개]]></title>
-    <link href="http://nolboo.github.io/blog/2013/07/22/beginners-guide-to-html-and-css-1-slash-10/"/>
-    <updated>2013-07-22T21:06:00+09:00</updated>
-    <id>http://nolboo.github.io/blog/2013/07/22/beginners-guide-to-html-and-css-1-slash-10</id>
-    <content type="html"><![CDATA[<p>원본 : <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro">A Beginner’s Guide to HTML &amp; CSS &ndash; LESSON 1 : Terminology, Syntax, &amp; Introduction</a></p>
-
-<p>HTML은 콘텐츠에 구조와 의미를 주기 위한 하이퍼 텍스트 마크업 언어이고, CSS(<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets)는 콘텐츠에 스타일과 모양을 주기위한 프리젠테이션 언어이다. 두 언어는 서로에 독립적이며, CSS가 HTML 문서 안에 있을 필요는 없고, 그 반대도 마찬가지다.</p>
-
-<h2>Common HTML Terms</h2>
-
-<p>오늘은 tags, elements, and attributes 세 가지 용어에 대해 익숙해지자.</p>
-
-<h3>Elements</h3>
-
-<p>페이지 안에서 구조와 컨텐츠를 포함하는 객체를 정의하기 위한 지명자.</p>
-
-<!-- more -->
-
-
-<h3>Tags</h3>
-
-<p>시작 태그 &lt;> 와 끝 태그 </>
-엘리먼트는 하나 또는 여러 개의 태그로 만들어진다.</p>
-
-<h3>Attributes</h3>
-
-<p>엘리먼트에 추가적으로 주어지는 속성.</p>
-
-<h2>HTML Document Structure &amp; Syntax</h2>
-
-<p>모든 HTML 문서는 <code>doctype, html, head, body</code>의 선언과 태그를 포함하는 구조로 만들어진다.</p>
-
-<p><code>doctype</code> 선언은 사용된 HTML 버전을 웹 브라우저에게 알려주며, HTML 문서의 최상위에 위치한다. <code>doctype</code> 선언에 이어, 문서의 처음과 끝을 뜻하는 <code>html</code> 태그가 위치한다.</p>
-
-<p><code>head</code>는 메타 데이타, 문서 <code>title</code>, 외부 화일 링크로 구성된다. 실제 웹 페이지에서는 보여지지 않는다. 웹 페이지에 보여줄 모든 콘텐츠는 <code>body 태그 안</code>에 넣는다.</p>
-
-<p>일반적인 HTML 문서 구조</p>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-      &lt;head&gt;
-            &lt;meta charset="utf-8"&gt;
-            &lt;title&gt;Hello World&lt;/title&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-            &lt;h1&gt;Hello World&lt;/h1&gt;
-            &lt;p&gt;This is a website.&lt;/p&gt;
-      &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<h2>Common CSS Terms</h2>
-
-<h3>Selectors</h3>
-
-<p>스타일을 적용할 엘리먼트(들).
-ID, class, type, 속성들의 조합이 하나의 실렉터가 될 수도 있다.</p>
-
-<h3>Properties</h3>
-
-<p>엘리먼트에 적용될 스타일을 결정한다.</p>
-
-<pre><code>p {
-      color: #ff0;
-      font-size: 16px;
-}
-</code></pre>
-
-<h3>Values</h3>
-
-<p>property 의 값이며, :와 ;사이에 위치한다.</p>
-
-<h2>CSS Structure &amp; Syntax</h2>
-
-<p>CSS는 실렉터를 사용하여 HTML 엘리먼트에 스타일을 적용하며, 모든 CSS 스타일은 여러 엘리먼트에 상속될 수 있다.</p>
-
-<p>예를 들어 한 페이지 안의 모든 텍스트에 특정 컬러와 크기와 wieght를 하나의 스타일로 지정할 수 있으며, 좀 더 세분화된 실렉터를 사용하여 특정 엘리먼트에 유일한 스타일을 덮어씌울 수 있다.</p>
-
-<p>Fig. 1.01 CSS syntax outline.<br/>
-<img src="http://learn.shayhowe.com/assets/courses/html-css-guide/terminology-syntax-intro/selector.png" alt="" /></p>
-
-<h3>Long vs. Short Hand</h3>
-
-<p>CSS에서 속성값을 선언하는 방법 중 하나의 속성과 하나의 값을 여러번 선언하는 것은 long hand, 하나의 속성에 여러 값을 나열하는 것이 short hand이다. short hand를 사용하는 것이 코드가 적기 때문에 좋다. 모든 속성이 shot hand를 지원하는 것이 아니기 때문에 확인해야 한다.</p>
-
-<pre><code>/* Long Hand */
-p {
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-}
-
-/* Short Hand */
-p {
-  padding: 10px 20px;
-}
-
-/* Short Hand */
-p {
-  padding: 10px;
-}
-</code></pre>
-
-<h4>Comments within HTML &amp; CSS</h4>
-
-<p>주석(comments)은 특히 여러 사람들이 공동작업할 때 매우 유용하다.</p>
-
-<p>HTML comments : <code>&lt;!--</code> 로 시작하고 <code>--&gt;</code> 로 끝난다.
-CSS comments : <code>/*</code> 로 시작하고 <code>*/</code> 로 끝난다.</p>
-
-<h2>Selectors</h2>
-
-<p>elements, IDs, and classes 또는 세 가지의 조합</p>
-
-<h3>Type Selectors</h3>
-
-<p>가장 기본적인 실렉터이다. 관리하기 쉽고 코드량이 적고 관리하기 쉽기 때문에 선호된다.</p>
-
-<h3>Class Selectors</h3>
-
-<p>HTML에선 class=&ldquo;classname&rdquo;, CSS에선 .classname
-페이지 내 여러 엘리먼트에 적용될 수 있다.</p>
-
-<h3>ID Selectors</h3>
-
-<p>클래스 실렉터와 유사하지만 한번에 하나의 엘리먼트 만을 대상으로 한다. 한 페이지 당 하나만 허용되므로, 중요한 엘리먼트에만 사용되야 한다.</p>
-
-<p>HTML에선 id=&ldquo;idname&rdquo;, CSS에서 #idname</p>
-
-<h3>Combining Selectors</h3>
-
-<p>CSS의 아름다움은 seelector 와 inherit 스타일을 조합하는 능력이다. 일반적인 실렉터로부터 시작하고 원하는 만큼 특정 실렉터를 조합해 나간다.</p>
-
-<pre><code>ul#social li {
-  padding: 0 3px;
-}
-ul#social li a {
-  height: 17px;
-  width: 16px;
-}
-ul#social li.tumblr a {
-  background: url('tumblr.png') 0 0 no-repeat;
-}
-</code></pre>
-
-<h3>Additional Selectors</h3>
-
-<p>그 외 많은 진보된 실렉터가 존재한다. 그러나, <a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/">진보된 실렉터</a>가 모든 브라우저에서 작동되는 것은 아니니 제대로 동작하지 않으면 브라우저 지원을 확인해야 한다.</p>
-
-<h2>Referencing CSS</h2>
-
-<p>가장 좋은 방법은 웹페이지의 head 안에 하나의 외부 화일로 링크하도록 한다. 하나의 외부 스타일시트을 사용하면 전체 웹 사이트에 걸쳐 같은 스타일을 사용할 수 있고, 사이트를 빠르게 변경할 수 있다.</p>
-
-<p>인터널과 인라인 스타일은 일반적으로 웹 사이트를 업데이트하고 유지하는 것을 짜증나게 한다.</p>
-
-<pre><code>&lt;!-- External CSS File --&gt;
-&lt;link rel="stylesheet" href="file.css"&gt;
-
-&lt;!-- Internal CSS --&gt;
-&lt;style type="text/css"&gt;
-p {
-  color: #f60;
-  font-size: 16px;
-}
-&lt;/style&gt;
-
-&lt;!-- Inline CSS --&gt;
-&lt;p style="color: #f60; font-size: 16px;"&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
-</code></pre>
-
-<h3>Using External CSS Stylesheets</h3>
-
-<p>전체 웹사이트에 걸쳐 하나의 스타일로 편하게 관리할 수 있으며, 스타일 렌더링을 위한 트래픽도 적어진다.</p>
-
-<p>다음 예는 서브 디렉토리인 styles의 file.css를 불러오게 된다.</p>
-
-<pre><code>&lt;head&gt;
-    &lt;link rel="stylesheet" href="styles/file.css"&gt;
-&lt;/head&gt;
-</code></pre>
-
-<h2>Reset</h2>
-
-<p>기본적으로 모든 웹브라우저는 자신 만의 방법으로 엘리먼트의 스타일을 해석한다. 이러한 문제와 전투를 벌이기 위해서 CSS reset이 널리 사용왼다.</p>
-
-<pre><code>#### Cross Browser Compatibility &amp; Testing
-각 브라우저가 다른 방식으로 페이지를 렌더링한다. 웹사이트가 모든 브라우저에서 동일하게 보일 필요는 없지만 유사하게는 보여야 한다. 
-</code></pre>
-
-<p>CSS reset은 모든 일반적인 HTML 엘리먼트를 하나의 통일된 스타일로 만들어버리는 몇 개의 룰셋이다. 페이지의 뼈대에 적용되는 모든 스타일이 확실히 렌더링되기 위해 CSS 스타일의 가장 앞에서 위치한다.</p>
-
-<p>엄청 많은 reset이 있으면 각장의 장점을 가지고 있다. 저자가 가장 좋은 하는 것은 <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyers reset</a></p>
-
-<pre><code>#### Code Validation
-
-코드 검증은 브라우저에 걸처 적절하게 렌더링하는 것도 도와주며, 코드 작성을 위한 베스트 프랙티스도 가르쳐 준다.
-[W3C HTML validator](http://validator.w3.org/)
-[W3C CSS validator](http://jigsaw.w3.org/css-validator/)
-</code></pre>
-
-<h2>Resources &amp; Links</h2>
-
-<ul>
-<li><a href="http://www.scriptingmaster.com/html/HTML-terms-glossary.asp">Common HTML Terms</a> via Scripting Master</li>
-<li><a href="http://www.codestyle.org/css/Glossary.shtml">CSS Glossary</a> via Code Style</li>
-<li><a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/">Taming Advanced CSS Selectors</a> via Smashing Magazine</li>
-<li><a href="http://meyerweb.com/eric/tools/css/reset/">CSS Tools: Reset CSS</a> via Eric Meyer</li>
-<li><a href="http://www.shayhowe.com/web-design/intro-to-html-css/">An Intro to HTML &amp; CSS via Shay Howe</a></li>
 </ul>
 
 ]]></content>
