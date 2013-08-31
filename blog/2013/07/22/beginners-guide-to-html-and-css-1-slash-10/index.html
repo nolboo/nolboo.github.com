@@ -9,7 +9,7 @@
   <meta name="author" content="Nolboo Kim">
 
   
-  <meta name="description" content="원본 : A Beginner’s Guide to HTML &amp; CSS &ndash; LESSON 1 : Terminology, Syntax, &amp; Introduction HTML은 콘텐츠에 구조와 의미를 주기 위한 하이퍼 텍스트 마크업 언어이고, CSS( &hellip;">
+  <meta name="description" content="원본 : A Beginner’s Guide to HTML &amp; CSS - LESSON 1 : Terminology, Syntax, &amp; Introduction HTML은 콘텐츠에 구조와 의미를 주기 위한 하이퍼 텍스트 마크업 언어이고, CSS( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -103,31 +103,28 @@
   </header>
 
 
-<div class="entry-content"><p>원본 : <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro">A Beginner’s Guide to HTML &amp; CSS &ndash; LESSON 1 : Terminology, Syntax, &amp; Introduction</a></p>
+<div class="entry-content"><p>원본 : <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro">A Beginner’s Guide to HTML &amp; CSS - LESSON 1 : Terminology, Syntax, &amp; Introduction</a></p>
 
-<p>HTML은 콘텐츠에 구조와 의미를 주기 위한 하이퍼 텍스트 마크업 언어이고, CSS(<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets)는 콘텐츠에 스타일과 모양을 주기위한 프리젠테이션 언어이다. 두 언어는 서로에 독립적이며, CSS가 HTML 문서 안에 있을 필요는 없고, 그 반대도 마찬가지다.</p>
+<p>HTML은 콘텐츠에 구조와 의미를 주기 위한 하이퍼 텍스트 마크업 언어이고, CSS(<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets)는 콘텐츠에 스타일과 모양을 주기위한 프리젠테이션 언어이다. 두 언어는 서로에 독립적이며, CSS가 HTML 문서 안에 있을 필요는 없고, 그 반대도 마찬가지다.</p>
 
-<h2>Common HTML Terms</h2>
+<h2 id="common-html-terms">Common HTML Terms</h2>
 
 <p>오늘은 tags, elements, and attributes 세 가지 용어에 대해 익숙해지자.</p>
 
-<h3>Elements</h3>
+<h3 id="elements">Elements</h3>
 
-<p>페이지 안에서 구조와 컨텐츠를 포함하는 객체를 정의하기 위한 지명자.</p>
+<p>페이지 안에서 구조와 컨텐츠를 포함하는 객체를 정의하기 위한 지명자.
+<!-- more --></p>
 
-<!-- more -->
+<h3 id="tags">Tags</h3>
 
-
-<h3>Tags</h3>
-
-<p>시작 태그 &lt;> 와 끝 태그 </>
+<p>시작 태그 &lt;&gt; 와 끝 태그 &lt;/&gt;
 엘리먼트는 하나 또는 여러 개의 태그로 만들어진다.</p>
 
-<h3>Attributes</h3>
-
+<h3 id="attributes">Attributes</h3>
 <p>엘리먼트에 추가적으로 주어지는 속성.</p>
 
-<h2>HTML Document Structure &amp; Syntax</h2>
+<h2 id="html-document-structure--syntax">HTML Document Structure &amp; Syntax</h2>
 
 <p>모든 HTML 문서는 <code>doctype, html, head, body</code>의 선언과 태그를 포함하는 구조로 만들어진다.</p>
 
@@ -150,14 +147,14 @@
 &lt;/html&gt;
 </code></pre>
 
-<h2>Common CSS Terms</h2>
+<h2 id="common-css-terms">Common CSS Terms</h2>
 
-<h3>Selectors</h3>
+<h3 id="selectors">Selectors</h3>
 
 <p>스타일을 적용할 엘리먼트(들).
 ID, class, type, 속성들의 조합이 하나의 실렉터가 될 수도 있다.</p>
 
-<h3>Properties</h3>
+<h3 id="properties">Properties</h3>
 
 <p>엘리먼트에 적용될 스타일을 결정한다.</p>
 
@@ -167,20 +164,20 @@ ID, class, type, 속성들의 조합이 하나의 실렉터가 될 수도 있다
 }
 </code></pre>
 
-<h3>Values</h3>
+<h3 id="values">Values</h3>
 
 <p>property 의 값이며, :와 ;사이에 위치한다.</p>
 
-<h2>CSS Structure &amp; Syntax</h2>
+<h2 id="css-structure--syntax">CSS Structure &amp; Syntax</h2>
 
-<p>CSS는 실렉터를 사용하여 HTML 엘리먼트에 스타일을 적용하며, 모든 CSS 스타일은 여러 엘리먼트에 상속될 수 있다.</p>
+<p>CSS는 실렉터를 사용하여 HTML 엘리먼트에 스타일을 적용하며, 모든 CSS 스타일은 여러 엘리먼트에 상속될 수 있다. </p>
 
 <p>예를 들어 한 페이지 안의 모든 텍스트에 특정 컬러와 크기와 wieght를 하나의 스타일로 지정할 수 있으며, 좀 더 세분화된 실렉터를 사용하여 특정 엘리먼트에 유일한 스타일을 덮어씌울 수 있다.</p>
 
-<p>Fig. 1.01 CSS syntax outline.<br/>
+<p>Fig. 1.01 CSS syntax outline.<br />
 <img src="http://learn.shayhowe.com/assets/courses/html-css-guide/terminology-syntax-intro/selector.png" alt="" /></p>
 
-<h3>Long vs. Short Hand</h3>
+<h3 id="long-vs-short-hand">Long vs. Short Hand</h3>
 
 <p>CSS에서 속성값을 선언하는 방법 중 하나의 속성과 하나의 값을 여러번 선언하는 것은 long hand, 하나의 속성에 여러 값을 나열하는 것이 short hand이다. short hand를 사용하는 것이 코드가 적기 때문에 좋다. 모든 속성이 shot hand를 지원하는 것이 아니기 때문에 확인해야 한다.</p>
 
@@ -203,34 +200,33 @@ p {
 }
 </code></pre>
 
-<h4>Comments within HTML &amp; CSS</h4>
+<h4 id="comments-within-html--css">Comments within HTML &amp; CSS</h4>
 
 <p>주석(comments)은 특히 여러 사람들이 공동작업할 때 매우 유용하다.</p>
 
 <p>HTML comments : <code>&lt;!--</code> 로 시작하고 <code>--&gt;</code> 로 끝난다.
 CSS comments : <code>/*</code> 로 시작하고 <code>*/</code> 로 끝난다.</p>
 
-<h2>Selectors</h2>
+<h2 id="selectors-1">Selectors</h2>
 
 <p>elements, IDs, and classes 또는 세 가지의 조합</p>
 
-<h3>Type Selectors</h3>
+<h3 id="type-selectors">Type Selectors</h3>
 
 <p>가장 기본적인 실렉터이다. 관리하기 쉽고 코드량이 적고 관리하기 쉽기 때문에 선호된다.</p>
 
-<h3>Class Selectors</h3>
+<h3 id="class-selectors">Class Selectors</h3>
 
-<p>HTML에선 class=&ldquo;classname&rdquo;, CSS에선 .classname
+<p>HTML에선 class=”classname”, CSS에선 .classname
 페이지 내 여러 엘리먼트에 적용될 수 있다.</p>
 
-<h3>ID Selectors</h3>
+<h3 id="id-selectors">ID Selectors</h3>
 
 <p>클래스 실렉터와 유사하지만 한번에 하나의 엘리먼트 만을 대상으로 한다. 한 페이지 당 하나만 허용되므로, 중요한 엘리먼트에만 사용되야 한다.</p>
 
-<p>HTML에선 id=&ldquo;idname&rdquo;, CSS에서 #idname</p>
+<p>HTML에선 id=”idname”, CSS에서 #idname</p>
 
-<h3>Combining Selectors</h3>
-
+<h3 id="combining-selectors">Combining Selectors</h3>
 <p>CSS의 아름다움은 seelector 와 inherit 스타일을 조합하는 능력이다. 일반적인 실렉터로부터 시작하고 원하는 만큼 특정 실렉터를 조합해 나간다.</p>
 
 <pre><code>ul#social li {
@@ -245,11 +241,11 @@ ul#social li.tumblr a {
 }
 </code></pre>
 
-<h3>Additional Selectors</h3>
+<h3 id="additional-selectors">Additional Selectors</h3>
 
 <p>그 외 많은 진보된 실렉터가 존재한다. 그러나, <a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/">진보된 실렉터</a>가 모든 브라우저에서 작동되는 것은 아니니 제대로 동작하지 않으면 브라우저 지원을 확인해야 한다.</p>
 
-<h2>Referencing CSS</h2>
+<h2 id="referencing-css">Referencing CSS</h2>
 
 <p>가장 좋은 방법은 웹페이지의 head 안에 하나의 외부 화일로 링크하도록 한다. 하나의 외부 스타일시트을 사용하면 전체 웹 사이트에 걸쳐 같은 스타일을 사용할 수 있고, 사이트를 빠르게 변경할 수 있다.</p>
 
@@ -270,7 +266,7 @@ p {
 &lt;p style="color: #f60; font-size: 16px;"&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
 </code></pre>
 
-<h3>Using External CSS Stylesheets</h3>
+<h3 id="using-external-css-stylesheets">Using External CSS Stylesheets</h3>
 
 <p>전체 웹사이트에 걸쳐 하나의 스타일로 편하게 관리할 수 있으며, 스타일 렌더링을 위한 트래픽도 적어진다.</p>
 
@@ -281,11 +277,11 @@ p {
 &lt;/head&gt;
 </code></pre>
 
-<h2>Reset</h2>
+<h2 id="reset">Reset</h2>
 
 <p>기본적으로 모든 웹브라우저는 자신 만의 방법으로 엘리먼트의 스타일을 해석한다. 이러한 문제와 전투를 벌이기 위해서 CSS reset이 널리 사용왼다.</p>
 
-<pre><code>#### Cross Browser Compatibility &amp; Testing
+<pre><code>#### Cross Browser Compatibility &amp; Testing
 각 브라우저가 다른 방식으로 페이지를 렌더링한다. 웹사이트가 모든 브라우저에서 동일하게 보일 필요는 없지만 유사하게는 보여야 한다. 
 </code></pre>
 
@@ -300,16 +296,15 @@ p {
 [W3C CSS validator](http://jigsaw.w3.org/css-validator/)
 </code></pre>
 
-<h2>Resources &amp; Links</h2>
+<h2 id="resources--links">Resources &amp; Links</h2>
 
 <ul>
-<li><a href="http://www.scriptingmaster.com/html/HTML-terms-glossary.asp">Common HTML Terms</a> via Scripting Master</li>
-<li><a href="http://www.codestyle.org/css/Glossary.shtml">CSS Glossary</a> via Code Style</li>
-<li><a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/">Taming Advanced CSS Selectors</a> via Smashing Magazine</li>
-<li><a href="http://meyerweb.com/eric/tools/css/reset/">CSS Tools: Reset CSS</a> via Eric Meyer</li>
-<li><a href="http://www.shayhowe.com/web-design/intro-to-html-css/">An Intro to HTML &amp; CSS via Shay Howe</a></li>
+  <li><a href="http://www.scriptingmaster.com/html/HTML-terms-glossary.asp">Common HTML Terms</a> via Scripting Master  </li>
+  <li><a href="http://www.codestyle.org/css/Glossary.shtml">CSS Glossary</a> via Code Style</li>
+  <li><a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/">Taming Advanced CSS Selectors</a> via Smashing Magazine </li>
+  <li><a href="http://meyerweb.com/eric/tools/css/reset/">CSS Tools: Reset CSS</a> via Eric Meyer </li>
+  <li><a href="http://www.shayhowe.com/web-design/intro-to-html-css/">An Intro to HTML &amp; CSS via Shay Howe</a></li>
 </ul>
-
 </div>
 
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-08-29T18:58:15+09:00</updated>
+  <updated>2013-08-31T15:45:24+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -22,28 +22,27 @@
 
 <p>필요한 부분만 완전 요약하여 번역하였으니 원문을 반드시 참조하세요!</p>
 
-<h2>Learn the Ecosystem of the Project</h2>
+<h2 id="learn-the-ecosystem-of-the-project">Learn the Ecosystem of the Project</h2>
 
 <p>공헌하기 위해서는 프로젝트와 관련된 모든 문서를 읽어라. 예를 들면, 깃허브는 표준화된 <code>CONTRIBUTING.md</code>를 가지고 있다. <a href="https://github.com/jquery/jquery/blob/master/CONTRIBUTING.md">jQuery 공헌 가이드</a>는 완벽한 예제이다. 프로젝트 생태계를 이해하는 또 다른 방법은 기존 코드베이스와 <code>git log</code>를 살펴보는 것이다. 프로젝트의 문서를 전부 읽고 어휘를 습득하라.</p>
 
-<h2>The Pull-Request Workflow for Code Contribution</h2>
+<h2 id="the-pull-request-workflow-for-code-contribution">The Pull-Request Workflow for Code Contribution</h2>
 
 <p>깃허브의 일반적인 워크플로우는 꽤 단순하다.</p>
 
 <ol>
-<li>자신의 계정으로 target 저장소를 fork한다.</li>
-<li>로컬 컴퓨터에 저장소를 clone한다.</li>
-<li>&ldquo;topic 브랜치"로 check out하고 소스를 변경한다.</li>
-<li>자신의 fork에 topic 브랜치를 push한다.</li>
-<li>토론을 통해 pull request를 만들기위해 깃허브의 diff 뷰어를 사용한다.</li>
-<li>요청된 변경을 만든다.</li>
-<li>pull 요청이 (보통 master 브랜치 안으로) merge되고 topic 브랜치는 upstream(target) 저장소에서 지워진다.</li>
+  <li>자신의 계정으로 target 저장소를 fork한다.</li>
+  <li>로컬 컴퓨터에 저장소를 clone한다.</li>
+  <li>“topic 브랜치”로 check out하고 소스를 변경한다.</li>
+  <li>자신의 fork에 topic 브랜치를 push한다.</li>
+  <li>토론을 통해 pull request를 만들기위해 깃허브의 diff 뷰어를 사용한다.</li>
+  <li>요청된 변경을 만든다.</li>
+  <li>pull 요청이 (보통 master 브랜치 안으로) merge되고 topic 브랜치는 upstream(target) 저장소에서 지워진다.</li>
 </ol>
-
 
 <p>워크플로우에서 각 프로젝트마다 많은 차이가 있다. 예로, topic 브랜치의 이름 규약은 서로 다르다. 어떤 프로젝트는 깃허브 이슈의 ID #가 345일 때 <code>bug_345</code>와 같은 규약을 사용한다. 어떤 프로젝트에선 더 짧은 커밋 메시지를 선호한다.</p>
 
-<h3>Step 1: Forking</h3>
+<h3 id="step-1-forking">Step 1: Forking</h3>
 
 <p>깃허브에서 저장소를 fork한다.</p>
 
@@ -51,7 +50,7 @@
 
 <p><img src="http://cdn.tutsplus.com/net.tutsplus.com/uploads/2013/08/forking.png" alt="" /></p>
 
-<h3>Step 2: Cloning</h3>
+<h3 id="step-2-cloning">Step 2: Cloning</h3>
 
 <p>우측 사이드바의 URL을 사용하여 저장소를 clone한다.</p>
 
@@ -60,7 +59,7 @@
 
 <p><img src="http://cdn.tutsplus.com/net.tutsplus.com/uploads/2013/08/clone_url.png" alt="" /></p>
 
-<h3>Step 3: Adding the Upstream Remote</h3>
+<h3 id="step-3-adding-the-upstream-remote">Step 3: Adding the Upstream Remote</h3>
 
 <p>클론한 디렉토리로 변경하고, 이 지점에서 upstream remote를 추가한다.</p>
 
@@ -74,30 +73,30 @@ git remote add upstream git@github.com:jquery/jquery.git
 git merge upstream/master
 </code></pre>
 
-<h3>Step 4: Checking Out a Topic Branch</h3>
+<h3 id="step-4-checking-out-a-topic-branch">Step 4: Checking Out a Topic Branch</h3>
 
 <p>자신의 변경사항을 만들기 전에, topic 브랜치로 checkout한다.</p>
 
 <pre><code>git checkout -b enhancement_345
 </code></pre>
 
-<h3>Step 5: Committing</h3>
+<h3 id="step-5-committing">Step 5: Committing</h3>
 
 <p>이제 소스를 변경하고 변경에 대한 추적하는 커밋을 만든다.</p>
 
 <pre><code>git commit -am "adding a smileyface to the documentation."
 </code></pre>
 
-<h3>Step 6: Pushing</h3>
+<h3 id="step-6-pushing">Step 6: Pushing</h3>
 
 <p>자신의 fork에 topic 브랜치를 push한다.</p>
 
 <pre><code>git push origin enhancment_345
 </code></pre>
 
-<h3>Step 7: Creating a Pull Request</h3>
+<h3 id="step-7-creating-a-pull-request">Step 7: Creating a Pull Request</h3>
 
-<p>최종적으로 pull 요청을 만들 것이다. 먼저 자신의 fork로 간다. “your recently pushed branches”에서 “Compare and Pull Request”를 선택한다. 그렇지 않으면 뜨랍다운에서 브랜치를 선택하고, 저장소 섹션의 우상에 있는 “Pull Request” 나 “Compare"를 클릭한다.</p>
+<p>최종적으로 pull 요청을 만들 것이다. 먼저 자신의 fork로 간다. “your recently pushed branches”에서 “Compare and Pull Request”를 선택한다. 그렇지 않으면 뜨랍다운에서 브랜치를 선택하고, 저장소 섹션의 우상에 있는 “Pull Request” 나 “Compare”를 클릭한다.</p>
 
 <p><img src="http://cdn.tutsplus.com/net.tutsplus.com/uploads/2013/08/compare_pull_request.png" alt="" /></p>
 
@@ -105,7 +104,7 @@ git merge upstream/master
 
 <p><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github/">“How GitHub Uses GitHub to Build GitHub”</a>에 따르면 pull 요청은 대화이다.</p>
 
-<h2>GitHub Issues + Pull Requests = Project Management Zen</h2>
+<h2 id="github-issues--pull-requests--project-management-zen">GitHub Issues + Pull Requests = Project Management Zen</h2>
 
 <p>이슈의 가장 놀라운 특징은 pull 요청과의 통합이다. 사용자는 키밋 메시지에 이슈 숫자 IO를 포함하여 커밋 메시지에서 이슈를 참조할 수 있다. 예를 들면:</p>
 
@@ -114,7 +113,7 @@ git merge upstream/master
 
 <p>위의 커밋 메시지는 pull 요청이 받아들여지면 이슈 #3를 자동으로 닫는다.</p>
 
-<h2>Seek Out Secondary Channels of Collaboration</h2>
+<h2 id="seek-out-secondary-channels-of-collaboration">Seek Out Secondary Channels of Collaboration</h2>
 
 <p>pull 요청만이 공헌할 수 있는 유일한 방법이라고 생각하지 마라. 포럼이나 IRC 대화에서도 가능하다.</p>
 ]]></content>
@@ -125,29 +124,25 @@ git merge upstream/master
     <link href="http://nolboo.github.io/blog/2013/07/21/start-octopress/"/>
     <updated>2013-07-21T23:16:00+09:00</updated>
     <id>http://nolboo.github.io/blog/2013/07/21/start-octopress</id>
-    <content type="html"><![CDATA[<h2>이전 동기와 간단한 과정 소개</h2>
+    <content type="html"><![CDATA[<h2 id="section">이전 동기와 간단한 과정 소개</h2>
 
-<p>워드프레스닷컴의 두 개의 블로그 중 학습을 위해 번역과 요약을 주로 올리던 <code>nolboos.wordpress.com</code> 블로그가 워드프레스닷컴에 의해 <a href="http://en.support.wordpress.com/suspended-blogs/">중지</a>되었다. 워드프레스 설치 호스팅 서비스를 세 곳이나 친절하게 알려주긴 했지만 도메인이나 비용, 속도 등 여러 사항이 걸리고, 아마존 이외에는 이용하던 호스팅 서비스도 없어 난감해 하고 있었다. 예전부터 Github Page로 블로그를 올리는 방법을 염두에 두고 있었는데 <a href="https://twitter.com/sungchi">@sungchi</a>님이 Github(<a href="http://sungchi.github.io/">http://sungchi.github.io/</a>)와 <a href="http://tryghost.org/">Ghost</a>를 추천하셨다. 고스트는 아직 개발 중이어서 고려대상에서 제외하였고 깃허브는 블로그글을 쓸 때마다 메인페이지에 링크를 다는 불편함 등이 있었다. 게으른 놀부는 불편함을 없애주는 방법을 찾기 시작했고, 두 개가 눈에 들어왔다.</p>
+<p>워드프레스닷컴의 두 개의 블로그 중 학습을 위해 번역과 요약을 주로 올리던 <code>nolboos.wordpress.com</code> 블로그가 워드프레스닷컴에 의해 <a href="http://en.support.wordpress.com/suspended-blogs/">중지</a>되었다. 워드프레스 설치 호스팅 서비스를 세 곳이나 친절하게 알려주긴 했지만 도메인이나 비용, 속도 등 여러 사항이 걸리고, 아마존 이외에는 이용하던 호스팅 서비스도 없어 난감해 하고 있었다. 예전부터 Github Page로 블로그를 올리는 방법을 염두에 두고 있었는데 <a href="https://twitter.com/sungchi">@sungchi</a>님이 Github(http://sungchi.github.io/)와 <a href="http://tryghost.org/">Ghost</a>를 추천하셨다. 고스트는 아직 개발 중이어서 고려대상에서 제외하였고 깃허브는 블로그글을 쓸 때마다 메인페이지에 링크를 다는 불편함 등이 있었다. 게으른 놀부는 불편함을 없애주는 방법을 찾기 시작했고, 두 개가 눈에 들어왔다. </p>
 
-<p><a href="http://haroopress.com/">하루프레스</a>와 <a href="http://octopress.org/">옥토프레스</a></p>
-
+<p><a href="http://haroopress.com/">하루프레스</a>와 <a href="http://octopress.org/">옥토프레스</a>
 <!-- more -->
+옥토프레스가 먼저 나왔고 해외에서 사용자 수가 점차적으로 늘어가고 있는 것 같으나 개발이 일년 이상 중지되어 있는 것 같았고, 하루프레스는 한국분이 <a href="https://twitter.com/Rhiokim">@Rhiokim</a> 만들어서인지 디자인이나 기능적인 측면에서 좀 더 끌리는 면이 있었다. 그래서 하루프레스를 설치하기 시작하였다. 그러나, 중간에 Xcode를 요구하는 에러메시지가 나와 물어보았더니 Xcode가 반드시 있어야 한다는 <a href="https://twitter.com/n0lb00/status/356388684259528705">답</a>이 돌아왔다. 디스크 용량을 걱정해야 하는 상황에선 Xcode 설치는 무리였다. 낙망하고 별 수 없이 옥토프레스를 설치하기 시작하였다.</p>
 
-
-<p>옥토프레스가 먼저 나왔고 해외에서 사용자 수가 점차적으로 늘어가고 있는 것 같으나 개발이 일년 이상 중지되어 있는 것 같았고, 하루프레스는 한국분이 <a href="https://twitter.com/Rhiokim">@Rhiokim</a> 만들어서인지 디자인이나 기능적인 측면에서 좀 더 끌리는 면이 있었다. 그래서 하루프레스를 설치하기 시작하였다. 그러나, 중간에 Xcode를 요구하는 에러메시지가 나와 물어보았더니 Xcode가 반드시 있어야 한다는 <a href="https://twitter.com/n0lb00/status/356388684259528705">답</a>이 돌아왔다. 디스크 용량을 걱정해야 하는 상황에선 Xcode 설치는 무리였다. 낙망하고 별 수 없이 옥토프레스를 설치하기 시작하였다.</p>
-
-<h2>사전 경험 얻기</h2>
+<h2 id="section-1">사전 경험 얻기</h2>
 
 <p>검색을 해봐도 옥토프레스에 대한 한글 블로그 글이 거의 없었고,(해커들을 위한 블로그 시스템이라 설명을 안하나?ㅠㅠ) <a href="http://doomed-lover.com/archives/migrating-to-octopress/">옥토프레스 이전 과정</a>에서 몇 가지 사전 지식을 얻을 수 있었다.</p>
 
 <ul>
-<li><a href="https://github.com/thomasf/exitwp">Exitwp</a> : 워드프레스 블로그를 지킬 블로그 엔진으로 쉽게 이전. 마크다운으로 변환</li>
-<li>동영상 임베딩 등은 플러그인을 사용하지말고 원 코드를 사용하는 것이 좋다.</li>
-<li>블로그의 제목, 태그는 모두 영문 사용을 기본으로 하는 것이 좋을듯.</li>
+  <li><a href="https://github.com/thomasf/exitwp">Exitwp</a> : 워드프레스 블로그를 지킬 블로그 엔진으로 쉽게 이전. 마크다운으로 변환</li>
+  <li>동영상 임베딩 등은 플러그인을 사용하지말고 원 코드를 사용하는 것이 좋다.</li>
+  <li>블로그의 제목, 태그는 모두 영문 사용을 기본으로 하는 것이 좋을듯.</li>
 </ul>
 
-
-<h2>기존 블로그 글을 <a href="http://jekyllrb.com/docs/migrations/">지킬로 마이그레이션</a></h2>
+<h2 id="httpjekyllrbcomdocsmigrations">기존 블로그 글을 <a href="http://jekyllrb.com/docs/migrations/">지킬로 마이그레이션</a></h2>
 
 <pre><code>$ gem install jekyll-import --pre
 </code></pre>
@@ -165,7 +160,7 @@ JekyllImport::WordpressDotCom.process({ :source =&gt; "wordpress.xml" })'
 
 <p><code>_posts</code>, <code>_pages</code>, <code>_nav_menu_items</code>의 세 개의 디렉토리에 <code>.html</code> 화일들이 추출된다.</p>
 
-<h2>설치</h2>
+<h2 id="section-2">설치</h2>
 
 <p>git과 Ruby를 <a href="http://octopress.org/docs/setup/">설치</a>하고 테마를 적용하였다.(글이 너무 길어지니 이 부분은 링크에서 보세요)</p>
 
@@ -179,9 +174,9 @@ $ rake generate
 $ rake deploy
 </code></pre>
 
-<p>위의 과정까지 마치면 <code>nolboo.github.com</code>이나 <code>nolboo.github.io</code>로 가보면 기본테마가 적용된 최초의 블로그를 볼 수 있다. 의외로 간단하다.</p>
+<p>위의 과정까지 마치면 <code>nolboo.github.com</code>이나 <code>nolboo.github.io</code>로 가보면 기본테마가 적용된 최초의 블로그를 볼 수 있다. 의외로 간단하다. </p>
 
-<h2><a href="http://octopress.org/docs/configuring/">설정하기</a></h2>
+<h2 id="httpoctopressorgdocsconfiguring"><a href="http://octopress.org/docs/configuring/">설정하기</a></h2>
 
 <p><code>Rakefile</code>과 <code>_config.yml</code>만 변경하는 것으로 충분하나 설정 화일 리스트는 다음과 같다.</p>
 
@@ -193,11 +188,11 @@ config.ru         # Rack config
 
 <p><code>Rakefile</code>도 <code>rsync</code>를 사용하지 않는 한 변경할 것이 없다.</p>
 
-<h3>블로그 설정</h3>
+<h3 id="section-3">블로그 설정</h3>
 
 <p><code>_config.yml</code>은 세 섹션으로 되어있다. <em><code>url</code>, <code>title</code>, <code>subtitle</code>, <code>author</code>는 반드시 변경해야 하고, 서드파티 서비스를 활성화시켜주어야 한다.</em></p>
 
-<h4>주요 설정</h4>
+<h4 id="section-4">주요 설정</h4>
 
 <pre><code>url:                # For rewriting urls for RSS, etc
 title:              # Used in the header and title tags
@@ -211,7 +206,7 @@ description:        # A default meta description for your site
 
 <p>플러그인에서는 일단 <code>disqus_short_name</code>에 숏네임을 하나 정해서 넣어주었고, <code>google_analytics_tracking_id</code>에 추적 ID를 생성해서 입력했다.</p>
 
-<h2>블로깅 하기</h2>
+<h2 id="section-5">블로깅 하기</h2>
 
 <p>블로그 포스트는 <code>source/_posts</code> 디렉토리에 지킬 방식인 <code>YYYY-MM-DD-post-title.markdown</code> 형식의 이름으로 저장되어야 한다. 이를 편하게 해주는 rake 명령은 다음과 같다.</p>
 
@@ -250,7 +245,7 @@ categories:
 
 <p>블로그의 인덱스 페이지에서 글의 일부만 보여주려면 <code>&lt;!-- more --&gt;</code> 주석을 넣어주면 “Continue →” 버튼으로 전체 글로 링크된다.</p>
 
-<h2>제너레이트와 미리보기</h2>
+<h2 id="section-6">제너레이트와 미리보기</h2>
 
 <pre><code>rake generate   # public 디렉토리에 포스트와 페이지를 제너레이트한다.
 rake preview    # http://localhost:4000 에 웹서버를 마운트하고 볼 수 있게 한다.
@@ -258,12 +253,12 @@ rake preview    # http://localhost:4000 에 웹서버를 마운트하고 볼 수
 
 <p>이제 웹 브라우저에서 <code>http://localhost:4000</code> 주소를 입력하여 미리볼 수 있다.</p>
 
-<h2>출판하기</h2>
+<h2 id="section-7">출판하기</h2>
 
 <pre><code>$ rake deploy
 </code></pre>
 
-<h2>블로깅 워크플로우</h2>
+<h2 id="section-8">블로깅 워크플로우</h2>
 
 <pre><code>1. $ rake new_post["title"] //title은 영문으로 간단하게
 2. 에디터로 .markdown 화일 편집하고 
@@ -280,17 +275,17 @@ git commit -m 'your message'
 git push origin source
 </code></pre>
 
-<h2>맺는말</h2>
+<h2 id="section-9">맺는말</h2>
 
 <p>마크다운을 이용할 수 있을 정도의 사용자라면 쉽게 써보려고 했지만 많이 부족한 것 같다. 옥토프레스가 내가 원하는 블로깅 워크플로우에 가장 근접하게 사용할 수 있을 것 같다. 이제 워드프레스닷컴에서 홀대받았던 나머지 글들을 계속 올리고 추가적인 포스팅도 꾸준히 할 것이다.</p>
 
-<h2>추가 참조 링크</h2>
+<h2 id="section-10">추가 참조 링크</h2>
 
 <ul>
-<li><a href="https://github.com/imathis/octopress/wiki/3rd-party-plugins">3rd party plugins</a></li>
-<li><a href="http://www.tomordonez.com/blog/2012/06/04/creating-a-github-blog-using-octopress/">Creating a Github Blog Using Octopress</a></li>
-<li><a href="http://webdesign.tutsplus.com/tutorials/applications/getting-started-with-octopress/">Getting Started with Octopress</a></li>
-<li><a href="http://paulsturgess.co.uk/blog/2013/04/24/hello-octopress-and-github-pages/">Hello Octopress &amp; Github Pages</a></li>
+  <li><a href="https://github.com/imathis/octopress/wiki/3rd-party-plugins">3rd party plugins</a></li>
+  <li><a href="http://www.tomordonez.com/blog/2012/06/04/creating-a-github-blog-using-octopress/">Creating a Github Blog Using Octopress</a></li>
+  <li><a href="http://webdesign.tutsplus.com/tutorials/applications/getting-started-with-octopress/">Getting Started with Octopress</a></li>
+  <li><a href="http://paulsturgess.co.uk/blog/2013/04/24/hello-octopress-and-github-pages/">Hello Octopress &amp; Github Pages</a></li>
 </ul>
 
 ]]></content>

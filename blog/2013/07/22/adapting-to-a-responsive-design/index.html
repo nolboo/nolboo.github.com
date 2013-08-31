@@ -9,7 +9,8 @@
   <meta name="author" content="Nolboo Kim">
 
   
-  <meta name="description" content="원본: Adapting To A Responsive Design (Case Study) Why Adapt To A Responsive Design? CHANGING OUR APPROACH 새로운 폼팩터가 엄청나게 유입되면서 좀 더 future-friendly한, &hellip;">
+  <meta name="description" content="원본: Adapting To A Responsive Design (Case Study) Why Adapt To A Responsive Design? CHANGING OUR APPROACH
+새로운 폼팩터가 엄청나게 유입되면서 좀 더 future-friendly한, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -105,39 +106,33 @@
 
 <div class="entry-content"><p>원본: <a href="http://mobile.smashingmagazine.com/2013/06/18/adapting-to-a-responsive-design-case-study/">Adapting To A Responsive Design (Case Study)</a></p>
 
-<h2>Why Adapt To A Responsive Design?</h2>
+<h2 id="why-adapt-to-a-responsive-design">Why Adapt To A Responsive Design?</h2>
 
-<h3>CHANGING OUR APPROACH</h3>
-
+<h3 id="changing-our-approach">CHANGING OUR APPROACH</h3>
 <p>새로운 폼팩터가 엄청나게 유입되면서 좀 더 future-friendly한, 동시에 관리하기 쉬운 웹사이트를 만들게 되었다.</p>
 
-<h3>SETTING GOALS FOR THE RESPONSIVE DESIGN</h3>
-
+<h3 id="setting-goals-for-the-responsive-design">SETTING GOALS FOR THE RESPONSIVE DESIGN</h3>
 <p><strong>반응형 디자인의 목표</strong></p>
 
 <ol>
-<li>속도</li>
-<li>스타일, 백그라운드 혹은 자바스크립트와 상관없는 접근성</li>
-<li>하나의 컨텐츠</li>
-<li>플랫폼 독립성</li>
-<li><a href="http://futurefriend.ly/">미래지향</a> &ndash; 계속 유지보수하기 싫다.</li>
-</ol>
-
-
+  <li>속도</li>
+  <li>스타일, 백그라운드 혹은 자바스크립트와 상관없는 접근성</li>
+  <li>하나의 컨텐츠</li>
+  <li>플랫폼 독립성</li>
+  <li><a href="http://futurefriend.ly/">미래지향</a> - 계속 유지보수하기 싫다.
 <!-- more -->
-
-
-<p>먼저 신뢰할만한 고객에게 의견을 구했고, <a href="http://www.google.co.uk/analytics/">구글 애널리틱스</a>, <a href="http://www.leadforensics.com/">리드포렌식</a>, <a href="http://www.crazyegg.com/">크레이지에그</a> 등을 이용해 기존 웹사이트를 분석했다.</p>
+먼저 신뢰할만한 고객에게 의견을 구했고, <a href="http://www.google.co.uk/analytics/">구글 애널리틱스</a>, <a href="http://www.leadforensics.com/">리드포렌식</a>, <a href="http://www.crazyegg.com/">크레이지에그</a> 등을 이용해 기존 웹사이트를 분석했다.</li>
+</ol>
 
 <p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
 <p>디자인 팀이 기존 컨텐츠를 재구성하기 위해 카드 소팅을 사용하고 있다.</p>
 
-<h2>Making Performance A Priority</h2>
+<h2 id="making-performance-a-priority">Making Performance A Priority</h2>
 
 <p>특정 스크린 너비에서 보이지않게만 하는 방법은 성능이 문제가 된다. 모바일 breadpoint에서 40 HTTP 요청과 500KB 데이타를 넘지않길 원했다.</p>
 
-<h3>THIRD-PARTY SCRIPTS</h3>
+<h3 id="third-party-scripts">THIRD-PARTY SCRIPTS</h3>
 
 <p><a href="http://zurb.com/article/883/small-painful-buttons-why-social-media-bu">Zurb에 의하면</a>, 총 19개의 요청으로 페이스북, 트위터, 구글 소셜 미디어 버튼을 로드하는 것이 대역폭에서 246.7 KB를 잡아먹는다고 한다. 그래서 무거운 소셜미디어 플러그인을 가벼운 소셜미디어 링크로 대치하였다.</p>
 
@@ -145,7 +140,7 @@
 
 <p>몇개의 필수적인 트래킹 스크립트는 남겨야 했는데, HTML의 <code>body</code> 엘리먼트의 바닥과 외부 스크립트 화일에 집어넣어서 컨텐츠 이후에 로딩되도록 하였다.</p>
 
-<h3>DID WE REALLY NEED A CMS?</h3>
+<h3 id="did-we-really-need-a-cms">DID WE REALLY NEED A CMS?</h3>
 
 <p>토의 초기에 CMS가 필요한가에 검토하였는데 우리 대부분은 HTML, CSS, Git에 익숙하기 때문에 CMS 없이 컨텐츠를 관리하기로 했다.</p>
 
@@ -161,19 +156,19 @@
 
 <p>초기 프로토타입을 개발하고 있다.</p>
 
-<p>정적 페이지를 위한 CMS를 제거하여 데이타베이스와 동적인 템플릿에 대한 니즈를 생략했다. 인기 있는 PHP 프레임워크인 Laravel을 사용해 커스텀 동적 루트와 정적 템플릿 시스템을 적용했다. 이것은 템플릿 이름과 URL을 매칭시켜 웹사이트에서 URL이 호출될 때마다 Laravel 라우터가 로드될 템플릿을 정확하게 안다는 것을 의미한다. 또한, 그 템플릿은 HTML에서 정적으로 레이아웃된 컨텐츠를 이미 가지고 있다는 것을 의미한다.</p>
+<p>정적 페이지를 위한 CMS를 제거하여 데이타베이스와 동적인 템플릿에 대한 니즈를 생략했다. 인기 있는 PHP 프레임워크인 Laravel을 사용해 커스텀 동적 루트와 정적 템플릿 시스템을 적용했다. 이것은 템플릿 이름과 URL을 매칭시켜 웹사이트에서 URL이 호출될 때마다 Laravel 라우터가 로드될 템플릿을 정확하게 안다는 것을 의미한다. 또한, 그 템플릿은 HTML에서 정적으로 레이아웃된 컨텐츠를 이미 가지고 있다는 것을 의미한다.</p>
 
 <p>이것만으로, 웹사이트 처리 속도를 3,900% 넘게 개선할 수 있었다. 평균 2.2초에서 56 밀리초로 서버 처리속도가 개선되었다.</p>
 
 <p><em>링크를 허락하지 않으며 문맥에 큰 상관이 없으니 원본 그림 참조 바랍니다.</em></p>
 
-<p>서버 처리 속도가 이제 단지 56밀리초이며, 데이타베이스 쿼리는 0이다. &ndash; 전보다 대략 40배 더 빨라졌다.</p>
+<p>서버 처리 속도가 이제 단지 56밀리초이며, 데이타베이스 쿼리는 0이다. - 전보다 대략 40배 더 빨라졌다.</p>
 
 <p>자연히 우리는 매 프로젝트의 시작에서 어떤 CMS가 가장 적합하고 필요한지 자문해야한다. 물론 다른 옵션도 있다. <a href="http://getkirby.com/">Kirby</a>와 <a href="http://statamic.com/">Statamic</a>와 같은 화일 베이스 CMS, <a href="http://grabaperch.com/">Perch</a>와 같은 경량 CMS를 구축하거나 커스터마이징, <a href="https://www.varnish-cache.org/">Varnish</a>와 같은 것을 이용해 더 나은 서버사이드 캐싱만을 적용하는 것 등이다.</p>
 
 <p>결국, 가장 경량이더라도, 영리한 캐싱과 함께 CMS를 최적화 시키는 것조차도 오버헤드이고 성능과 정적화일의 서버 족적에 맞출 수 없어서 CMS를 제거하기로 결정했다.</p>
 
-<h3>AVOIDING OFF-THE-SHELF CSS FRAMEWORKS</h3>
+<h3 id="avoiding-off-the-shelf-css-frameworks">AVOIDING OFF-THE-SHELF CSS FRAMEWORKS</h3>
 
 <p><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>과 <a href="http://foundation.zurb.com/">Foundation</a>과 같은 CSS 프레임워크는 인터렉티브한 프로토타입을 재빠르게 구축하는 데에 훌륭하지만 대부분의 프로젝트에 필요한 것보단 종종 훨씬 더 복잡하다. 이들 프레임워크가 민감하고 광범위한 유즈 케이스에 맞추어져 있고 프로젝트의 특별한 요구에 맞추어져 있지 않기 때문이다.</p>
 
@@ -297,7 +292,7 @@ $gutter:     20px;
 
 <p><a href="https://github.com/Cyber-Duck/hoisin.scss">깃허브</a>에 오픈소스화 하였으니, 포크하여 당신의 프로젝트에 적용해 보고 어떤지 알려달라!</p>
 
-<h3>CONDITIONALLY LOADING JAVASCRIPT</h3>
+<h3 id="conditionally-loading-javascript">CONDITIONALLY LOADING JAVASCRIPT</h3>
 
 <p>속도 향상을 필요로 하고 지원될 때만 자바스크립트가 로드되길 원했고, <a href="http://requirejs.org/">RequireJS</a>를 이용했다. 자바스크립트 화일을 줄여주는 <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a>도 포함되어있다.</p>
 
@@ -305,7 +300,7 @@ $gutter:     20px;
 
 <p>최적화로 자바스크립트 크기가 411 KB에서 106 KB로 줄었다.</p>
 
-<h3>OPTIMIZING IMAGE ASSETS</h3>
+<h3 id="optimizing-image-assets">OPTIMIZING IMAGE ASSETS</h3>
 
 <p>우리 웹사이트는 작업을 전시하기 위해 꽤 이미지가 무거운 실례이기 때문에 대부분의 웹사이트에서 가장 무거운 자산인 이미지 다운로드를 개선하길 원했다.</p>
 
@@ -379,9 +374,9 @@ $gutter:     20px;
 }
 </code></pre>
 
-<h3>DELIVERING CONTENT FASTER</h3>
+<h3 id="delivering-content-faster">DELIVERING CONTENT FASTER</h3>
 
-<p><a href="http://developer.yahoo.com/performance/rules.html">야후의 성능 황금률</a>에서는 엔드유저 반응 시간의 80-90%는 페이지의 모든 구성요소(이미지, 스타일 시트, 스크립트, 플래쉬 등)를 다운로드하는 것에 소비된다고 한다. 간략히, 각 요청은 처리하는 시간이 걸린다; 그러므로 서버에서 화일을 제공되는 것과 같은 각 요청은 로딩 시간을 불가피하게 증가시킬 것이다.</p>
+<p><a href="http://developer.yahoo.com/performance/rules.html">야후의 성능 황금률</a>에서는 엔드유저 반응 시간의 80-90%는 페이지의 모든 구성요소(이미지, 스타일 시트, 스크립트, 플래쉬 등)를 다운로드하는 것에 소비된다고 한다. 간략히, 각 요청은 처리하는 시간이 걸린다; 그러므로 서버에서 화일을 제공되는 것과 같은 각 요청은 로딩 시간을 불가피하게 증가시킬 것이다.</p>
 
 <p><a href="http://www.cloudflare.com/features-cdn">CloudFlare의 CDN</a>을 이용하여 웹사이트 처리에서 웹 서버의 화일 제공 작업을 분리하였다. 이것은 우리 웹 서버를 정적 화일을 제공하기 보단 애플리케이션에 집중하도록 하는 것을 의미한다. 모든 정적인 자산을 분리된 서브도메인(우리 경우 <code>static.cyber-duck.co.uk</code>)으로 옮겼다. 각 자산에 요구되는 대역폭을 차례로 줄여 하나의 자산을 요청하는 각 요청과 함께 보내지는 쿠키를 최소로 줄이기 위한 것이다.</p>
 
@@ -389,11 +384,11 @@ $gutter:     20px;
 
 <p>CDN에 더해, Gzip 룰을 사용했고 <a href="https://github.com/h5bp/html5-boilerplate/blob/master/.htaccess">HTML5 Boilerplate의 <code>.htaccess</code> 화일</a>에서 헤더를 죽였다.(expire) This uses Apache’s mod_deflate module to compress the output of files to the browser and also sets an expiration on headers far into the future, to ensure better caching of the website for returning visitors.</p>
 
-<h2>Creating A Truly Responsive Design</h2>
+<h2 id="creating-a-truly-responsive-design">Creating A Truly Responsive Design</h2>
 
-<p>진정한 반응형 디자인을 전달하기 위해, 모든 스타일링과 디스플레이 작업을 &ndash; 자바스크립트를 직접 사용해 엘리먼트를 숨기거나 보여주지 않고, CSS 클래스를 추가하거나 제거하여 엘리먼트의 상태만을 변경하기 위해 자바스크립트를 사용하고 &ndash; CSS 에만 위임했다.</p>
+<p>진정한 반응형 디자인을 전달하기 위해, 모든 스타일링과 디스플레이 작업을 - 자바스크립트를 직접 사용해 엘리먼트를 숨기거나 보여주지 않고, CSS 클래스를 추가하거나 제거하여 엘리먼트의 상태만을 변경하기 위해 자바스크립트를 사용하고 - CSS 에만 위임했다.</p>
 
-<h3>THE RIGHT CODE FOR THE TASK</h3>
+<h3 id="the-right-code-for-the-task">THE RIGHT CODE FOR THE TASK</h3>
 
 <p>이 방법을 사용해 모바일 방문자가 전화하거나 사무실을 빠르게 찾을 수 있도록 전화와 지도 버튼을 갖도록 모바일의 탑 메뉴를 변형하는 등의 모바일에 특정한 최적화를 할 수 있었다.</p>
 
@@ -438,7 +433,7 @@ $('.btn-menu').click(function(e){
 }
 </code></pre>
 
-<h3>ANIMATIONS AS AN ENHANCEMENT</h3>
+<h3 id="animations-as-an-enhancement">ANIMATIONS AS AN ENHANCEMENT</h3>
 
 <p>애니메이션 슬라이드쇼를 위해 HTML과 CSS만을 사용하는 슬라이드쇼를 만들기 위해 <a href="http://www.sequencejs.com/">SequenceJS</a>를 사용했다. 자바스크립트를 이용할 수 없거나 스크린 크기가 너무 작을 경우엔 애니메이션에 필요한 모든 자산을 다운로드할 필요가 없다.</p>
 
@@ -458,7 +453,7 @@ $('.btn-menu').click(function(e){
 }
 </code></pre>
 
-<h3>BREAKPOINTS BASED ON CONTENT AND DESIGN, NOT DEVICE</h3>
+<h3 id="breakpoints-based-on-content-and-design-not-device">BREAKPOINTS BASED ON CONTENT AND DESIGN, NOT DEVICE</h3>
 
 <p>구분점(breakpoint)들에서 크고 작은 스크린에 최적화된 컨텐츠 표현을 반응적으로 전달하기 위해 다양한 CSS 미디어 쿼리를 사용했다.</p>
 
@@ -474,30 +469,28 @@ $('.btn-menu').click(function(e){
 
 <p>우리 디자이너와 프론트엔드 팀이 노키아 X2와 같은 오래된 모델을 포함한 매우 다양한 기기에서 테스트하였다.</p>
 
-<h2>Being More Accessible</h2>
+<h2 id="being-more-accessible">Being More Accessible</h2>
 
 <p>웹 디자이너와 개발자로서 반응성은 웹 사이트를 더 접근하기 쉽게 만드는 것이 아니라 우리 고객과 동료가 왜 배려받아야 하는지에 관해 교육하는 것이다.</p>
 
 <p>우리 웹사이트에 적용한 접근성에 대해 얻은 것 몇가지가 아래에 있다.</p>
 
-<h3>TEXT</h3>
+<h3 id="text">TEXT</h3>
 
 <ul>
-<li>텍스트는 배경에 대해 읽기쉬워야 한다. 헤딩에는 3:1, <code>body</code> 텍스트엔 4.5:1의 대조비를 준다.</li>
-<li>텍스트는 적절한 헤딩과 의미있는 순서로 구조되어야 하고 컨텐츠의 주제나 목적을 설명한다.</li>
-<li>텍스트는 컨텐츠나 기능성을 잃지 않고 크기를 변경할 수 있어야 한다.</li>
+  <li>텍스트는 배경에 대해 읽기쉬워야 한다. 헤딩에는 3:1, <code>body</code> 텍스트엔 4.5:1의 대조비를 준다.</li>
+  <li>텍스트는 적절한 헤딩과 의미있는 순서로 구조되어야 하고 컨텐츠의 주제나 목적을 설명한다.</li>
+  <li>텍스트는 컨텐츠나 기능성을 잃지 않고 크기를 변경할 수 있어야 한다.</li>
 </ul>
 
-
-<h3>LINKS</h3>
+<h3 id="links">LINKS</h3>
 
 <ul>
-<li>모든 링크의 목적은 설명하는 텍스트와 함께 명료해야하고 할 수 없는 경우에는 대안 텍스트를 제공해야 한다.</li>
-<li>모든 페이지의 첫번째 링크는 컨텐츠로 직접 이동할 수 있는 내비게이션을 제공해야 한다.</li>
-<li>페이지 주소(즉, URL)은 사람이 읽기쉬워야 하고, 가능한 경우에는 영구적이어야 한다.</li>
-<li>중요한 페이지와 기능에 빠른 내비게이션을 위해 접근 관문을 제공했다.</li>
+  <li>모든 링크의 목적은 설명하는 텍스트와 함께 명료해야하고 할 수 없는 경우에는 대안 텍스트를 제공해야 한다.</li>
+  <li>모든 페이지의 첫번째 링크는 컨텐츠로 직접 이동할 수 있는 내비게이션을 제공해야 한다.</li>
+  <li>페이지 주소(즉, URL)은 사람이 읽기쉬워야 하고, 가능한 경우에는 영구적이어야 한다.</li>
+  <li>중요한 페이지와 기능에 빠른 내비게이션을 위해 접근 관문을 제공했다.</li>
 </ul>
-
 
 <p>네비게이션 링크를 스킵하는 HTML:</p>
 
@@ -512,39 +505,36 @@ $('.btn-menu').click(function(e){
 }
 </code></pre>
 
-<h3>IMAGES</h3>
+<h3 id="images">IMAGES</h3>
 
 <ul>
-<li>모든 컨텐츠 이미지는 이미지가 불가하거나 지원되지 않을 때 보여주는 (<code>alt</code> 속성과 함께하는) 대안 텍스트를 가져야한다.</li>
-<li>컨텐츠는 이미지가 불가하거나 지원되지 않을 때에도 접근할 수 있거나 이해될 수 있어야 한다.</li>
+  <li>모든 컨텐츠 이미지는 이미지가 불가하거나 지원되지 않을 때 보여주는 (<code>alt</code> 속성과 함께하는) 대안 텍스트를 가져야한다.</li>
+  <li>컨텐츠는 이미지가 불가하거나 지원되지 않을 때에도 접근할 수 있거나 이해될 수 있어야 한다.</li>
 </ul>
 
-
-<h3>VIDEO</h3>
+<h3 id="video">VIDEO</h3>
 
 <ul>
-<li>모든 비디오는 말하는 부분이 있으면 캔셥이나 자막을 갖고, YouTube에 호스팅한다.</li>
+  <li>모든 비디오는 말하는 부분이 있으면 캔셥이나 자막을 갖고, YouTube에 호스팅한다.</li>
 </ul>
 
-
-<h3>FORMS</h3>
+<h3 id="forms">FORMS</h3>
 
 <ul>
-<li>모든 폼 컨트롤과 필드는 적절하고 명료하게 레이블한다.</li>
-<li>폼 입력은 터치 스크린에서 정확한 키보드가 로드되도록 형식과 속성을 할당한다.</li>
-<li>모든 중요한 폼 필드는 폼이 제출 될 때 에러를 체크하도록 한다.</li>
-<li>발견된 에러는 정정하는 방법에 대한 제안과 함께 유저에게 텍스트로 설명되어야 한다.</li>
-<li>모든 폼은 키보드에서 <code>tab</code>키로 내비게이션할 수 있도록 적절한 포커스 순서를 가져야 한다.</li>
-<li>모든 폼은 <code>Return</code>이나 <code>Enter</code>키로 제출할 수 있어야 한다.</li>
+  <li>모든 폼 컨트롤과 필드는 적절하고 명료하게 레이블한다.</li>
+  <li>폼 입력은 터치 스크린에서 정확한 키보드가 로드되도록 형식과 속성을 할당한다.</li>
+  <li>모든 중요한 폼 필드는 폼이 제출 될 때 에러를 체크하도록 한다.</li>
+  <li>발견된 에러는 정정하는 방법에 대한 제안과 함께 유저에게 텍스트로 설명되어야 한다.</li>
+  <li>모든 폼은 키보드에서 <code>tab</code>키로 내비게이션할 수 있도록 적절한 포커스 순서를 가져야 한다.</li>
+  <li>모든 폼은 <code>Return</code>이나 <code>Enter</code>키로 제출할 수 있어야 한다.</li>
 </ul>
-
 
 <p><code>required</code>나 <code>placeholder</code>와 같은 적절한 input 타입과 속성을 사용하면 폼을 더 접근하기 쉽게 만들 수 있다.</p>
 
 <pre><code>&lt;input type="email" id="email" name="email" value="" required="" placeholder="Pop your email address in here"&gt;
 </code></pre>
 
-<h2>Just Getting Started</h2>
+<h2 id="just-getting-started">Just Getting Started</h2>
 
 <p>몇 주전 새 웹사이트를 띄운 결과가 인상적이었다. 모바일 트래픽이 200% 넘게 증가하였고(모든 트래픽 평균에선 82%가 증가), 평균 방문 시간이 18% 증가혔다. 모바일 사용자의 exit 비율이 4,000% 감소하였다.</p>
 

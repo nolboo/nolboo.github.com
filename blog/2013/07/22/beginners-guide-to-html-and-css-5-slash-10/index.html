@@ -9,7 +9,7 @@
   <meta name="author" content="Nolboo Kim">
 
   
-  <meta name="description" content="원본 : A Beginner&rsquo;s Guide to HTML &amp; CSS &ndash; LESSON 5 : Backgrounds &amp; Gradients 백그라운드(배경)은 작게 쓰이거나 크게 쓰이거나 웹사이트 전체 디자인에 중요한 시각적 효과를 준다 &hellip;">
+  <meta name="description" content="원본 : A Beginner’s Guide to HTML &amp; CSS - LESSON 5 : Backgrounds &amp; Gradients 백그라운드(배경)은 작게 쓰이거나 크게 쓰이거나 웹사이트 전체 디자인에 중요한 시각적 효과를 준다. CSS3에서는 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -103,16 +103,14 @@
   </header>
 
 
-<div class="entry-content"><p>원본 : <a href="http://learn.shayhowe.com/html-css/backgrounds-gradients">A Beginner&rsquo;s Guide to HTML &amp; CSS &ndash; LESSON 5 : Backgrounds &amp; Gradients</a></p>
+<div class="entry-content"><p>원본 : <a href="http://learn.shayhowe.com/html-css/backgrounds-gradients">A Beginner’s Guide to HTML &amp; CSS - LESSON 5 : Backgrounds &amp; Gradients</a></p>
 
 <p>백그라운드(배경)은 작게 쓰이거나 크게 쓰이거나 웹사이트 전체 디자인에 중요한 시각적 효과를 준다.</p>
 
-<p>CSS3에서는 그라디언트 백그라운드, 하나의 엘리먼트에 여러 백그라운드 이미지 적용 등의 새로운 <a href="http://learn.shayhowe.com/html-css/backgrounds-gradients">백그라운드 특성</a>이 도입되었다.</p>
+<p>CSS3에서는 그라디언트 백그라운드, 하나의 엘리먼트에 여러 백그라운드 이미지 적용 등의 새로운 <a href="http://learn.shayhowe.com/html-css/backgrounds-gradients">백그라운드 특성</a>이 도입되었다.
+<!-- more --></p>
 
-<!-- more -->
-
-
-<h2>Adding a Background Color</h2>
+<h2 id="adding-a-background-color">Adding a Background Color</h2>
 
 <p>엘리먼트에 백그라운드 적용하는 가장 빠른 방법은 <code>background</code>나 <code>background-color</code> 속성으로 한 가지 색의 백그라운드를 적용하는 것이다. <code>background</code> 속성은 색상과 이미지를, <code>background-color</code>는 백그라운드 색상만을 위해 사용된다.</p>
 
@@ -130,7 +128,7 @@
 }
 </code></pre>
 
-<h2>Adding a Background Image</h2>
+<h2 id="adding-a-background-image">Adding a Background Image</h2>
 
 <p>백그라운드 색상처럼 <code>background</code> 속성이나 <code>background-image</code> 속성을 사용하여 백그라운드 이미지를 추가할 수 있다. 어떤 속성을 사용하던지 간에 백그라운 이미지의 경로 즉, 이미지 소스를 정의하는 <code>url</code> 값을 사용해야 한다.</p>
 
@@ -142,7 +140,7 @@
 
 <p><code>url</code> 값만 사용하면 컨테이너 엘리먼트의 좌상에서부터 수평과 수직 방향으로 반복될 것이다. 다행히 <code>background-repeat</code> 와 <code>background-position</code> 속성을 사용해서 이를 해결할 수 있다.</p>
 
-<h3>Background Repeat</h3>
+<h3 id="background-repeat">Background Repeat</h3>
 
 <p>기본적으로 백그라운 이미지는 수평과 수직 방향으로 무한 반복된다. <code>background</code> 속성의 <code>url</code> 값 뒤에 반복 값을 추가하거나 <code>background-repeat</code> 속성으로 반복 값을 지정할 수 있다.</p>
 
@@ -155,7 +153,7 @@
 
 <p>백그라운드 반복(repeat)은 <code>repeat</code>, <code>repeat-x</code>, <code>repeat-y</code>, <code>no-repeat</code>의 네 가지 값을 갖는다. <code>repeat</code> 값이 디폴트이며, 수직과 수평 방향으로 이미지를 반복한다. <code>repeat-x</code>는 수평방향으로 이미지를 반복하며, <code>repeat-y</code>는 수직방향으로 반복한다. <code>no-repeat</code>는 백그라운드 이미지를 한번만 표시하며, 반복하지 않는다.</p>
 
-<h3>Background Position</h3>
+<h3 id="background-position">Background Position</h3>
 
 <p><code>background-position</code> 속성을 사용하면 백그라운드 이미지가 어디에 위치할지와 어디서부터 반복할지를 조정할 수 있다. 다른 백그라운드 속성과 마찬가지로 <code>background</code> 속성의 <code>url</code> 값 뒤에서 지정하거나 <code>background-position</code> 속성으로 별도로 지정할 수 있다.</p>
 
@@ -174,14 +172,14 @@
 <p><img src="http://learn.shayhowe.com/assets/courses/html-css-guide/backgrounds-gradients/background-percentages.png" alt="Background Percentages" />
 <strong>Fig. 5.01</strong> 백그라운드 이미지의 위치를 조정하기 위해 퍼센트와 키워드를 사용</p>
 
-<h3>Alert Message Background Example</h3>
+<h3 id="alert-message-background-example">Alert Message Background Example</h3>
 
-<h6>HTML</h6>
+<h6 id="html">HTML</h6>
 
 <pre><code>&lt;p&gt;&lt;strong&gt;Warning!&lt;/strong&gt; You are walking on thin ice.&lt;/p&gt;
 </code></pre>
 
-<h6>CSS</h6>
+<h6 id="css">CSS</h6>
 
 <pre><code>p {
   background: #fff6cc url('warning.png') 15px 50% no-repeat;
@@ -192,37 +190,35 @@
 }
 </code></pre>
 
-<h4>Demo</h4>
-
+<h4 id="demo">Demo</h4>
 <ul>
-<li><a href="http://jsfiddle.net/nolboo/gWUuR/">jsfiddle 링크</a></li>
+  <li><a href="http://jsfiddle.net/nolboo/gWUuR/">jsfiddle 링크</a></li>
 </ul>
 
-
-<h2>Gradient Backgrounds with CSS3</h2>
+<h2 id="gradient-backgrounds-with-css3">Gradient Backgrounds with CSS3</h2>
 
 <p>그라디언트 백그라운드는 CSS3와 함께 도입되었으며, 모든 브라우저에서 지원되지는 않지만 최신 브라우저에서는 전부 지원된다.</p>
 
 <p>그라디언트 백그라운드는 백그라운드 이미지처럼 다뤄지며, <code>background</code>나 <code>background-image</code> 속성을 이용하여 linear, radial 두 가지 형태로 만들 수 있다.</p>
 
-<blockquote><h4>Browser Specific Property Values</h4>
-
-<p><br>
+<blockquote>
+  <h4 id="browser-specific-property-values">Browser Specific Property Values</h4>
+  <p><br />
 브라우저들이 CSS3를 다른 특성들을 서서히 지원하였기 때문에 각 브라우저 제작사는 약간씩 다른 방법으로 새로운 속성을 적용하였다. 새로운 속성이 정확하게 작동하게 하기 위해 vendor prefix를 사용했다. 대부분의 브라우저가 그라디언트 백그라운드를 표준으로 정했지만 아직은 대체 지원을 할 필요가 있다.
-<br><br>
-vendor prefixe가 점점 상관없어지고 있지만 오래된 브라우저 때문에 그것들을 사용하는 것이 더 안전한다.<br><br></p>
+<br /><br />
+vendor prefixe가 점점 상관없어지고 있지만 오래된 브라우저 때문에 그것들을 사용하는 것이 더 안전한다.<br /><br /></p>
 
-<ul>
-<li>Mozilla Firefox: <code>-moz-</code></li>
-<li>Microsoft Internet Explorer: <code>-ms-</code></li>
-<li>Opera: <code>-o-</code></li>
-<li>Webkit (Chrome &amp; Safari): <code>-webkit-</code></li>
-</ul>
+  <ul>
+    <li>Mozilla Firefox: <code>-moz-</code> </li>
+    <li>Microsoft Internet Explorer: <code>-ms-</code></li>
+    <li>Opera: <code>-o-</code></li>
+    <li>Webkit (Chrome &amp; Safari): <code>-webkit-</code></li>
+  </ul>
 </blockquote>
 
-<h3>Linear Gradient Background</h3>
+<h3 id="linear-gradient-background">Linear Gradient Background</h3>
 
-<p>수년간 디자이너와 개발자들은 이미지 화일을 잘라내 선형(linear) 그라디언트 백그라운드로 사용해왔다. 잘 작동하기는 했지만 적용하는 시간이 걸렸고, 변경하기가 어려웠다. 다행히 그런 시절은 가버렸고 이젠 CSS안에서 <a href="http://dev.opera.com/articles/view/css3-linear-gradients/">linear gradient</a>를 지정할 수 있다. 색상을 변경하려고 이미지를 다시 자르고 서버에 업로드할 필요가 없으며, CSS 안에서 빠르게 변경할 수 있다.</p>
+<p>수년간 디자이너와 개발자들은 이미지 화일을 잘라내 선형(linear) 그라디언트 백그라운드로 사용해왔다. 잘 작동하기는 했지만 적용하는 시간이 걸렸고, 변경하기가 어려웠다. 다행히 그런 시절은 가버렸고 이젠 CSS안에서 <a href="http://dev.opera.com/articles/view/css3-linear-gradients/">linear gradient</a>를 지정할 수 있다. 색상을 변경하려고 이미지를 다시 자르고 서버에 업로드할 필요가 없으며, CSS 안에서 빠르게 변경할 수 있다.</p>
 
 <pre><code>div {
   background: #70bf32;
@@ -246,13 +242,15 @@ vendor prefixe가 점점 상관없어지고 있지만 오래된 브라우저 때
 
 <p>키워드에 더해 degree 값을 사용할 수도 있으며, <code>left top</code>에서 부터 그라디언트가 시작하길 원하면 <code>315deg</code> 값을 사용할 수 있다.</p>
 
-<blockquote><h4>Old Linear Gradient Keyword Syntax</h4>
+<blockquote>
+  <h4 id="old-linear-gradient-keyword-syntax">Old Linear Gradient Keyword Syntax</h4>
 
-<p>예전엔 리니어 그라디언트의 키워드 문법은 <code>to</code> 키워드를 사용하지 않았다. 키워드(들)를 선언하는 대신 그라디언트의 시작점을 선언하였고 그 반대방향으로 진행되었다. 위의 대각선 리니어 그라디언트 예제에서 예전 문법은 <code>to bottom right</code>가 아닌 <code>top left</code>가 될 것이다.
-<br><br>
-새로운 키워드 문법으로 다른 브라우저들 사이에서 지원될 수 있게 되었다. 새로운 문법이 작동되지 않으면 예전 문법이 작동되는지 확인해볼 필요가 있다. 그러나, 곧 업데이트되야 할 것이라는 것을 염두에 두어라.</p></blockquote>
+  <p>예전엔 리니어 그라디언트의 키워드 문법은 <code>to</code> 키워드를 사용하지 않았다. 키워드(들)를 선언하는 대신 그라디언트의 시작점을 선언하였고 그 반대방향으로 진행되었다. 위의 대각선 리니어 그라디언트 예제에서 예전 문법은 <code>to bottom right</code>가 아닌 <code>top left</code>가 될 것이다.
+<br /><br />
+새로운 키워드 문법으로 다른 브라우저들 사이에서 지원될 수 있게 되었다. 새로운 문법이 작동되지 않으면 예전 문법이 작동되는지 확인해볼 필요가 있다. 그러나, 곧 업데이트되야 할 것이라는 것을 염두에 두어라.</p>
+</blockquote>
 
-<h3>Radial Gradient Background</h3>
+<h3 id="radial-gradient-background">Radial Gradient Background</h3>
 
 <p>리니어 그라디언트는 한 방향으로 퍼지는 그라디언트를 만들기엔 완벽하지만 종종 radial 그라디언트에 대한 요구도 있다. 리니어 백그라운드와 유사하지만 위치, 크기, 반경 값 등으로 좀 더 복잡할 수 있다. 여기선 기본적인 것만 다루고 <a href="http://dev.opera.com/articles/view/css3-radial-gradients/">여기서</a> 좀 더 깊게 살펴 볼 수 있다.</p>
 
@@ -263,13 +261,15 @@ vendor prefixe가 점점 상관없어지고 있지만 오래된 브라우저 때
 }
 </code></pre>
 
-<blockquote><h4>CSS3 Gradient Background Generator</h4>
+<blockquote>
+  <h4 id="css3-gradient-background-generator">CSS3 Gradient Background Generator</h4>
 
-<p>CSS3 그라디언트를 직접 프로그래밍하는 것은 숙달하지 않으면 꽤 힘든 작업이다. 다행히 <a href="http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/default.html">CSS3 그라디언트 제너레이터</a>와 같은 것들이 나타났다. 제너레이터들마다 약간 다르게 동작하지만 어떤 것은 프리셋과 예제가 있고, 어떤 것은 확장할 수 있는 옵션 목록을 가지고 있다. 관심이 있다면 필요에 맞는 적절한 제너레이터를 조사해볼 것을 추천한다.</p></blockquote>
+  <p>CSS3 그라디언트를 직접 프로그래밍하는 것은 숙달하지 않으면 꽤 힘든 작업이다. 다행히 <a href="http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/default.html">CSS3 그라디언트 제너레이터</a>와 같은 것들이 나타났다. 제너레이터들마다 약간 다르게 동작하지만 어떤 것은 프리셋과 예제가 있고, 어떤 것은 확장할 수 있는 옵션 목록을 가지고 있다. 관심이 있다면 필요에 맞는 적절한 제너레이터를 조사해볼 것을 추천한다.</p>
+</blockquote>
 
-<h3>Gradient Background Stops</h3>
+<h3 id="gradient-background-stops">Gradient Background Stops</h3>
 
-<p>지금까지 하나의 색상에서 다른 색으로 전이되는 그라디언트에 관해 논의했으나, 두 가지 이상의 색상에서 전이되길 원하면 &ldquo;color stop&#8221;을 사용할 수 있다. 두 개의 색상값을 선언하는 대신에 여러 개의 값을 선언할 수 있으며, 차례대로 하나에서 다음 색으로 전이할 것이다. 컬러 스톱에 길이 값을 추가하면 전이의 위치와 길이가 결정된다. 길이값이 선언되지 않으면 그라디언트는 선언된 모든 색상 사이에 평등하게 전이될 것이다.</p>
+<p>지금까지 하나의 색상에서 다른 색으로 전이되는 그라디언트에 관해 논의했으나, 두 가지 이상의 색상에서 전이되길 원하면 “color stop”을 사용할 수 있다. 두 개의 색상값을 선언하는 대신에 여러 개의 값을 선언할 수 있으며, 차례대로 하나에서 다음 색으로 전이할 것이다. 컬러 스톱에 길이 값을 추가하면 전이의 위치와 길이가 결정된다. 길이값이 선언되지 않으면 그라디언트는 선언된 모든 색상 사이에 평등하게 전이될 것이다.</p>
 
 <pre><code>div {
   background: #6c9730;
@@ -278,9 +278,9 @@ vendor prefixe가 점점 상관없어지고 있지만 오래된 브라우저 때
 }
 </code></pre>
 
-<h3>Navigation Background Example</h3>
+<h3 id="navigation-background-example">Navigation Background Example</h3>
 
-<h6>HTML</h6>
+<h6 id="html-1">HTML</h6>
 
 <pre><code>&lt;ul&gt;
   &lt;li class="play"&gt;&lt;a href="#"&gt;Play&lt;/a&gt;&lt;/li&gt;
@@ -290,7 +290,7 @@ vendor prefixe가 점점 상관없어지고 있지만 오래된 브라우저 때
 &lt;/ul&gt;
 </code></pre>
 
-<h6>CSS</h6>
+<h6 id="css-1">CSS</h6>
 
 <pre><code>ul {
   background: #f4f4f4;
@@ -349,14 +349,12 @@ li a {
 }
 </code></pre>
 
-<h4>Demo</h4>
-
+<h4 id="demo-1">Demo</h4>
 <ul>
-<li><a href="http://jsfiddle.net/nolboo/yTM63/">jsfiddle 링크</a></li>
+  <li><a href="http://jsfiddle.net/nolboo/yTM63/">jsfiddle 링크</a></li>
 </ul>
 
-
-<h2>Multiple Background Images with CSS3</h2>
+<h2 id="multiple-background-images-with-css3">Multiple Background Images with CSS3</h2>
 
 <p>예전엔 하나의 엘리먼트에 한 개 이상의 백그라운드를 원한다면 또다른 엘리먼트로 감싸고 그 엘리먼트에 백그라운드를 할당해야 했다. 이것 때문에 백그라운드를 추가하는 단순한 사용으로도 코드가 비대해지곤 했다. CSS3에선 백그라운드 값들을 연달아(chain) 선언하여 하나의 엘리먼트에 여러 개의 백그라운드 이미지를 사용할 수 있다.</p>
 
@@ -370,14 +368,14 @@ li a {
 
 <p><code>background</code> 속성 값을 연달어 선언할 수 있을 뿐아니라, <code>background-repeat</code>, <code>background-position</code>와 같은 다른 백그라운드 관련 속성들도 연달아 선언할 수 있다.</p>
 
-<h3>Multiple Background Images Example</h3>
+<h3 id="multiple-background-images-example">Multiple Background Images Example</h3>
 
-<h6>HTML</h6>
+<h6 id="html-2">HTML</h6>
 
 <pre><code>&lt;div&gt;Dinosaur with Grass and Clouds&lt;/div&gt;
 </code></pre>
 
-<h6>CSS</h6>
+<h6 id="css-2">CSS</h6>
 
 <pre><code>div {
   background: 
@@ -389,15 +387,14 @@ li a {
 }
 </code></pre>
 
-<h4>Demo</h4>
-
+<h4 id="demo-2">Demo</h4>
 <p><a href="http://jsfiddle.net/nolboo/vtgqy/">Dinosaur with Grass and Clouds</a></p>
 
-<h2>New CSS3 Background Properties</h2>
+<h2 id="new-css3-background-properties">New CSS3 Background Properties</h2>
 
 <p>그라디언트 백그라운드와 여러 개의 백그라운드 이미지와 함께 <code>background-size</code>, <code>background-clip</code>, <code>background-origin</code>의 세 가지 새로운 CSS 속성이 추가되었다.</p>
 
-<h3>CSS3 Background Size</h3>
+<h3 id="css3-background-size">CSS3 Background Size</h3>
 
 <p><code>background-size</code> 속성은 백그라운드 이미지에 특정한 크기를 줄 수 있다. 선언되는 첫번째 값은 이미지의 너비이며, 두번째 값은 높이이며, 어떠한 길이 값이나 키워드도 사용할 수 있다. 만약 하나의 값만 선언된다면 적절한 이미지 비율을 유지해주는 <code>auto</code> 키워드가 사용된다.</p>
 
@@ -410,21 +407,22 @@ li a {
 }
 </code></pre>
 
-<blockquote><h4>Cover &amp; Contain Values</h4>
+<blockquote>
+  <h4 id="cover--contain-values">Cover &amp; Contain Values</h4>
 
-<p><code>cover</code> 키워드 값은 (백그라운드가) 엘리먼트 전체를 완전히 덮는 비율적 크기로 재조정되어야 한다. 백그라운드를 얼마나 재조정하느냐는 백그라운드와 엘리먼트의 차원(dimension)에 달려있다. 백그라운드는 비율적으로 차원을 가지지만 이미지 퀄리티(질)는 다소간 왜곡되게 재조정될 수 있다. 항상 작업을 체크하라.<br><br></p>
+  <p><code>cover</code> 키워드 값은 (백그라운드가) 엘리먼트 전체를 완전히 덮는 비율적 크기로 재조정되어야 한다. 백그라운드를 얼마나 재조정하느냐는 백그라운드와 엘리먼트의 차원(dimension)에 달려있다. 백그라운드는 비율적으로 차원을 가지지만 이미지 퀄리티(질)는 다소간 왜곡되게 재조정될 수 있다. 항상 작업을 체크하라.<br /><br /></p>
 
-<p><code>contain</code> 키워드 값은 엘리먼트의 경계 범위 안에 백그라운드 이미지를 비율적 크기로 재조정할 것이다. 이것은 엘리먼트의 일부분이 백그라운드가 없는 것을 의미하지만, 전체 백그라운드 이미지는 보여진다. <code>cover</code> 키워드 값처럼 백그라운드 이미지의 크기 재조정은 이미지의 차원에 비율적일 것이나 이미지는 왜곡될 수 있다.</p></blockquote>
+  <p><code>contain</code> 키워드 값은 엘리먼트의 경계 범위 안에 백그라운드 이미지를 비율적 크기로 재조정할 것이다. 이것은 엘리먼트의 일부분이 백그라운드가 없는 것을 의미하지만, 전체 백그라운드 이미지는 보여진다. <code>cover</code> 키워드 값처럼 백그라운드 이미지의 크기 재조정은 이미지의 차원에 비율적일 것이나 이미지는 왜곡될 수 있다.</p>
+</blockquote>
 
-<p>역자참조링크 :</p>
+<p>역자참조링크 : </p>
 
 <ul>
-<li><a href="http://dolly77.tistory.com/entry/CSS3-backgroundsize-%EC%86%8D%EC%84%B1%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0">background-size 속성 알아보기</a></li>
-<li><a href="http://blog.naver.com/PostView.nhn?blogId=poppymanye&amp;logNo=60161713731">background-size 속성 사용법</a></li>
+  <li><a href="http://dolly77.tistory.com/entry/CSS3-backgroundsize-%EC%86%8D%EC%84%B1%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0">background-size 속성 알아보기</a></li>
+  <li><a href="http://blog.naver.com/PostView.nhn?blogId=poppymanye&amp;logNo=60161713731">background-size 속성 사용법</a></li>
 </ul>
 
-
-<h3>CSS3 Background Clip &amp; Background Origin</h3>
+<h3 id="css3-background-clip--background-origin">CSS3 Background Clip &amp; Background Origin</h3>
 
 <p><code>background-clip</code> 속성은 백그라운 이미지가 적용되는 영역을 지정하며, <code>background-origin</code> 속성은 <code>background-position</code>이 어디서부터 시작되는지 지정한다. 이 두 속성이 도입되면서 <code>border-box</code>, <code>padding-box</code>, <code>content-box</code>의 세 값이 포함되었으며, 각각 <code>background-clip</code>과 <code>background-origin</code> 속성값으로 사용될 수 있다.</p>
 
@@ -444,13 +442,13 @@ li a {
 <p><strong>Fig. 5.05</strong> <code>content-box</code> 값은 엘리먼트의 경계선과 패딩 안까지 포함된다.
 <img src="http://learn.shayhowe.com/assets/courses/html-css-guide/backgrounds-gradients/content-box.png" alt="Content Box Value" /></p>
 
-<h2>Resources &amp; Links</h2>
+<h2 id="resources--links">Resources &amp; Links</h2>
 
 <ul>
-<li><a href="http://www.slideshare.net/maxdesign/css3-backgrounds">CSS3 Background</a> via Russ Weakley</li>
-<li><a href="http://dev.opera.com/articles/view/css3-linear-gradients/">CSS3 Linear Gradients</a> via Dev.Opera</li>
-<li><a href="http://dev.opera.com/articles/view/css3-radial-gradients/">CSS3 Radial Gradients</a> via Dev.Opera</li>
-<li><a href="http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/default.html">CSS Gradient Background Maker</a></li>
+  <li><a href="http://www.slideshare.net/maxdesign/css3-backgrounds">CSS3 Background</a> via Russ Weakley</li>
+  <li><a href="http://dev.opera.com/articles/view/css3-linear-gradients/">CSS3 Linear Gradients</a> via Dev.Opera</li>
+  <li><a href="http://dev.opera.com/articles/view/css3-radial-gradients/">CSS3 Radial Gradients</a> via Dev.Opera</li>
+  <li><a href="http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/default.html">CSS Gradient Background Maker</a></li>
 </ul>
 
 </div>
