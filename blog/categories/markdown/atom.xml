@@ -4,7 +4,7 @@
   <title><![CDATA[Category: markdown | Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-09-07T19:07:11+09:00</updated>
+  <updated>2013-09-07T20:40:41+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -242,12 +242,13 @@ This is an H2
 
 <p>목록에 사용되는 실제 숫자는 마크다운이 처리하는 HTML 출력에 아무런 영향도 주지 않는다는 것은 알아두는 것이 중요하다. 위의 목록을 마크다운이 처리하면, HTML은 다음과 같게 된다.:</p>
 
-<pre><code>&lt;ol&gt;
-&lt;li&gt;Bird&lt;/li&gt;
-&lt;li&gt;McHale&lt;/li&gt;
-&lt;li&gt;Parish&lt;/li&gt;
-&lt;/ol&gt;
-</code></pre>
+<p>```html</p>
+<ol>
+<li>Bird</li>
+<li>McHale</li>
+<li>Parish</li>
+</ol>
+<p>```</p>
 
 <p>만약 위의 예 대신에:</p>
 
@@ -295,11 +296,12 @@ Suspendisse id sem consectetuer libero luctus adipiscing.
 
 <p>은 다음처럼 변환된다:</p>
 
-<pre><code>&lt;ul&gt;
-&lt;li&gt;Bird&lt;/li&gt;
-&lt;li&gt;Magic&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
+<p>```html</p>
+<ul>
+<li>Bird</li>
+<li>Magic</li>
+</ul>
+<p>```</p>
 
 <p>그러나, 다음은:</p>
 
@@ -310,11 +312,12 @@ Suspendisse id sem consectetuer libero luctus adipiscing.
 
 <p>이렇게 변환된다:</p>
 
-<pre><code>&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Magic&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
+<p>```html</p>
+<ul>
+<li><p>Bird</p></li>
+<li><p>Magic</p></li>
+</ul>
+<p>```</p>
 
 <p>목록 항목은 여러 문단으로 이루어질 수 있다. 목록 항목에서 이어지는 문단은 적어도 4개 이상의 공백이나 하나 이상의 탭으로 들여써야 한다.</p>
 
@@ -378,7 +381,7 @@ sit amet, consectetuer adipiscing elit.
 
 <p>마크다운은 다음처럼 바꾼다:</p>
 
-<p>```</p>
+<p>```html</p>
 <p>This is a normal paragraph:</p>
 
 <pre><code>This is a code block.
@@ -396,7 +399,7 @@ sit amet, consectetuer adipiscing elit.
 
 <p>은 다음처럼 바뀐다:</p>
 
-<p>```</p>
+<p>```html</p>
 <p>Here is an example of AppleScript:</p>
 
 <pre><code>tell application "Foo"
@@ -459,7 +462,7 @@ end tell
 
 <p>다음처럼 바뀐다:</p>
 
-<p>```</p>
+<p>```html</p>
 <p>This is <a href="http://example.com/" title="Title">
 an example</a> inline link.</p>
 
@@ -569,7 +572,7 @@ title attribute.</p>
 
 <p>위의 예는 모두 다음과 같은 HTML 출력을 만든다:</p>
 
-<p>```</p>
+<p>```html</p>
 <p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from
 <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a>
 or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
@@ -633,8 +636,9 @@ __double underscores__
 
 <p>는 다음처럼 출력된다:</p>
 
-<pre><code>&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
-</code></pre>
+<p>```html</p>
+<p>Use the <code>printf()</code> function.</p>
+<p>```</p>
 
 <p>문자 코드에 역따옴표를 포함하기 위해 여러 개의 역 따옴표를 사용할 수 있다:</p>
 
@@ -643,8 +647,9 @@ __double underscores__
 
 <p>이렇게 출력된다:</p>
 
-<pre><code>&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;/p&gt;
-</code></pre>
+<p>```html</p>
+<p><code>There is a literal backtick (`) here.</code></p>
+<p>```</p>
 
 <p>문자 코드를 감싼 역따옴표 구분자는 공백을 포함할 수 있다 - 열기 전 한개, 닫기 전 한개. 이렇게 함으로서 문자 코드의 시작 또는 끝에 역따옴표를 글자 그대로 표시할 수 있다:</p>
 
@@ -655,9 +660,10 @@ A backtick-delimited string in a code span: `` `foo` ``
 
 <p>다음과 같이 출력된다:</p>
 
-<pre><code>&lt;p&gt;A single backtick in a code span: &lt;code&gt;`&lt;/code&gt;&lt;/p&gt;
+<p>```html
+    &lt;p&gt;A single backtick in a code span: <code>`</code>&lt;/p&gt;</p>
 
-&lt;p&gt;A backtick-delimited string in a code span: &lt;code&gt;`foo`&lt;/code&gt;&lt;/p&gt;
+<pre><code>&lt;p&gt;A backtick-delimited string in a code span: &lt;code&gt;`foo`&lt;/code&gt;&lt;/p&gt; ```
 </code></pre>
 
 <p>문자 코드에서 <code>&amp;</code>와 꺽쇠 괄호는 엔티티로 자동 인코드된다. 이것으로 HTML 코드를 포함하기 쉽다. 마크다운은 다음을:</p>
@@ -667,8 +673,9 @@ A backtick-delimited string in a code span: `` `foo` ``
 
 <p>다음과 같이 변환한다:</p>
 
-<pre><code>&lt;p&gt;Please don't use any &lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
-</code></pre>
+<p>```html</p>
+<p>Please don't use any <code>&lt;blink&gt;</code> tags.</p>
+<p>```</p>
 
 <p>다음과 같이 쓸 수도 있다:</p>
 
@@ -677,8 +684,9 @@ A backtick-delimited string in a code span: `` `foo` ``
 
 <p>다음과 같이 출력된다:</p>
 
-<pre><code>&lt;p&gt;&lt;code&gt;&amp;amp;#8212;&lt;/code&gt; is the decimal-encoded equivalent of &lt;code&gt;&amp;amp;mdash;&lt;/code&gt;.&lt;/p&gt;
-</code></pre>
+<p>```html</p>
+<p><code>&amp;#8212;</code> is the decimal-encoded equivalent of <code>&amp;mdash;</code>.</p>
+<p>```</p>
 
 <h3 id="images">IMAGES</h3>
 
@@ -726,8 +734,9 @@ A backtick-delimited string in a code span: `` `foo` ``
 
 <p>마크다운은 이것을 다음처럼 바꾼다:</p>
 
-<pre><code>&lt;a href="http://example.com/"&gt;http://example.com/&lt;/a&gt;
-</code></pre>
+<p><code>html
+&lt;a href="http://example.com/"&gt;http://example.com/&lt;/a&gt;
+</code></p>
 
 <p>전자우편 주소에 대한 자동 링크도 비슷하지만 전자우편 주소는 스팸 봇의 접근을 막기위해 랜덤의 10진, 16진 인코딩을 한다는 점이 차이가 있다. 예를 들어 마크다운은 다음을:</p>
 
@@ -736,11 +745,12 @@ A backtick-delimited string in a code span: `` `foo` ``
 
 <p>이렇게 바꾼다:</p>
 
-<pre><code>&lt;a href="&amp;#x6D;&amp;#x61;i&amp;#x6C;&amp;#x74;&amp;#x6F;:&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;
+<p><code>html
+&lt;a href="&amp;#x6D;&amp;#x61;i&amp;#x6C;&amp;#x74;&amp;#x6F;:&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;
 &amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6C;e&amp;#x2E;&amp;#99;&amp;#111;
 &amp;#109;"&gt;&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;
 &amp;#109;&amp;#x70;&amp;#x6C;e&amp;#x2E;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;
-</code></pre>
+</code></p>
 
 <p>브라우저에선 “address@example.com”로 클릭가능한 링크로 렌더링된다.</p>
 
