@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-09-17T23:44:33+09:00</updated>
+  <updated>2013-09-17T23:55:07+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -157,12 +157,14 @@ rake preview    # http://localhost:4000 에 웹서버를 마운트하고 볼 수
 <pre><code>1. $ rake new_post["title"] //title은 영문으로 간단하게
 2. 에디터로 .markdown 화일 편집하고 
 3. title: 에 멋진 한글 제목을 달고 categories: [CSS3, Sass, Media Queries] 지정
-4. $ rake generate &amp;&amp; rake deploy
+4. $ rake generate &amp;&amp; rake preview //localhost:4000에서 미리보기와 수정
+5. 소스 백업(*아래 참조*)
+6. $ rake deploy
 </code></pre>
 
 <p>깃허브에 반영되는 것은 시간이 좀 걸리니 바로 안 나타난다고 조급해하지 말자.</p>
 
-<p><strong>4번 출판하기 전에 <code>source</code> 브랜치에 소스를 직접 푸시하는 것을 잊지마라.</strong></p>
+<p><strong>5번 출판하기 전에 <code>source</code> 브랜치에 소스를 직접 푸시하는 것을 잊지마라.</strong></p>
 
 <pre><code>git add .
 git commit -m 'your message'
