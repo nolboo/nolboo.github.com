@@ -9,13 +9,18 @@
   <meta name="author" content="Nolboo Kim">
 
   
-  <meta name="description" content="원문 : Daring Fireball: Markdown 기존 오피스에서 구글 클라우드로 모든 문서작업을 옮긴 지가 거의 4년 정도 되는 것 같다. 무겁고 복잡하여 느린 오피스에 불만이 많았고, 어디서나 어느 기기에서나 접근할 수 있다는 매력으로 한참을 사용하였지만 &hellip;">
+  <meta name="description" content="원문 : What’s new in Twitter Bootstrap 3? Scaffolding 모바일 퍼스트, 반응형 12행 그리드 그리드 시스템 .span*에서 .col-xs, .col-sm-*, .col-md-*, .col-lg-*로 변경.
+디폴트로 fluid이므로 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<!--   <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"> -->
 
   
   <link rel="canonical" href="http://nolboo.github.io">
@@ -77,6 +82,70 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/09/17/new-in-bootstrap3/">부트스트랩 3에서 새롭게 바뀐 것</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-17T23:09:00+09:00" pubdate data-updated="true">Sep 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>원문 : <a href="http://julienrenaux.fr/2013/08/11/whats-new-in-twitter-bootstrap-3/">What’s new in Twitter Bootstrap 3?</a></p>
+
+<h2 id="scaffolding">Scaffolding</h2>
+
+<ul>
+  <li>모바일 퍼스트, 반응형 12행 그리드</li>
+</ul>
+
+<h2 id="section">그리드 시스템</h2>
+
+<p><code>.span*</code>에서 <code>.col-xs</code>, <code>.col-sm-*</code>, <code>.col-md-*</code>, <code>.col-lg-*</code>로 변경.
+디폴트로 fluid이므로 <code>.container-fluid</code>와 <code>.row-fluid</code>은 제거.</p>
+
+<p>모바일, 태블릿, 테스트탑에서 그리드 예제:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td><td class="code"><pre><code class="html"><span class="line"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+</span><span class="line">    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-6 col-md-6 col-lg-6&quot;</span><span class="nt">&gt;</span>6<span class="nt">&lt;/div&gt;</span>
+</span><span class="line">    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-6 col-md-6 col-lg-6&quot;</span><span class="nt">&gt;</span>6<span class="nt">&lt;/div&gt;</span>
+</span><span class="line"><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/09/17/new-in-bootstrap3/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -562,52 +631,6 @@ markdoc.serve: INFO: Serving on http://127.0.0.1:8008
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/22/advanced-guide-to-html-and-css-4-slash-10/">HTML & CSS 중급자 가이드 - 4강 : 반응형 웹 디자인</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-22T21:20:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>원본 : <a href="http://learn.shayhowe.com/advanced-html-css/responsive-web-design">An Advanced Guide to HTML &amp; CSS - LESSON 4 : Responsive Web Design</a></p>
-
-<p>인터넷은 누구도 예측할 수 없을 정도로 빠르게, 미친듯이 성장했다. 최근 수 년간 모바일 성장이 현장에서 폭발하고 있다. 모바일 인터넷 사용의 성장도 일반 인터넷 사용의 성장을 훨씬 뛰어넘고 있다.</p>
-
-<p>요즘 인터넷에 연결되는 모바일 기기를 하나 이상 갖고 있지 않은 사람을 찾는 것은 힘들다. 영국에선 인구보다 <a href="http://www.gpmd.co.uk/blog/2012-mobile-internet-statistics/">모바일 폰</a>이 더 많고, 모바일 인터넷 사용이 데스크탑 인터넷 사용을 올해 추월하는 <a href="http://www.digitalbuzzblog.com/2011-mobile-statistics-stats-facts-marketing-infographic/">트랜드가 이어지고 있다</a>.</p>
-
-<p>모바일 인터넷 사용이 계속 성장하면서 어떻게 모든 유저에게 적합한 웹사이트를 만들 것인가 하는 질문이 제기되고있다. 업계는 이 질문에 반응형 웹 디자인(responsive web design : RWD로 응답하고 있다.
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/07/22/advanced-guide-to-html-and-css-4-slash-10/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -621,6 +644,10 @@ markdoc.serve: INFO: Serving on http://127.0.0.1:8008
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/17/new-in-bootstrap3/">부트스트랩 3에서 새롭게 바뀐 것</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/09/07/john-gruber-markdown/">존 그루버 마크다운 페이지 번역</a>

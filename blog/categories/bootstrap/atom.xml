@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bootstrap | Nolboo's Blog]]></title>
+  <link href="http://nolboo.github.io/blog/categories/bootstrap/atom.xml" rel="self"/>
+  <link href="http://nolboo.github.io/"/>
+  <updated>2013-09-17T23:44:33+09:00</updated>
+  <id>http://nolboo.github.io/</id>
+  <author>
+    <name><![CDATA[Nolboo Kim]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[부트스트랩 3에서 새롭게 바뀐 것]]></title>
+    <link href="http://nolboo.github.io/blog/2013/09/17/new-in-bootstrap3/"/>
+    <updated>2013-09-17T23:09:00+09:00</updated>
+    <id>http://nolboo.github.io/blog/2013/09/17/new-in-bootstrap3</id>
+    <content type="html"><![CDATA[<p>원문 : <a href="http://julienrenaux.fr/2013/08/11/whats-new-in-twitter-bootstrap-3/">What’s new in Twitter Bootstrap 3?</a></p>
+
+<h2 id="scaffolding">Scaffolding</h2>
+
+<ul>
+  <li>모바일 퍼스트, 반응형 12행 그리드</li>
+</ul>
+
+<h2 id="section">그리드 시스템</h2>
+
+<p><code>.span*</code>에서 <code>.col-xs</code>, <code>.col-sm-*</code>, <code>.col-md-*</code>, <code>.col-lg-*</code>로 변경.
+디폴트로 fluid이므로 <code>.container-fluid</code>와 <code>.row-fluid</code>은 제거.</p>
+
+<p>모바일, 태블릿, 테스트탑에서 그리드 예제:</p>
+
+<p><code>html
+&lt;div class="row"&gt;
+    &lt;div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"&gt;6&lt;/div&gt;
+    &lt;div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"&gt;6&lt;/div&gt;
+&lt;/div&gt;
+</code></p>
+
+<!-- more -->
+
+<h2 id="section-1">반응형 디자인</h2>
+
+<h3 id="section-2">반응형 이미지</h3>
+
+<p>구글 맵스와 <a href="https://github.com/twbs/bootstrap/issues/1552">문제</a>가 있었는데, BS3에선 <code>.img-responsive</code> 클래스를 넣어 해결했다. 이 클래스는 이미지에 <code>max-width: 100%;</code>와 <code>height: auto;</code>를 적용하여 부모 엘리먼트에 따라 크기가 달라진다.</p>
+
+<h3 id="section-3">반응형 유틸리티</h3>
+
+<p><code>.visible-xs</code>, <code>.visible-sm</code>, <code>.visible-md</code>, <code>.visible-lg</code> 4개의 클래스로 크기별로 보이거나, <code>.hidden-xs</code>, <code>.hidden-sm</code>, <code>.hidden-md</code>, <code>.hidden-lg</code> 클래스로 숨길 수 있다.</p>
+
+<h2 id="css">CSS</h2>
+
+<p>글로발 CSS 설정, 기본 HTML 엘리먼트 스타일링
+<code>*zoom: 1</code>, <code>-moz-box-shadow</code> 등의 hack을 없애고 IE7과 파이어폭스 3.6을 지원하지 않는다.</p>
+
+<h3 id="typography">Typography</h3>
+
+<p>헤딩, 리스트, 텍스트 클래스명이 좀 더 일관성있게 되었다. 예: .list-unstyled, .list-inline, .text-muted, .h1, .h2, .h3 등을 사용</p>
+
+<h3 id="section-4">테이블</h3>
+
+<p>기본적으로 <code>&lt;table&gt;</code>에 스타일링하지 않으며, <code>.table</code>을 사용하여 기본 스타일링을 한다.
+<code>.table-hover</code>로 마우스 오버했을 때와 같이 <code>.active</code>로 열을 하일라이트할 수 있다.</p>
+
+<h3 id="forms">Forms</h3>
+
+<p><code>.input-prepend</code>, <code>.input-append</code>를 사용하지 않고 <code>input-group</code>을 사용한다.
+수평폼도 모바일 퍼스트이므로, 768px 보다 작은 화면에서는 그냥 쌓인다.
+<em><code>.form-control</code>과 함께 <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code> 엘리먼트는 기본적으로 <code>width: 100%;</code>로 설정된다.</em></p>
+
+<p><code>.radio-inline</code>은 그대로이고 <code>.form-group</code>이 추가되었으며, 다음은 없어졌다:</p>
+
+<ul>
+  <li>.inline-help  </li>
+  <li>.help-inline  </li>
+  <li>.uneditable-input </li>
+  <li>.form-search  </li>
+  <li>.input-block-level  </li>
+  <li>.controls-row </li>
+  <li>.input-prepend  </li>
+  <li>.input-append</li>
+</ul>
+
+<h4 id="height-sizing">Height sizing</h4>
+
+<p><code>.input-small</code>, <code>.input-large</code> 등을 사용할 때 버튼 크기에 따라 폼의 높이도 변경된다.</p>
+
+<h3 id="buttons">Buttons</h3>
+
+<p>기본 버튼도 <code>.button-default</code>가 필요하며, <code>.btn-inverse</code>는 없어졌다. 나머지 버튼 크기는 <code>btn-xs</code>, <code>.btn-sm</code>, <code>.btn-lg</code>로 바뀌었다.</p>
+
+<h3 id="images">Images</h3>
+
+<p><code>.img-polaroid</code>는 없어졌으며, 보통의 inline(-block) 이미지를 위한 <code>.img-thumbnail</code>이 추가되었다. <em><code>.img-responsive</code> 클래스를 추가하여 반응형에 가깝게 사용할 수 있다.</em></p>
+
+<h2 id="components">Components</h2>
+
+<h3 id="dropdown-menus">Dropdown menus</h3>
+
+<p>드랍다운 메뉴에 헤더를 줄 수 있다.</p>
+
+<h3 id="buttons-1">Buttons</h3>
+
+<p><code>.btn-group-justified</code> 클래스로 부모 엘리먼트의 전체 너비와 같은 크기를 가질 수 있다.</p>
+
+<h3 id="alerts">Alerts</h3>
+
+<p><code>.alert</code> 컴포넌트 안의 <code>hr</code> 엘리먼트는 alert 색의 경계선으로 스타일링될 것이다. 링크도 가독성을 위해 자동으로 알맞게 스타일링된다.</p>
+
+<h3 id="navs">Navs</h3>
+
+<p><code>.nav-list</code>가 없어졌고, List group이 대신한다. 왼쪽/오른쪽/아래쪽 탭이 없어졌다. <strong>자바스크립트 플러그인과 커스텀 CSS로 왼쪽/오른쪽 탭을 사용할 수 있다. 그러나 이제 핵심 기능에 포함되지 않는다.</strong></p>
+
+<h3 id="navbar">Navbar</h3>
+
+<p>navbar의 높이가 모바일 기기에선 44px에서 62px로, 데스크탑에선 50px로 커졌고, 박스 그림자나 그라디언트되지 않는다. <code>.navbar-search</code>, <code>.divider-vertical</code>, <code>.navbar-inner</code>가 없어졌으며, 변경된 것은 다음과 같다:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">BS2</th>
+      <th style="text-align: left">BS3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">.navbar &gt; .nav</td>
+      <td style="text-align: left">.navbar-nav</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">.btn-navbar</td>
+      <td style="text-align: left">.navbar-toggle</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">.brand</td>
+      <td style="text-align: left">.navbar-brand</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="list-groupnew">List group(NEW)</h3>
+
+<h4 id="basic-list-group">Basic list group</h4>
+
+<p>기본적으로 BS2의 <code>.nav-list</code>와 같다. <strong>리스트 그룹 항목엔 배지를 추가할 수 있으며, 자동으로 오른쪽에 위치한다.</strong></p>
+
+<p><code>html
+&lt;ul class="list-group"&gt;
+    &lt;li class="list-group-item"&gt;Cras justo odio&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Dapibus ac facilisis in&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Morbi leo risus&lt;/li&gt;
+&lt;/ul&gt;
+</code></p>
+
+<h4 id="linked-list-group">Linked list group</h4>
+
+<p><code>html
+&lt;div class="list-group"&gt;
+    &lt;a href="#" class="list-group-item active"&gt;Cras justo odio&lt;/a&gt;
+    &lt;a href="#" class="list-group-item"&gt;Dapibus ac facilisis in&lt;/a&gt;
+    &lt;a href="#" class="list-group-item"&gt;Morbi leo risus&lt;/a&gt;
+&lt;/div&gt;
+</code></p>
+
+<h4 id="custom-content">Custom content</h4>
+
+<p><code>html
+&lt;div class="list-group"&gt;
+    &lt;a href="#" class="list-group-item active"&gt;
+        &lt;h4 class="list-group-item-heading"&gt;List group item heading&lt;/h4&gt;
+        &lt;p class="list-group-item-text"&gt;Donec id elit non mi porta gravida at eget metus.&lt;/p&gt;
+    &lt;/a&gt;
+    &lt;a href="#" class="list-group-item"&gt;
+        &lt;h4 class="list-group-item-heading"&gt;List group item heading&lt;/h4&gt;
+        &lt;p class="list-group-item-text"&gt;Donec id elit non mi porta gravida at eget metus.&lt;/p&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+</code></p>
+
+<h3 id="typographic-components">Typographic components</h3>
+
+<p>헤딩 <code>font-weight</code>가 가벼워졌으며, <strong>반응형 뷰에서 폰트 사이즈가 변경된다.</strong>
+<code>.hero-unit</code>이 <code>.jumbotron</code>으로 바뀌었다.</p>
+
+<h3 id="progress-bars">Progress bars</h3>
+
+<p>구조가 다음과 같으며:</p>
+
+<p><code>html
+&lt;div class="progress"&gt;
+    &lt;div class="progress-bar"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></p>
+
+<p><code>.progress-bar-info</code>과 같은 클래스가 <code>.progress-bar</code>에 바로 옆에 오며, 다음과 같이 클래스가 바뀌었다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">BS2</th>
+      <th style="text-align: left">BS3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">.bar</td>
+      <td style="text-align: left">.progress-bar</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">.progress-info</td>
+      <td style="text-align: left">.progress-bar-info</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">.progress-success</td>
+      <td style="text-align: left">.progress-bar-success</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">.progress-warning</td>
+      <td style="text-align: left">.progress-bar-warning</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">.progress-danger</td>
+      <td style="text-align: left">.progress-bar-danger</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="panelsnew">Panels(NEW)</h3>
+
+<p>헤더와 푸터를 가진 박스를 만들 수 있다.</p>
+
+<h4 id="panel-with-heading">Panel with heading</h4>
+
+<p><code>html
+&lt;div class="panel"&gt;
+    &lt;div class="panel-heading"&gt;
+        &lt;h3 class="panel-title"&gt;Panel title&lt;/h3&gt;
+    &lt;/div&gt;
+    Panel content
+&lt;/div&gt;
+</code></p>
+
+<h4 id="panel-with-footer">Panel with footer</h4>
+
+<p><code>html
+&lt;div class="panel"&gt;
+    Panel content
+    &lt;div class="panel-footer"&gt;Panel footer&lt;/div&gt;
+&lt;/div&gt;
+</code></p>
+
+<h4 id="contextual-alternatives">Contextual alternatives</h4>
+
+<p>문맥 상태(success, warning, danger, info)를 나타내는 <code>.panel-success</code> 등의 클래스를 사용하여 의미있는 패널을 만들 수 있다.</p>
+
+<p><code>html
+&lt;div class="panel panel-success"&gt;
+    &lt;div class="panel-heading"&gt;
+        &lt;h3 class="panel-title"&gt;Panel title&lt;/h3&gt;
+    &lt;/div&gt;
+    Panel content
+&lt;/div&gt;
+</code></p>
+
+<h2 id="sources">Sources</h2>
+
+<ul>
+  <li><a href="http://blog.getbootstrap.com/">Bootstrap Blog</a></li>
+  <li><a href="https://github.com/twbs/bootstrap/pull/6342">List of changes and useful tips</a></li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>
