@@ -4,7 +4,7 @@
   <title><![CDATA[Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-10-07T19:33:19+09:00</updated>
+  <updated>2013-10-11T00:22:26+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[free-blog-with-github-jekyll]]></title>
+    <link href="http://nolboo.github.io/blog/2013/10/08/free-blog-with-github-jekyll/"/>
+    <updated>2013-10-08T19:58:00+09:00</updated>
+    <id>http://nolboo.github.io/blog/2013/10/08/free-blog-with-github-jekyll</id>
+    <content type="html"><![CDATA[<pre><code>[sudo] gem install jekyll
+
+jekyll new myblog //myblog 디렉토리를 만들어 기본 디렉토리와 화일을 생성한다.
+cd myblog
+jekyll serve --watch
+
+깃허브에서 새로운 저장소를 만든다. 깃허브나 커맨드 라인이 생소하면 어제 올린 블로그를 참조.
+
+git remote add 저장소URL
+git add .
+git commit -m "Initialize blog"
+git push origin master
+</code></pre>
+
+<p>이제 끝났다.</p>
+
+<p>프로젝트 페이지로 만들 때 상대경로를 써야하기 때문에 조금 더 복잡해진다.</p>
+
+<p>_config.yml baseurl 값을 저장소명과 동일하게 설정한다.</p>
+
+<p>default.html과 index.html에 상대경로를 넣어야 한다.</p>
+
+<p>을 곳곳에 넣어준다.</p>
+
+<pre><code>git remote add 저장소URL
+git add .
+git commit -m "Initialize blog"
+git push origin master
+</code></pre>
+
+<p>로컬에서 컴파일하면서 봐야하기 때문에 </p>
+
+<pre><code>jekyll serve --baseurl '' --watch
+</code></pre>
+
+<p>redcarpet2 설치</p>
+
+<p>깃허브에선 플러그인은 안된다.</p>
+
+<p>상대주소 설명 페이지 http://jekyllrb.com/docs/github-pages/
+    https://github.com/andrewshell/baseurltest</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[완전 초보를 위한 깃허브]]></title>
@@ -6633,15 +6682,6 @@ git push origin source
   <li><a href="http://paulsturgess.co.uk/blog/2013/04/24/hello-octopress-and-github-pages/">Hello Octopress &amp; Github Pages</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://nolboo.github.io/blog/2013/07/21/hello-world/"/>
-    <updated>2013-07-21T21:53:00+09:00</updated>
-    <id>http://nolboo.github.io/blog/2013/07/21/hello-world</id>
-    <content type="html"><![CDATA[<p>안녕, 여러분!</p>
 ]]></content>
   </entry>
   
