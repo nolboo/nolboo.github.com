@@ -9,9 +9,7 @@
   <meta name="author" content="Nolboo Kim">
 
   
-  <meta name="description" content="[sudo] gem install jekyll jekyll new myblog //myblog 디렉토리를 만들어 기본 디렉토리와 화일을 생성한다.
-cd myblog
-jekyll serve --watch 깃허브에서 새로운 저장소를 만든다. 깃허브나 커맨드 라인이 &hellip;">
+  <meta name="description" content="원문 : GitHub For Beginners: Don’t Get Scared, Get Started GitHub For Beginners: Commit, Push And Go [중략] 깃의 필요성 등에 대해 역설함. 컴퓨터를 사용하는 모든 지식 근로자는 깃허브를 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,82 +81,6 @@ jekyll serve --watch 깃허브에서 새로운 저장소를 만든다. 깃허브
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/08/free-blog-with-github-jekyll/">Free-blog-with-github-jekyll</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-08T19:58:00+09:00" pubdate data-updated="true">Oct 8<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><pre><code>[sudo] gem install jekyll
-
-jekyll new myblog //myblog 디렉토리를 만들어 기본 디렉토리와 화일을 생성한다.
-cd myblog
-jekyll serve --watch
-
-깃허브에서 새로운 저장소를 만든다. 깃허브나 커맨드 라인이 생소하면 어제 올린 블로그를 참조.
-
-git remote add 저장소URL
-git add .
-git commit -m "Initialize blog"
-git push origin master
-</code></pre>
-
-<p>이제 끝났다.</p>
-
-<p>프로젝트 페이지로 만들 때 상대경로를 써야하기 때문에 조금 더 복잡해진다.</p>
-
-<p>_config.yml baseurl 값을 저장소명과 동일하게 설정한다.</p>
-
-<p>default.html과 index.html에 상대경로를 넣어야 한다.</p>
-
-<p>을 곳곳에 넣어준다.</p>
-
-<pre><code>git remote add 저장소URL
-git add .
-git commit -m "Initialize blog"
-git push origin master
-</code></pre>
-
-<p>로컬에서 컴파일하면서 봐야하기 때문에 </p>
-
-<pre><code>jekyll serve --baseurl '' --watch
-</code></pre>
-
-<p>redcarpet2 설치</p>
-
-<p>깃허브에선 플러그인은 안된다.</p>
-
-<p>상대주소 설명 페이지 http://jekyllrb.com/docs/github-pages/
-    https://github.com/andrewshell/baseurltest</p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -665,6 +587,52 @@ markdoc.serve: INFO: Serving on http://127.0.0.1:8008
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/22/50-useful-css-snippets/">모든 디자이너와 프런트 개발자가 숙달하고 있어야할 CSS 스니핏 50</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-22T21:39:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>원본 : <a href="http://www.hongkiat.com/blog/css-snippets-for-designers/">50 Useful CSS Snippets Every Designer Should Have</a></p>
+
+<p><a href="http://www.hongkiat.com/blog/complete-guide-to-cross-browser-compatibility-check/">Complete Guide To Cross-Browser Compatibility Check</a></p>
+
+<p><img src="http://media02.hongkiat.com/css-snippets-for-designers/css-snippets.jpg" alt="" /></p>
+
+<p>이 기사가 모든 웹 프로들에게 <strong>50개의 편리한 CSS2/CCS3 코드 스니핏을</strong> 선물하기를 바란다.
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/22/50-useful-css-snippets/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -678,10 +646,6 @@ markdoc.serve: INFO: Serving on http://127.0.0.1:8008
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/10/08/free-blog-with-github-jekyll/">Free-blog-with-github-jekyll</a>
-      </li>
     
       <li class="post">
         <a href="/blog/2013/10/06/github-for-beginner/">완전 초보를 위한 깃허브</a>
@@ -757,6 +721,10 @@ markdoc.serve: INFO: Serving on http://127.0.0.1:8008
     
       <li class="post">
         <a href="/blog/2013/07/21/start-octopress/">옥토프레스로 블로깅하기</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/21/hello-world/">Hello World</a>
       </li>
     
   </ul>
