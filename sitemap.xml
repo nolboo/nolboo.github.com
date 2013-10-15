@@ -56,7 +56,7 @@
     </url>
     <url>
         <loc>http://nolboo.github.io/blog/2013/07/22/50-useful-css-snippets/</loc>
-        <lastmod>2013-08-31T17:43:01+09:00</lastmod>
+        <lastmod>2013-10-12T17:16:29+09:00</lastmod>
     </url>
     <url>
         <loc>http://nolboo.github.io/blog/2013/07/22/adapting-to-a-responsive-design/</loc>
@@ -95,12 +95,16 @@
         <lastmod>2013-10-07T19:31:19+09:00</lastmod>
     </url>
     <url>
+        <loc>http://nolboo.github.io/blog/2013/10/15/free-blog-with-github-jekyll/</loc>
+        <lastmod>2013-10-15T20:36:14+09:00</lastmod>
+    </url>
+    <url>
         <loc>http://nolboo.github.io/blog/archives/</loc>
-        <lastmod>2013-10-07T19:31:19+09:00</lastmod>
+        <lastmod>2013-10-15T20:36:14+09:00</lastmod>
     </url>
     <url>
         <loc>http://nolboo.github.io/</loc>
-        <lastmod>2013-10-07T19:31:19+09:00</lastmod>
+        <lastmod>2013-10-15T20:36:14+09:00</lastmod>
     </url>
     <url>
         <loc>http://nolboo.github.io/robots.txt</loc>
@@ -108,6 +112,6 @@
     </url>
     <url>
         <loc>http://nolboo.github.io/trans/</loc>
-        <lastmod>2013-10-07T19:57:25+09:00</lastmod>
+        <lastmod>2013-10-12T17:09:19+09:00</lastmod>
     </url>
 </urlset>
