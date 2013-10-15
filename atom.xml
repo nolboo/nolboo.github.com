@@ -4,7 +4,7 @@
   <title><![CDATA[Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-10-15T20:42:31+09:00</updated>
+  <updated>2013-10-15T21:00:56+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[지킬로 깃허브에 무료 블로그를 만들기]]></title>
+    <title type="html"><![CDATA[지킬로 깃허브에 무료 블로그 만들기]]></title>
     <link href="http://nolboo.github.io/blog/2013/10/15/free-blog-with-github-jekyll/"/>
     <updated>2013-10-15T19:58:00+09:00</updated>
     <id>http://nolboo.github.io/blog/2013/10/15/free-blog-with-github-jekyll</id>
@@ -127,7 +127,7 @@ baseurl: "/blog" // 이 부분을 반드시 추가하여야 한다.
 </pre></td><td class="code"><pre><code class="html"><span class="line"><span class="nt">&lt;head&gt;</span>
 </span><span class="line">    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
 </span><span class="line">    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge,chrome=1&quot;</span><span class="nt">&gt;</span>
-</span><span class="line">    <span class="nt">&lt;title&gt;</span>지킬로 깃허브에 무료 블로그를 만들기<span class="nt">&lt;/title&gt;</span>
+</span><span class="line">    <span class="nt">&lt;title&gt;</span>지킬로 깃허브에 무료 블로그 만들기<span class="nt">&lt;/title&gt;</span>
 </span><span class="line">    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width&quot;</span><span class="nt">&gt;</span>
 </span><span class="line">
 </span><span class="line">    <span class="c">&lt;!-- syntax highlighting CSS --&gt;</span>
