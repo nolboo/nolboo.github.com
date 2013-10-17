@@ -4,7 +4,7 @@
   <title><![CDATA[Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-10-15T21:00:56+09:00</updated>
+  <updated>2013-10-17T17:53:30+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -12,6 +12,217 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Harp로 블로그 만들기]]></title>
+    <link href="http://nolboo.github.io/blog/2013/10/17/start-blog-with-harp/"/>
+    <updated>2013-10-17T17:07:00+09:00</updated>
+    <id>http://nolboo.github.io/blog/2013/10/17/start-blog-with-harp</id>
+    <content type="html"><![CDATA[<p>원문 : <a href="http://kennethormandy.com/journal/start-a-blog-with-harp">Start a blog with Harp</a></p>
+
+<p>참조 :  <a href="http://sintaxi.com/introducing-harp">Intoducing Harp</a></p>
+
+<h2 id="install-harp">Install Harp</h2>
+
+<pre><code>sudo npm install harp -g
+</code></pre>
+
+<p>하프를 글로벌로 설치한다.</p>
+
+<pre><code>cd ~/Sites
+harp init my-harp-blog
+</code></pre>
+
+<!-- more -->
+
+<p><code>harp init</code>이 다음과 같은 디폴트앱을 만든다.</p>
+
+<pre><code>▾ /
+  ▪ _layout.jade
+  ▪ 404.jade
+  ▪ index.jade
+  ▪ main.less
+</code></pre>
+
+<p>이제 웹서버를 시작하여 하프앱을 눈으로 보자.</p>
+
+<pre><code>harp server my-harp-blog
+</code></pre>
+
+<p><a href="localhost:9000">localhost:9000</a>에서 로컬에서 실행된 <code>my-harp-blog</code>를 볼 수 있다.</p>
+
+<p><img src="http://kennethormandy.com/images/start-a-blog-with-harp/1.png" alt="" /></p>
+
+<h2 id="start-with-markdown">Start with Markdown</h2>
+
+<p>마크다운 화일을 추가하여 새 페이지를 만들어보자. 루트 디렉토리에 <code>about.md</code>를 만들어 아래와 같은 형식으로 자신에 대한 것을 적는다.</p>
+
+<pre><code># About Kenneth
+
+Hi, I’m Kenneth. Sometimes I write about building things with [Harp](http://harpjs.com).
+</code></pre>
+
+<p>화일을 저장하고 <a href="localhost:9000/about">localhost:9000/about</a>를 방문하면 about 페이지를 볼 수 있다. 하프를 재시작할 필요도, 무언가를 설정할 필요도 없다.</p>
+
+<p><code>about.md</code> 화일을 변경하고 저장하고 브라우저를 새로고침하면, 변경된 것이 이미 반영된다.</p>
+
+<p><img src="http://kennethormandy.com/images/start-a-blog-with-harp/2.png" alt="" /></p>
+
+<p>정적 사이트 제너레이터를 경험해 본 적이 있다면 화일 watcher를 시작하고 정지시키는 작업을 했을 것이다. 하프에선 그럴 필요가 없다; 서버가 작동하고 있는 한, 변경사항이 바로 브라우저로 전달된다. 이 프로세스는 매우 빠르다: 화일이 제대로 준비된다면, 하나의 화일이 변경되었을 때 전체 앱을 다시 빌드할 필요가 없다.</p>
+
+<p>하프는 순수 HTML로 about 페이지를 렌더링하지 않는 것을 주목해야한다. 대신, 먼저 레이아웃 화일을 통과하여 인덱스 페이지와 매칭한다.</p>
+
+<h2 id="layouts">Layouts</h2>
+
+<p>레이아웃은 헤더와 푸터 등 또는 더 복잡하게 반복되는 구조를 만들기 위해서 사용된다. <code>_layout</code> 화일은 마크업을 포함한다. <a href="http://harpjs.com/docs/development/rules">규약</a>에 의하면, 하프는 밑줄(<code>_</code>)로 시작되는 화일이나 폴더는 서비스하지 않는다. 특별히, 이 <code>_layout.jade</code>은 화일을 위한 wrapper로서 <em>서비스 된다</em>.</p>
+
+<p><code>about.md</code>, <code>404.jade</code>, <code>index.jade</code>의 모든 컨텐츠는 <code>yield</code> 변수로 사용하여 레이아웃의 어디에든 가져올 수 있다.</p>
+
+<pre><code>!!!
+html
+  head
+    link(rel="stylesheet", href="http://nolboo.github.io/main.css")
+  body
+    != yield
+</code></pre>
+
+<p>Jade의 명쾌함은 강력하다. 처음에 친숙하지 않더라도 사용해 볼 것을 권한다. 당신이 <code>HTML</code>을 고수하려한다면, 하프는 <code>EJS</code>도 지원한다.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+</pre></td><td class="code"><pre><code class="html"><span class="line"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span class="line"><span class="nt">&lt;html&gt;</span>
+</span><span class="line">  <span class="nt">&lt;head&gt;</span>
+</span><span class="line">    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;main.css&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="line">  <span class="nt">&lt;/head&gt;</span>
+</span><span class="line">  <span class="nt">&lt;body&gt;</span>
+</span><span class="line">    <span class="err">&lt;</span>%- yield %&gt;
+</span><span class="line">  <span class="nt">&lt;/body&gt;</span>
+</span><span class="line"><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Jade에서, 감탄부호(<code>!</code>)는 <code>yield</code>가 예외처리되지 않게 한다. <code>EJS</code>에서 하이픈(<code>-</code>)과 같다.</p>
+
+<p>어느 쪽이든, <code>main.css</code>가 참조된 것을 주의한다. 폴더에 실제로 그 화일이 없더라도;<code>main.less</code>가 있다. 하프는 프리프로세싱이 내장되어 있다. <code>LESS</code> 화일을 업데이트하고 저장하면 변경사항이 브라우저에 바로 변경된다. 디폴트 스타일시트에 조금 추가한 것이 있다. 같은 것을 사용하고 싶다면, <a href="https://github.com/kennethormandy/my-harp-blog/blob/master/main.less">여기</a>에 있다.</p>
+
+<p><img src="http://kennethormandy.com/images/start-a-blog-with-harp/3.png" alt="" /></p>
+
+<h2 id="adding-articles">Adding Articles</h2>
+
+<p>나는 <code>localhost:9000/articles/another-article</code>에서 내 첫번째 글을 액세스하고 싶다. 그래서 <code>article</code> 디렉토리를 만들 것이다. 폴더가 그대로 URL이 된다; 원하는 대로 <code>URL</code>을 반영하는 디렉토리 구조를 만들어라.</p>
+
+<pre><code>▾ /
+  ▪ _layout.jade
+  ▪ 404.jade
+  ▪ index.jade
+  ▪ main.less
+  ▾ articles/
+    ▪ _data.json
+    ▪ a-simple-article.md
+    ▪ another-article.md
+</code></pre>
+
+<p>추가한 글은 마크다운이면 된다. 글 자체를 넘어서는 글에 관한 정보는 <code>_data.json</code> 안에 담긴다.</p>
+
+<h2 id="flexible-metadata">Flexible Metadata</h2>
+
+<p>각각의 <code>.md</code> 화일이 아닌  _data.json` 안의 메타데이타를 유지하는 것은 몇 가지 이유로 잘 작동된다.</p>
+
+<ol>
+  <li>하나의 화일에 어떤 크기의 메타데이타를 가질 수 있으므로, 당신의 글을 방해하지 않는다.</li>
+  <li>포스트, 이미지, 비디오 혹은 다른 어떤 것의 메타데이타가 같은 방식으로 추가될 수 있다.</li>
+  <li>다른 화일들도 이 <code>_data.json</code>을 쉽게 사용할 수 있다.</li>
+  <li>정보의 순서를 화일명으로 요구하기보다 <code>_data.json</code>에서 정할 수 있다.</li>
+</ol>
+
+<p>글 자체 안이 아닌 <code>_data.json</code> 화일에 제목, 날짜, 혹은 다른 정보를 추가하여, 마크다운을 사용하는 이점을 최대한으로 얻을 수 있으며 단지 글쓰기에 대해서만 고민하면 된다.</p>
+
+<p>이 블로그를 위해, 내 <code>_data.json</code> 화일에 아래와 같이 추가하기로 했다:</p>
+
+<pre><code>{
+  "a-good-article": {
+    "title": "A Good Article"
+  },
+  "a-complicated-article": {
+    "title": "Another Article"
+  }
+}
+</code></pre>
+
+<p>Jade를 사용하여, 이 메타데이타를 반복할 수 있고, 모든 글을 목록화했다. <code>index.jade</code>에 다음을 추가했다.</p>
+
+<pre><code>ul
+  each article, slug in public.articles.data
+    li
+      a(href="/articles/#{ slug }") #{ article.title }
+</code></pre>
+
+<p>기대한대로, 홈페이지에 이제 글 목록이 있다.</p>
+
+<p><img src="http://kennethormandy.com/images/start-a-blog-with-harp/4.png" alt="" /></p>
+
+<p>이 블로그는 아직 내비게이션할 방법이 빠져있다. 레이아웃에 헤더뿐만 아니라 푸터에 내비를 넣는 것이 좋을 것이다. 하프의 <code>partial</code> 함수로 같은 마크업을 여러 번 반복하지 않을 수 있다.</p>
+
+<h2 id="partials">Partials</h2>
+
+<p><code>partial()</code>은 하나의 화일에서 다른 화일로 가져다 사용할 수 있다. 앱에서 하나의 partial로 어떤 텍스트 기반 화일을 사용할 수 있다. 일반적으로 전체 페이지보다는 하나의 코드 스니핏으로 가져오길 원할 것이다. 그러나, 각각에 <code>partial()</code>을 사용할 수도 있다. <code>_layout</code> 화일을 사용할 때, 화일명의 시작에 밑줄을 추가하면 자신의 페이지가 제너레이트되지 않을 것이다. 코드 스니핏일 때 훌륭하다. 이 규약은 폴더에서도 적용된다:밑줄로 시작되는 폴더는 그 안의 어떤 것도 제너레이트되지 않는다. 밑줄로 시작되는 폴더는 partial을 저장하기에 좋은 장소이다. 이를 위해 <code>_shared</code> 폴더를 만들었다.</p>
+
+<p><code>_shared/</code> 안에 <code>nav.jade</code>란 새 화일을 만들었다.</p>
+
+<pre><code>nav
+  a(href="/") Home
+  a(href="/about") About
+</code></pre>
+
+<p>이제 <code>_layout.jade</code> 안에 <code>partial()</code>로 다음 화일을 사용했다:</p>
+
+<pre><code>!!!
+html
+  head
+    link(rel="stylesheet", href="http://nolboo.github.io/main.css")
+  body
+    != partial("_shared/nav")
+    != yield
+    footer
+      != partial("_shared/nav")
+</code></pre>
+
+<p>이제, 중복된 마크업을 사용하지 않고 내비가 블로그 포스트의 위와 아래에 나타난다. 이건 단순한 예제이다. 그러나, 유용한 partial들이 블로그의 부분들로 얼마나 유용하게 어디서나 재사용될 수 있는지 상상할 수 있을 것이다.</p>
+
+<p><img src="http://kennethormandy.com/images/start-a-blog-with-harp/5.png" alt="" /></p>
+
+<h2 id="getting-it-out-there">Getting it out there</h2>
+
+<p>이제 블로그가 첫번째 버전을 온라인으로 올릴 만하게 보인다. 하프앱은 <code>HTML</code>, <code>CSS</code> &amp; <code>JavaScript</code>로 변환하여 원하는 어떤 곳에도 발행할 수 있다.</p>
+
+<pre><code>harp compile
+</code></pre>
+
+<p>이 명령은 블로그의 <code>HTML</code>, <code>CSS</code> &amp; <code>JavaScript</code>이 들어있는 <code>www</code> 폴더를 제너레이트한다. 아마존 S3, <a href="http://harpjs.com/docs/deployment/github-pages">GitHub Pages</a>, <a href="http://kennethormandy.com/journal/harpjs.com/docs/deployment/heroku">Heroku</a>, Nodejitsu 혹은 Apache Cordova/PhoneGap를 포함한 어떤 곳에서도 훌륭히 작동된다.</p>
+
+<p>컴파일 단계를 완전히 생략하고, 드랍박스에 앱을 올릴 수 있는 <a href="http://harp.io/">하프플랫폼</a>에서도 작업할 수 있다.</p>
+
+<p>하프로 사이트를 만들 때 <code>LESS</code>, 마크다운, <code>Jade</code>와 작업하는 것이 덜 어렵다는 것을 알았다.</p>
+
+<p><em>블로그 소스코드는 <a href="http://github.com/kennethormandy/my-harp-blog">GitHub</a>에 올려져있다.</em></p>
+
+<h2 id="section">역자 참조 링크</h2>
+
+<ul>
+  <li>계속해서 깃허브 등에 적용하는 포스트가 올라올 것으로 생각되지만, 바로 자신의 블로그를 만들어서 깃허브에 적용하려면 <a href="http://nolboo.github.io/blog/2013/10/15/free-blog-with-github-jekyll/">지킬로 깃허브에 무료 블로그 만들기</a>와 <a href="http://nolboo.github.io/blog/2013/10/06/github-for-beginner/">완전 초보를 위한 깃허브</a>를 참조하면 쉽게 올릴 수 있을 것으로 생각한다.</li>
+  <li>마크다운에 익숙하지 않는 분은 <a href="http://nolboo.github.io/blog/2013/09/07/john-gruber-markdown/">존 그루버 마크다운 페이지 번역</a>을 참조하시면 글쓰기의 신천지를 경험할 수 있다.</li>
+  <li>이 블로그는 <a href="http://nolboo.github.io/blog/2013/07/21/start-octopress/">옥토프레스</a>로 만들어졌으며, 다양한 블로깅 플랫폼을 탐색하는 중이다.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[지킬로 깃허브에 무료 블로그 만들기]]></title>
@@ -6716,180 +6927,6 @@ p {
   <li><a href="http://meyerweb.com/eric/tools/css/reset/">CSS Tools: Reset CSS</a> via Eric Meyer </li>
   <li><a href="http://www.shayhowe.com/web-design/intro-to-html-css/">An Intro to HTML &amp; CSS via Shay Howe</a></li>
 </ul>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[옥토프레스로 블로깅하기]]></title>
-    <link href="http://nolboo.github.io/blog/2013/07/21/start-octopress/"/>
-    <updated>2013-07-21T23:16:00+09:00</updated>
-    <id>http://nolboo.github.io/blog/2013/07/21/start-octopress</id>
-    <content type="html"><![CDATA[<h2 id="section">이전 동기와 간단한 과정 소개</h2>
-
-<p>워드프레스닷컴의 두 개의 블로그 중 학습을 위해 번역과 요약을 주로 올리던 <code>nolboos.wordpress.com</code> 블로그가 워드프레스닷컴에 의해 <a href="http://en.support.wordpress.com/suspended-blogs/">중지</a>되었다. 워드프레스 설치 호스팅 서비스를 세 곳이나 친절하게 알려주긴 했지만 도메인이나 비용, 속도 등 여러 사항이 걸리고, 아마존 이외에는 이용하던 호스팅 서비스도 없어 난감해 하고 있었다. 예전부터 Github Page로 블로그를 올리는 방법을 염두에 두고 있었는데 <a href="https://twitter.com/sungchi">@sungchi</a>님이 Github(http://sungchi.github.io/)와 <a href="http://tryghost.org/">Ghost</a>를 추천하셨다. 고스트는 아직 개발 중이어서 고려대상에서 제외하였고 깃허브는 블로그글을 쓸 때마다 메인페이지에 링크를 다는 불편함 등이 있었다. 게으른 놀부는 불편함을 없애주는 방법을 찾기 시작했고, 두 개가 눈에 들어왔다. </p>
-
-<p><a href="http://haroopress.com/">하루프레스</a>와 <a href="http://octopress.org/">옥토프레스</a>
-<!-- more -->
-옥토프레스가 먼저 나왔고 해외에서 사용자 수가 점차적으로 늘어가고 있는 것 같으나 개발이 일년 이상 중지되어 있는 것 같았고, 하루프레스는 한국분이 <a href="https://twitter.com/Rhiokim">@Rhiokim</a> 만들어서인지 디자인이나 기능적인 측면에서 좀 더 끌리는 면이 있었다. 그래서 하루프레스를 설치하기 시작하였다. 그러나, 중간에 Xcode를 요구하는 에러메시지가 나와 물어보았더니 Xcode가 반드시 있어야 한다는 <a href="https://twitter.com/n0lb00/status/356388684259528705">답</a>이 돌아왔다. 디스크 용량을 걱정해야 하는 상황에선 Xcode 설치는 무리였다. 낙망하고 별 수 없이 옥토프레스를 설치하기 시작하였다.</p>
-
-<h2 id="section-1">사전 경험 얻기</h2>
-
-<p>검색을 해봐도 옥토프레스에 대한 한글 블로그 글이 거의 없었고,(해커들을 위한 블로그 시스템이라 설명을 안하나?ㅠㅠ) <a href="http://doomed-lover.com/archives/migrating-to-octopress/">옥토프레스 이전 과정</a>에서 몇 가지 사전 지식을 얻을 수 있었다.</p>
-
-<ul>
-  <li><a href="https://github.com/thomasf/exitwp">Exitwp</a> : 워드프레스 블로그를 지킬 블로그 엔진으로 쉽게 이전. 마크다운으로 변환</li>
-  <li>동영상 임베딩 등은 플러그인을 사용하지말고 원 코드를 사용하는 것이 좋다.</li>
-  <li>블로그의 제목, 태그는 모두 영문 사용을 기본으로 하는 것이 좋을듯.</li>
-</ul>
-
-<h2 id="httpjekyllrbcomdocsmigrations">기존 블로그 글을 <a href="http://jekyllrb.com/docs/migrations/">지킬로 마이그레이션</a></h2>
-
-<pre><code>$ gem install jekyll-import --pre
-</code></pre>
-
-<p>공개/비공개 포스트를 구별하지 않으니 확인해야 한다.</p>
-
-<pre><code>$ gem install hpricot
-</code></pre>
-
-<p><code>https://YOUR-USER-NAME.wordpress.com/wp-admin/export.php</code>에서 내려받은 <code>wordpress.xml</code>을 변환</p>
-
-<pre><code>$ ruby -rubygems -e 'require "jekyll/jekyll-import/wordpressdotcom";
-JekyllImport::WordpressDotCom.process({ :source =&gt; "wordpress.xml" })'
-</code></pre>
-
-<p><code>_posts</code>, <code>_pages</code>, <code>_nav_menu_items</code>의 세 개의 디렉토리에 <code>.html</code> 화일들이 추출된다.</p>
-
-<h2 id="section-2">설치</h2>
-
-<p>git과 Ruby를 <a href="http://octopress.org/docs/setup/">설치</a>하고 테마를 적용하였다.(글이 너무 길어지니 이 부분은 링크에서 보세요)</p>
-
-<p>이제 <a href="http://octopress.org/docs/deploying/github/">깃허브에 올려보자</a>.</p>
-
-<p>원하던 블로그 도메인인 <code>nolboo.github.com</code>으로 <a href="https://github.com/repositories/new">새 저장소</a>를 만든다.</p>
-
-<pre><code>$ rake setup_github_pages //저장소 URL을 물어보면 내 경우엔 `https://github.com/nolboo/nolboo.github.com.git`을 입력
-
-$ rake generate
-$ rake deploy
-</code></pre>
-
-<p>위의 과정까지 마치면 <code>nolboo.github.com</code>이나 <code>nolboo.github.io</code>로 가보면 기본테마가 적용된 최초의 블로그를 볼 수 있다. 의외로 간단하다. </p>
-
-<h2 id="httpoctopressorgdocsconfiguring"><a href="http://octopress.org/docs/configuring/">설정하기</a></h2>
-
-<p><code>Rakefile</code>과 <code>_config.yml</code>만 변경하는 것으로 충분하나 설정 화일 리스트는 다음과 같다.</p>
-
-<pre><code>_config.yml       # Main config (Jekyll's settings)
-Rakefile          # Configs for deployment
-config.rb         # Compass config
-config.ru         # Rack config
-</code></pre>
-
-<p><code>Rakefile</code>도 <code>rsync</code>를 사용하지 않는 한 변경할 것이 없다.</p>
-
-<h3 id="section-3">블로그 설정</h3>
-
-<p><code>_config.yml</code>은 세 섹션으로 되어있다. <em><code>url</code>, <code>title</code>, <code>subtitle</code>, <code>author</code>는 반드시 변경해야 하고, 서드파티 서비스를 활성화시켜주어야 한다.</em></p>
-
-<h4 id="section-4">주요 설정</h4>
-
-<pre><code>url:                # For rewriting urls for RSS, etc
-title:              # Used in the header and title tags
-subtitle:           # A description used in the header
-author:             # Your name, for RSS, Copyright, Metadata
-simple_search:      # Search engine for simple site search
-description:        # A default meta description for your site
-</code></pre>
-
-<p>위의 것만 확인하면서 변경하였다.</p>
-
-<p>플러그인에서는 일단 <code>disqus_short_name</code>에 숏네임을 하나 정해서 넣어주었고, <code>google_analytics_tracking_id</code>에 추적 ID를 생성해서 입력했다.</p>
-
-<h2 id="section-5">블로깅 하기</h2>
-
-<p>블로그 포스트는 <code>source/_posts</code> 디렉토리에 지킬 방식인 <code>YYYY-MM-DD-post-title.markdown</code> 형식의 이름으로 저장되어야 한다. 이를 편하게 해주는 rake 명령은 다음과 같다.</p>
-
-<pre><code>$ rake new_post["title"]
-</code></pre>
-
-<p><em>Title은 영문으로 주는 것이 좋다.</em>
-해당 <code>.markdown</code> 화일을 에디터로 열어보면 다음과 같은 YAML 헤더를 볼 수 있다.</p>
-
-<pre><code>---
-layout: post
-title: "Zombie Ninjas Attack: A survivor's retrospective"
-date: 2011-07-03 5:59
-comments: true
-external-url:
-categories:
----
-</code></pre>
-
-<p>비공개로 할 경우에는 <code>published: false</code>를 추가한다. linklog 스타일로 포스팅할 때는 <code>external-url</code>에 링크를 추가하면 된다.</p>
-
-<p>카테고리는 다음과 같은 방식으로 지정한다.</p>
-
-<pre><code># 한 개 추가
-categories: Sass
-
-# 여러 개 추가하기 1
-categories: [CSS3, Sass, Media Queries]
-
-# 여러 개 추가하기 2
-categories:
-- CSS3
-- Sass
-- Media Queries
-</code></pre>
-
-<p>블로그의 인덱스 페이지에서 글의 일부만 보여주려면 <code>&lt;!-- more --&gt;</code> 주석을 넣어주면 “Continue →” 버튼으로 전체 글로 링크된다.</p>
-
-<h2 id="section-6">제너레이트와 미리보기</h2>
-
-<pre><code>rake generate   # public 디렉토리에 포스트와 페이지를 제너레이트한다.
-rake preview    # http://localhost:4000 에 웹서버를 마운트하고 볼 수 있게 한다.
-</code></pre>
-
-<p>이제 웹 브라우저에서 <code>http://localhost:4000</code> 주소를 입력하여 미리볼 수 있다.</p>
-
-<h2 id="section-7">출판하기</h2>
-
-<pre><code>$ rake deploy
-</code></pre>
-
-<h2 id="section-8">블로깅 워크플로우</h2>
-
-<pre><code>1. $ rake new_post["title"] //title은 영문으로 간단하게
-2. 에디터로 .markdown 화일 편집하고 
-3. title: 에 멋진 한글 제목을 달고 categories: [CSS3, Sass, Media Queries] 지정
-4. $ rake generate &amp;&amp; rake preview //localhost:4000에서 미리보기와 수정
-5. 소스 백업(*아래 참조*)
-6. $ rake deploy
-</code></pre>
-
-<p>깃허브에 반영되는 것은 시간이 좀 걸리니 바로 안 나타난다고 조급해하지 말자.</p>
-
-<p><strong>5번 출판하기 전에 <code>source</code> 브랜치에 소스를 직접 푸시하는 것을 잊지마라.</strong></p>
-
-<pre><code>git add .
-git commit -m 'your message'
-git push origin source
-</code></pre>
-
-<h2 id="section-9">맺는말</h2>
-
-<p>마크다운을 이용할 수 있을 정도의 사용자라면 쉽게 써보려고 했지만 많이 부족한 것 같다. 옥토프레스가 내가 원하는 블로깅 워크플로우에 가장 근접하게 사용할 수 있을 것 같다. 이제 워드프레스닷컴에서 홀대받았던 나머지 글들을 계속 올리고 추가적인 포스팅도 꾸준히 할 것이다.</p>
-
-<h2 id="section-10">추가 참조 링크</h2>
-
-<ul>
-  <li><a href="https://github.com/imathis/octopress/wiki/3rd-party-plugins">3rd party plugins</a></li>
-  <li><a href="http://www.tomordonez.com/blog/2012/06/04/creating-a-github-blog-using-octopress/">Creating a Github Blog Using Octopress</a></li>
-  <li><a href="http://webdesign.tutsplus.com/tutorials/applications/getting-started-with-octopress/">Getting Started with Octopress</a></li>
-  <li><a href="http://paulsturgess.co.uk/blog/2013/04/24/hello-octopress-and-github-pages/">Hello Octopress &amp; Github Pages</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
