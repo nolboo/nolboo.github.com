@@ -9,7 +9,7 @@
   <meta name="author" content="Nolboo Kim">
 
   
-  <meta name="description" content="원본: How To Get 100% Anonymous Web Hosting 익명 목적으로 사용하는 별도의 컴퓨터가 없다면 인터넷 접속하기 전과 후에 쿠키를 지워야 한다. Piriform의 CCleaner가 널리 사용되는 무료 선택사항이다. 시작하기 전에 설치하고 &hellip;">
+  <meta name="description" content="[TOC] Markdoc 설치 터미널에서 $ easy_install Markdoc Finished processing dependencies for Markdoc 위의 메시지가 나오면 성공. 위키 만들기 위키 초기화 $ markdoc init my-wiki --vcs &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -82,6 +82,93 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/22/install-markdoc/">Markdoc 설치</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-22T21:41:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>[TOC]</p>
+
+<h2 id="markdochttpmarkdocorg-"><a href="http://markdoc.org/">Markdoc</a> 설치</h2>
+
+<p>터미널에서</p>
+
+<pre><code>$ easy_install Markdoc
+
+Finished processing dependencies for Markdoc
+</code></pre>
+
+<p>위의 메시지가 나오면 성공.</p>
+
+<h2 id="section">위키 만들기</h2>
+
+<h3 id="section-1">위키 초기화</h3>
+
+<pre><code>$ markdoc init my-wiki --vcs-ignore hg
+
+markdoc.vcs-ignore: INFO: Writing ignore file to .hgignore
+markdoc.init: INFO: Wiki initialization complete
+markdoc.init: INFO: Your new wiki is at: .../my-wiki
+
+$ cd .../my-wiki &lt;!-- more --&gt;
+</code></pre>
+
+<h3 id="section-2">페이지 편집</h3>
+
+<p>wiki/ 서브 디렉토리에 문서가 위치하며, 마크다운 파일이다. .md 확장자를 가지며, wiki configuration에서 추가할 수 있다. wiki/ 디렉토리에서 마크다운 화일 작성.</p>
+
+<h3 id="section-3">빌드</h3>
+
+<p>아래 명령을 내리면 .html/ 서브디렉토리에 모든 HTML이 제너레이트된다.</p>
+
+<pre><code>$ markdoc build
+</code></pre>
+
+<h3 id="section-4">보기</h3>
+
+<pre><code>$ markdoc serve
+markdoc.serve: INFO: Serving on http://127.0.0.1:8008
+</code></pre>
+
+<p>웹브라우저에서 <a href="http://localhost:8008/">http://localhost:8008/</a>를 열면 보인다.</p>
+
+<h2 id="section-5">기타 기능</h2>
+
+<ul>
+  <li>구글 애널리틱스를 한줄 코드로 삽입</li>
+  <li>rsync를 이용해 원격 서버와 동기화</li>
+  <li>Pygments 지원 문법</li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -519,53 +606,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/22/beginners-guide-to-html-and-css-2-slash-10/">HTML & CSS 초보자 가이드 - 2강 : Elements & Semantics</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-22T21:07:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>원본 : <a href="http://learn.shayhowe.com/html-css/elements-semantics">A Beginner’s Guide to HTML &amp; CSS - LESSON 2 : Elements &amp; Semantics</a></p>
-
-<p><br /><br />일단 코딩을 시작하게 되면 semantic 코딩을 반드시 원하게 될 것이다. semantic 코딩을 한다는 것은 코드를 잘 정리하고 풍부한 정보를 갖춘 결정도 할 수 있다는 것이다.</p>
-
-<h2 id="semantics-overview-">Semantics Overview(시맨틱 개요)</h2>
-<p><br /></p>
-
-<p>HTML에서 <a href="http://boagworld.com/dev/semantic-code-what-why-how/">Semantics</a>는 페이지의 의미와 구조 위에 컨텐츠를 올려놓는 것이다. 페이지에서 컨텐츠의 <strong>가치</strong>를 표현하며, 스타일링 목적으로<strong>만 사용되진 않는다</strong>. semantic 코딩은 웹 페이지를 적절히 읽고 이해하는 능력을 컴퓨터, 스크린 리더, 검색엔진이나 다른 기기들에게 제공하는 등의 이점을 제공한다. 게다가 semnatic 코드는 각 컨텐츠의 특성을 명확하게 알  수 있어 관리하거나 일하는 것이 더 쉽다.
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/07/22/beginners-guide-to-html-and-css-2-slash-10/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -581,6 +621,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/15/coursera-download/">코세라 온라인 강의 자료를 로컬 디스크에 다운로드 받기</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/10/22/google-web-font-faster-tip/">구글 웹폰트를 빠르게 로드하는 팁 7가지</a>
@@ -656,10 +700,6 @@
     
       <li class="post">
         <a href="/blog/2013/07/22/beginners-guide-to-html-and-css-3-slash-10/">HTML & CSS 초보자 가이드 - 3강 : Box Model & Positioning</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/22/beginners-guide-to-html-and-css-2-slash-10/">HTML & CSS 초보자 가이드 - 2강 : Elements & Semantics</a>
       </li>
     
   </ul>

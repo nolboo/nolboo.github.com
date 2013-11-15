@@ -4,7 +4,7 @@
   <title><![CDATA[Category: responsive | Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/blog/categories/responsive/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-10-22T20:46:11+09:00</updated>
+  <updated>2013-11-15T20:23:12+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -275,6 +275,12 @@
 <ul>
   <li><a href="http://blog.getbootstrap.com/">Bootstrap Blog</a></li>
   <li><a href="https://github.com/twbs/bootstrap/pull/6342">List of changes and useful tips</a></li>
+</ul>
+
+<h2 id="section-5">역자추가링크</h2>
+
+<ul>
+  <li><a href="http://designyoutrust.com/technology/bootstrap-3-0-tutorial/">Bootstrap 3.0: What’s new and how to migrate from 2.x to 3.x</a></li>
 </ul>
 ]]></content>
   </entry>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: markdown | Nolboo's Blog]]></title>
   <link href="http://nolboo.github.io/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://nolboo.github.io/"/>
-  <updated>2013-10-22T20:46:11+09:00</updated>
+  <updated>2013-11-15T20:23:12+09:00</updated>
   <id>http://nolboo.github.io/</id>
   <author>
     <name><![CDATA[Nolboo Kim]]></name>
@@ -796,7 +796,7 @@ _   underscore
     <id>http://nolboo.github.io/blog/2013/07/22/install-markdoc</id>
     <content type="html"><![CDATA[<p>[TOC]</p>
 
-<h2 id="section">설치</h2>
+<h2 id="markdochttpmarkdocorg-"><a href="http://markdoc.org/">Markdoc</a> 설치</h2>
 
 <p>터미널에서</p>
 
@@ -807,9 +807,9 @@ Finished processing dependencies for Markdoc
 
 <p>위의 메시지가 나오면 성공.</p>
 
-<h2 id="section-1">위키 만들기</h2>
+<h2 id="section">위키 만들기</h2>
 
-<h3 id="section-2">위키 초기화</h3>
+<h3 id="section-1">위키 초기화</h3>
 
 <pre><code>$ markdoc init my-wiki --vcs-ignore hg
 
@@ -820,18 +820,18 @@ markdoc.init: INFO: Your new wiki is at: .../my-wiki
 $ cd .../my-wiki &lt;!-- more --&gt;
 </code></pre>
 
-<h3 id="section-3">페이지 편집</h3>
+<h3 id="section-2">페이지 편집</h3>
 
 <p>wiki/ 서브 디렉토리에 문서가 위치하며, 마크다운 파일이다. .md 확장자를 가지며, wiki configuration에서 추가할 수 있다. wiki/ 디렉토리에서 마크다운 화일 작성.</p>
 
-<h3 id="section-4">빌드</h3>
+<h3 id="section-3">빌드</h3>
 
 <p>아래 명령을 내리면 .html/ 서브디렉토리에 모든 HTML이 제너레이트된다.</p>
 
 <pre><code>$ markdoc build
 </code></pre>
 
-<h3 id="section-5">보기</h3>
+<h3 id="section-4">보기</h3>
 
 <pre><code>$ markdoc serve
 markdoc.serve: INFO: Serving on http://127.0.0.1:8008
@@ -839,7 +839,7 @@ markdoc.serve: INFO: Serving on http://127.0.0.1:8008
 
 <p>웹브라우저에서 <a href="http://localhost:8008/">http://localhost:8008/</a>를 열면 보인다.</p>
 
-<h2 id="section-6">기타 기능</h2>
+<h2 id="section-5">기타 기능</h2>
 
 <ul>
   <li>구글 애널리틱스를 한줄 코드로 삽입</li>
